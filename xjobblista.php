@@ -10,6 +10,7 @@ class MyStruct {
     public $email;
 }
 $obj = new MyStruct();
+$a=array($obj);
 
 
 // Create connection
@@ -28,16 +29,18 @@ $result = $conn->query($sql);
 
 
 if ($result->num_rows > 0) {
-   echo "<table><tr><th>ID</th>
-   <th>Name</th><th>Password</tr><tr>";
+   //echo "<table><tr><th>ID</th>
+   //<th>Name</th><th>Password</tr><tr>";
     // output data of each row
     while($row = $result->fetch_assoc()) {
        // $arr = array($row["id"],$row["Username"],$row["Password"],$row["Firstname"]);
-        $obj->ID = $row["id"];
-        $obj->name = $row["Name"];
-        $obj->webpage = $row["Webpage"];
-        $obj->email = $row["Email"];
-        echo $obj->name;
+       array_push($a,
+        $obj->ID = $row["id"],
+        $obj->name = $row["Name"],
+        $obj->webpage = $row["Webpage"],
+        $obj->email = $row["Email"]);
+        //print_r($a);
+        //echo $obj->name;
     }
     echo "</table>";
 } else {
