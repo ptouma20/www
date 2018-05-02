@@ -4,7 +4,12 @@ $servername = "10.22.18.59";
 $username = "user";
 $password = "12345";
 $dbname = "Examensprojekt";
-$id = $_post[id];
+$usernamee = $_POST['username1'];
+$passwordd = $_POST['password1'];
+$firstnamee = $_POST['firstname1'];
+$lastnamee = $_POST['lastname1'];
+$emaill = $_POST['email1'];
+$educationn = $_POST['education1'];
 
 // Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
@@ -23,7 +28,7 @@ if (!$conn) {
 //reg_date TIMESTAMP
 //)";
 $sql = "INSERT INTO students (username, password, firstname, lastname,email,education)
-VALUES ('$id', '12345', 'oo', 'aa', 'john@ee.com', 'waw')";
+VALUES ('$usernamee', '$passwordd', '$firstnamee', '$lastnamee', '$emaill', '$educationn')";
 if (mysqli_query($conn, $sql)) {
     echo "New record created successfully";
 } else {
