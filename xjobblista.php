@@ -8,10 +8,10 @@ class MyStruct {
     public $name;
     public $webpage;
     public $email;
-}
-$obj = new MyStruct();
-$a=array($obj);
-print json_encode($dbname);
+};
+//$obj = new MyStruct();
+$a=array();
+
 
 
 // Create connection
@@ -24,51 +24,27 @@ if ($conn->connect_error) {
 $sql = "SELECT  id, Name, Email, Webpage FROM company";
 
 $result = $conn->query($sql);
-
-
-
-
+header("Content-type: text/javascript");
 
 if ($result->num_rows > 0) {
-   //echo "<table><tr><th>ID</th>
-   //<th>Name</th><th>Password</tr><tr>";
-    // output data of each row
     while($row = $result->fetch_assoc()) {
-       // $arr = array($row["id"],$row["Username"],$row["Password"],$row["Firstname"]);
-       array_push($a,
-        $obj->ID = $row["id"],
-        $obj->name = $row["Name"],
-        $obj->webpage = $row["Webpage"],
-        $obj->email = $row["Email"]);
-        //print_r($a);
+       $obj = new MyStruct();
+        $obj->ID = $row["id"];
+        $obj->name = $row["Name"];
+        $obj->webpage = $row["Webpage"];
+        $obj->email = $row["Email"];
+        array_push($a, $obj);
+        //$a[] = $obj;
+        
         //echo $obj->name;
+
     }
-    echo "</table>";
+    //print_r($a);
+    echo json_encode($a);
 } else {
     echo " fel";
     
 }
-<script type="javascript">
 
-
-var Fuse = require ('fuse.js');
-var options = {
-    shouldSort: true,
-    //tokenize: true,
-    //matchAllTokens: true,
-    threshold: 0.6,
-    location: 0,
-    distance: 100,
-    maxPatternLength: 32,
-    minMatchCharLength: 2,
-    keys: [
-      "name"
-  ]
-  };
-var fuse = new Fuse ($a, options); // "list" is the item array
-
-var result = fuse.search("ericsson");
-console.log(result);
-</script>
 $conn->close();
 ?>
