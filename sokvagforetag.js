@@ -205,5 +205,17 @@ var options = {
 var fuse = new Fuse (list, options); // "list" is the item array
 
 var result = fuse.search("woo");
-console.log(result);
+
+accepted
+Try:
+
+$.ajax({
+    url: "<?php echo site_url('/xjobblista.php'); ?>",
+    type: 'POST',
+    data: form_data,
+    dataType:"json",
+    success: function(data) {
+        alert(data[0]);
+   }
+//console.log(result);
      

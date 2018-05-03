@@ -11,6 +11,7 @@ class MyStruct {
 }
 $obj = new MyStruct();
 $a=array($obj);
+print json_encode($dbname);
 
 
 // Create connection
@@ -47,5 +48,27 @@ if ($result->num_rows > 0) {
     echo " fel";
     
 }
+<script type="javascript">
+
+
+var Fuse = require ('fuse.js');
+var options = {
+    shouldSort: true,
+    //tokenize: true,
+    //matchAllTokens: true,
+    threshold: 0.6,
+    location: 0,
+    distance: 100,
+    maxPatternLength: 32,
+    minMatchCharLength: 2,
+    keys: [
+      "name"
+  ]
+  };
+var fuse = new Fuse ($a, options); // "list" is the item array
+
+var result = fuse.search("ericsson");
+console.log(result);
+</script>
 $conn->close();
 ?>
