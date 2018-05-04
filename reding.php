@@ -5,6 +5,8 @@ $password = "12345";
 $dbname = "Examensprojekt";
 $usernamee = $_POST['username1'];
 $Passwordd = $_POST['password1'];
+$pp = "pascal";
+
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
