@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   
+
     <!--Bootstrap..-->
 
 
@@ -51,7 +51,7 @@
                     <a href="StudentStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a  class="active" href="StudentProfil.html">Profil</a>
+                    <a class="active" href="StudentProfil.html">Profil</a>
                 </li>
                 <li>
                     <a href="StudentMeddelande.html">Meddelande</a>
@@ -81,31 +81,118 @@
         </div>
     </header>
     <main>
-            <h1>Student...</h1>
+        <div class="main-row">
+            <div class="main1-col">
+                <!-- Form Överallt? -->
+                <form id="student-profile-content">
+                    <!-- Image of ORU LOGGA as Profil Pic -->
+                    <img id="profil-pic" href="#">
+                    
+                    <br>
+                    <fieldset id="For-name" form="student-profile-content">
+                        <legend>Namn</legend>
+                        <label for="FirstName-Student">Förnamn </label>
+                        <br>
+                        <input type="text" name="FirstName-Student" id="FirstName-Student">
+                        <br>
+                        <label for="SecondName-Student">Efternamn </label>
+                        <br>
+                        <input type="text" name="SecondName-Student" id="SecondName-Student">
+
+                    </fieldset>
+
+                    <fieldset id="For-education" form="student-profile-content">
+                        <legend>Utbildning</legend>
+                        <label for="Education-Student">Program</label>
+                        <br>
+                        <input type="text" name="Education-Student" id="Education-Student">
+                    </fieldset>
+
+                    <fieldset id="For-keywords" form="profile-content">
+                        <legend>Kunskaper</legend>
+                        Väntar vi lite med...
+                    </fieldset>
+
+                    <fieldset id="For-Experience" form="student-profile-content">
+                        <legend>Erfarenhet</legend>
+                        Hur ska vi göra här...
+                    </fieldset>
+
+                    <!-- Buttons -->
+                </form>
+            </div>
+
+            <div class="main2-col">
+                <form id="student-user-content">
+                    <br>
+                    <fieldset id="For-userlogin" form="student-user-content">
+                        <legend>Inloggningsuppgifter</legend>
+                       
+                        <div class="Login">
+                            <label for="UserName-Student">Användarnamn</label>
+                            <br>
+                            <input type="text" name="UserName-Student" id="UserName-Student" readonly>
+
+                            <br>
+                            <label for="Mail-Student">Mail</label>
+                            <br>
+                            <input type="email" name="Mail-Student" id="Mail-Student">
+
+                            <br>
+                            <label for="password-Student">Password</label>
+                            <br>
+                            <input type="password" name="password-Student" id="password-Student" pattern="^.*(?=.{6,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" >
+                            
+                            <br>
+                            <label for="password-Student-Valid">Password</label>
+                            <br>
+                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" >
+                        
+                        </div>
+                        <div class="Message">
+                            <h4>Lösenord måste innehålla</h4>
+                            <p id="letter" class="invalid">Minst en <b>versal</b> av A till Z</p>
+                            <p id="capital" class="invalid">Minst en <b>gemen</b> av a till z</p>
+                            <p id="symbols" class="invalid">Minst en <b>symbol</b> av (!@#$%¨*-_+=) /p>
+                            <p id="number" class="invalid">En <b>siffra</b> mellan 0 till 9</p>
+                            <p id="length" class="invalid"> Lösenordet måste innehålla minst <b>8 karaktärer</b></p>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+
+
+        </div>
     </main>
     <footer>
-    <div class="row">
+        <div class="row">
             <div class="col">
                 <h4 id="h41">Örebro Universitet</h4>
                 <img id="BB" src="Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
                 <map name="ORU">
                     <area target="_blank" alt="Örebro Universitet" title="www.oru.se" href="https://www.oru.se/?" coords="-1,10,44,65" shape="rect">
                 </map>
-                
+
             </div>
             <div class="col">
-                    <h4 id="h42">Följ Örebro Universitet</h4>
-                    <a titel="facebook.se/oru" target="_blank" href="https://www.facebook.com/oru.se/" class="fa fa-facebook"></a>
-                    <a titel="twitter.com/orebrouni" target="_blank" href="https://twitter.com/orebrouni" class="fa fa-twitter"></a>
-                    <a title="linkedin.com/school/orebro-universitet" target="_blank" href="https://www.linkedin.com/school/orebro-university/" class="fa fa-linkedin"></a>
-                    <a  title ="instagram.com/orebrouni" target="_blank" href="https://www.instagram.com/orebrouni/" class="fa fa-instagram"></a>
-                    <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
+                <h4 id="h42">Följ Örebro Universitet</h4>
+                <a titel="facebook.se/oru" target="_blank" href="https://www.facebook.com/oru.se/" class="fa fa-facebook"></a>
+                <a titel="twitter.com/orebrouni" target="_blank" href="https://twitter.com/orebrouni" class="fa fa-twitter"></a>
+                <a title="linkedin.com/school/orebro-universitet" target="_blank" href="https://www.linkedin.com/school/orebro-university/"
+                    class="fa fa-linkedin"></a>
+                <a title="instagram.com/orebrouni" target="_blank" href="https://www.instagram.com/orebrouni/" class="fa fa-instagram"></a>
+                <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
                 <h4 id="TCM">Om TCM</h4>
                 <section>
-                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma och Edin Jelecevic.<br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.<br></p>
+                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                        och Edin Jelecevic.
+                        <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.
+                        <br>
+                    </p>
                 </section>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
