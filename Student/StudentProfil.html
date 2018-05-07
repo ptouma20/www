@@ -105,16 +105,14 @@
         
                         <fieldset id="Keywords-ReadOnly" form="StudentFormProfile">
                                 <legend>Kunskaper</legend>
-                                Väntar vi lite med...
+                               <textarea name="Keywords" id="Keywords" style="width:320px;height:100px;"readonly></textarea>
                         </fieldset>
         
                         <fieldset id="Experience-ReadOnly" form="StudentFormProfile">
                                 <legend>Erfarenhet</legend>
-                                <textarea name="StudentBio" id="StudentBio" style="height:200px;width:270px;" readonly></textarea>    
-                    
+                                <textarea name="StudentBio" id="StudentBio" style="height:200px;width:320px;" readonly></textarea>                        
                         </fieldset>
-
-                    
+                        <!-- Javascript som tar info från databasen till inputsen -->
                 </form>
                 <form id="StudentForm">
                 
@@ -137,16 +135,68 @@
 
                     <fieldset id="For-keywords" form="StudentForm">
                         <legend>Kunskaper</legend>
-                        
+                        <div class="Programming">
+
+                            <div class="PLcol">
+                                <input type="checkbox" id="Java" value="Java">Java</input>
+                                <br>
+                                <input type="checkbox" id="C" value="C">C</input>
+                                <br>
+                                <input type="checkbox" id="C++" value="C++">C++</input>
+                                <br>
+                                <input type="checkbox" id="C#" value="C#">C#</input>
+                                <br>
+                                <input type="checkbox" id="Swift" value="Swift">Swift</input>
+                                <br>
+                                <input type="checkbox" id="VB.NET" value="VB.NET">VB.NET</input>
+                                <br>
+                                <input type="checkbox" id="Python" value="Python">Python</input>
+                                <br>
+                                <input type="checkbox" id="Perl" value="Perl">Perl</input>
+                              
+                            </div>
+                            <div class="PLcol">
+                                    <input type="checkbox" id="Ruby" value="Ruby">Ruby</input>
+                                    <br>
+                                    <input type="checkbox" id="Javascript" value="Javascript">Javascript</input>
+                                    <br>
+                                    <input type="checkbox" id="PHP" value="PHP">PHP</input>
+                                    <br>
+                                    <input type="checkbox" id="HTML" value="HTML">HTML</input>
+                                    <br>
+                                    <input type="checkbox" id="CSS" value="CSS">CSS</input>
+                                    <br>
+                                    <input type="checkbox" id="Angularjs" value="Angularjs">Angularjs</input>
+                                    <br>
+                                    <input type="checkbox" id="Bootstrap" value="Bootstrap">Bootstrap</input>
+                                    <br>
+                                    <input type="checkbox" id="jQuery" value="jQuery">jQuery</input>
+                                    
+                            </div>
+                            <div class="PLcol">
+                                    <input type="checkbox" id="MySQL" value="MySQL">MySQL</input>
+                                    <br>
+                                    <input type="checkbox" id="Github" value="Github" >Github</input>
+                                    <br>
+                                    <input type="checkbox" id="Wordpress" value="Wordpress">Wordpress</input>
+                                    <br>
+                                    <input type="checkbox" id="SQL" value="SQL">SQL</input>
+                                    <br>
+                                    <input type="checkbox" id="Photoshop" value="Photoshop">Photoshop</input>
+                            </div>
+                        </div>
+                        <hr>
+                        <button type="button" class="AddButton" name="AddButton" >Lägg till</button>     
+                        <button type="reset" class="ResetButton" name="ResetButton" >Rensa</button>     
                     </fieldset>
 
                     <fieldset id="For-Experience" form="StudentForm">
                         <legend>Erfarenhet</legend>
-                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:270px;"placeholder="Skriv din arbetserfarenhet här..."></textarea>    
+                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:320px;" placeholder="Skriv din arbetserfarenhet här..."></textarea>    
                     </fieldset>
                     <br>
-                    <button type="button" class="button2" name="saveButton" >Ändra</button> 
-                   
+                    <button type="button" class="saveButton" name="saveButton" >Ändra</button> 
+                   <!-- Knappen ska spara informationen från inputs till databasen -->
                 </form>
             </div>
 
@@ -169,15 +219,16 @@
                             <br>
                             <label for="password-Student">Lösenord</label>
                             <br>
-                            <input type="password" name="password-Student" id="password-Student" pattern="^.*(?=.{6,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" required >
+                            <input type="password" name="password-Student" id="password-Student" pattern=".{6,}" required >
                             
                             <br>
                             <label for="password-Student-Valid">Lösenord</label>
                             <br>
-                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" required>
+                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern=".{6,}" required>
                             <br>
                             <br>
-                            <input type="button" class="button1" name="ChangePassword"value="Ändra">
+                            <input type="button" class="ChangePassword" name="ChangePassword"value="Ändra">
+                            <!-- Javascript som matchar lösenorden och minst 6 karaktärer och spara till databas genom knappen -->
                         </div>
                         <div class="Message">
                             
@@ -187,69 +238,30 @@
                     </fieldset>
                 </form>
                 <form id="DeleteStudentProfile">
-                    <h5> Vill du ta bort din profil? Tryck på <input type="button" class="button3" name="DeleteProfile" value="Radera Profil"> </h5>
+                    <!-- script med pop up, javascript  -->
+                    <h5> Vill du ta bort din profil? Tryck på <input type="button" class="DeleteProfile" name="DeleteProfile" value="Radera Profil"> </h5>
                     
                 </form>
             </div>
             <!-- <script>
                     var Password = document.getElementById("password-Student");
                     var PasswordValidation= document.getElementById("password-Student-Valid");
-                    var letter = document.getElementById("letter");
-                    var capital = document.getElementById("capital");
-                    var symbols= document.getElementById("symbols");
-                    var number = document.getElementById("number");
                     var length = document.getElementById("length");
-                    
-                    // When the user clicks on the password field, show the message box
-                    Password.onfocus = function() {
-                      document.getElementById("Message").style.display = "block";
-                    }
-                    PasswordValidation.onfocus = function() {
-                      document.getElementById("Message").style.display = "block";
-                    }
-
-                    
-                    // When the user clicks outside of the password field, hide the message box
-                    Password.onblur = function() {
-                      document.getElementById("Message").style.display = "none";
-                    }
-                    PasswordValidation.onblur = function() {
-                      document.getElementById("Message").style.display = "none";
-                    }
-                    // When the user starts to type something inside the password field
-                    myInput.onkeyup = function() {
-                      // Validate lowercase letters
-                      var lowerCaseLetters = /[a-z]/g;
-                      if(myInput.value.match(lowerCaseLetters)) { 
-                        letter.classList.remove("invalid");
-                        letter.classList.add("valid");
-                      } else {
-                        letter.classList.remove("valid");
-                        letter.classList.add("invalid");
-                    }
-                    
-                      // Validate capital letters
-                      var upperCaseLetters = /[A-Z]/g;
-                      if(myInput.value.match(upperCaseLetters)) { 
-                        capital.classList.remove("invalid");
-                        capital.classList.add("valid");
-                      } else {
-                        capital.classList.remove("valid");
-                        capital.classList.add("invalid");
-                      }
-                    
-                      // Validate numbers
-                      var numbers = /[0-9]/g;
-                      if(myInput.value.match(numbers)) { 
-                        number.classList.remove("invalid");
-                        number.classList.add("valid");
-                      } else {
-                        number.classList.remove("valid");
-                        number.classList.add("invalid");
-                      }
-                    
+                  
+                    Password.onkeyup = function()
+                    {   
                       // Validate length
-                      if(myInput.value.length >= 8) {
+                      if(Password.value.length >= 6) {
+                        length.classList.remove("invalid");
+                        length.classList.add("valid");
+                      } else {
+                        length.classList.remove("valid");
+                        length.classList.add("invalid");
+                      }
+                    }  
+                      PasswordValidation.onkeyup = function() {   
+                      // Validate length
+                      if(Password.value.length >= 6) {
                         length.classList.remove("invalid");
                         length.classList.add("valid");
                       } else {
@@ -257,9 +269,11 @@
                         length.classList.add("invalid");
                       }
                     }
+                    
+                    var p1=document.getElementById().value;
+                    var p2=document.getElementById().value;
+            
             </script> -->
-
-
         </div>
     </main>
     <footer>

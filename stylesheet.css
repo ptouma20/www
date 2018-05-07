@@ -14,6 +14,20 @@ main
 {
     background-color: white;
 }
+.Programming:after
+{
+    content:"";
+    display:table;
+    clear:both; 
+}
+
+.PLcol
+{
+    float:left;
+    width:30%;
+    font-size: 12px;
+    
+}
 .mainRow:after
 {
     content:"";
@@ -60,7 +74,7 @@ main
 fieldset
 {
    
-    width:50%;
+    width:60%;
     position:relative;
     margin:auto; 
     border:0.5px solid; 
@@ -74,40 +88,78 @@ fieldset
 
 }
 
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: auto;;
+    content:  "✖";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left:auto;
+    content: "✔";
+}
+
 .Message p
 {
     font-size: 14px;
 }
-.button1
+
+.saveButton
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 4px 2px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:190px;
+    width:300px;
+    margin-left:21%;
 }
-.button2
+.AddButton
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 8px 8px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin: 4px 4px;
     transition-duration: 0.4s;
-    width:289px;
-    margin-left:22.5%;
+    width:120px;
+    margin-left:10%;
 }
-.button3
+.ResetButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 8px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 4px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+.ChangePassword
 {
     background-color:black; 
     border:none;
@@ -121,46 +173,50 @@ fieldset
     transition-duration: 0.4s;
     width:120px;
 }
-.button3:hover
+.DeleteProfile
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 15px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+.DeleteProfile:hover
+{
+    background-color:red;
+    color:white;   
+}
+.AddButton:hover
 {
     background-color:red;
     color:white;
 
 }
-.button2:hover
+.ResetButton:hover
 {
     background-color:red;
     color:white;
 
 }
-.button1:hover
+.saveButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
+.ChangePassword:hover
 {
     background-color:red;
     color:white;
 
 }
 
-/* Add a green text color and a checkmark when the requirements are right
-.valid {
-    color: green;
-}
-
-.valid:before {
-    position: relative;
-    left: -35px;
-    content: "&#10004;";
-}
-
-/* Add a red text color and an "x" icon when the requirements are wrong */
-/*.invalid {
-    color: red;
-}
-
-.invalid:before {
-    position: relative;
-    left: -35px;
-    content: "&#10006;";
-} */
 footer{
     background-color:grey;
     color:white;
