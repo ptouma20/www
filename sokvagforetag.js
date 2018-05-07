@@ -1,4 +1,4 @@
-function sok(string) {
+function sokforetag(string) {
    //var jsVar = require('xjobblista.php')
    var options = {
      shouldSort: true,
