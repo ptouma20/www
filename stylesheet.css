@@ -35,14 +35,27 @@ main
     margin: 5px;
     padding: 10px;
 }
-/*  display:inline-block;
-    text-align:center; */
+
+#StudentFormProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+
+}
 #StudentForm
 {
     border:0.5px solid;
     padding:10px;
     margin:10px;
   
+}
+
+#DeleteStudentProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
 }
 fieldset
 {
@@ -93,6 +106,26 @@ fieldset
     transition-duration: 0.4s;
     width:289px;
     margin-left:22.5%;
+}
+.button3
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 15px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+.button3:hover
+{
+    background-color:red;
+    color:white;
+
 }
 .button2:hover
 {
