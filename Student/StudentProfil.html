@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exjobb Örebro</title>
-    <link rel="stylesheet" href="/stylesheet.css">
-    <link rel="styles" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\stylesheet.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -31,7 +32,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" href="/ICONS/Favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\ICONS\Favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -40,18 +41,18 @@
             <label for="Inlogg">Inloggad...</label>
         </div>
         <div class="Logo">
-            <img src="/www/Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
+            <img src="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Logos\Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
             <map name="ORULOGGA">
-                <area alt="Örebro Universitet Logga" href="/Student/StudentStartsida.html" coords="916,370,1,6" shape="rect">
+                <area alt="Örebro Universitet Logga" href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Student\StudentStartsida.html" coords="916,370,1,6" shape="rect">
             </map>
         </div>
         <div class="navigation">
             <ul class="dropdown">
                 <li>
-                    <a href="/Student/StudentStartsida.html">Startsida</a>
+                    <a href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Student\StudentStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a class="active" href="/Student/StudentProfil.html">Profil</a>
+                    <a class="active" href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Student\StudentProfil.html">Profil</a>
                 </li>
                 <li>
                     <a href="/Student/StudentMeddelande.html">Meddelande</a>
@@ -77,18 +78,18 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        </div>
+        </div>    
     </header>
     <main>
-        <div class="main-row">
-            <div class="main1-col">
+        <div class="mainRow">
+            <div class="mainCol1">
                 <!-- Form Överallt? -->
-                <form id="student-profile-content">
+                <form id="StudentForm">
                     <!-- Image of ORU LOGGA as Profil Pic -->
-                    <img id="profil-pic" href="#">
-                    
-                    <br>
+
+                    <!-- <img id="profil-pic" href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Logos\ORUL.png"> -->
+    
+                   
                     <fieldset id="For-name" form="student-profile-content">
                         <legend>Namn</legend>
                         <label for="FirstName-Student">Förnamn </label>
@@ -98,9 +99,7 @@
                         <label for="SecondName-Student">Efternamn </label>
                         <br>
                         <input type="text" name="SecondName-Student" id="SecondName-Student">
-
                     </fieldset>
-
                     <fieldset id="For-education" form="student-profile-content">
                         <legend>Utbildning</legend>
                         <label for="Education-Student">Program</label>
@@ -117,14 +116,15 @@
                         <legend>Erfarenhet</legend>
                         Hur ska vi göra här...
                     </fieldset>
-
-                    <!-- Buttons -->
+                    <br>
+                    <button type="button" class="button2" name="saveButton" >Spara</button> 
+                   
                 </form>
             </div>
 
-            <div class="main2-col">
-                <form id="student-user-content">
-                    <br>
+            <div class="mainCol2">
+                <form id="StudentFormUser">
+    
                     <fieldset id="For-userlogin" form="student-user-content">
                         <legend>Inloggningsuppgifter</legend>
                        
@@ -141,16 +141,19 @@
                             <br>
                             <label for="password-Student">Password</label>
                             <br>
-                            <input type="password" name="password-Student" id="password-Student" pattern="^.*(?=.{6,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" >
+                            <input type="password" name="password-Student" id="password-Student" pattern="^.*(?=.{6,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" required >
                             
                             <br>
                             <label for="password-Student-Valid">Password</label>
                             <br>
-                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" >
-                        
+                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" required>
+                            <br>
+                            <br>
+                            <input type="button" class="button1" name="ChangePassword"value="Ändra">
                         </div>
                         <div class="Message">
-                            <h4>Lösenord måste innehålla</h4>
+                            
+                            <h4>Lösenordet måste innehålla</h4>
                             <p id="letter" class="invalid">Minst en <b>versal</b> av A till Z</p>
                             <p id="capital" class="invalid">Minst en <b>gemen</b> av a till z</p>
                             <p id="symbols" class="invalid">Minst en <b>symbol</b> av (!@#$%¨*-_+=) /p>
@@ -160,6 +163,73 @@
                     </fieldset>
                 </form>
             </div>
+            <!-- <script>
+                    var Password = document.getElementById("password-Student");
+                    var PasswordValidation= document.getElementById("password-Student-Valid");
+                    var letter = document.getElementById("letter");
+                    var capital = document.getElementById("capital");
+                    var symbols= document.getElementById("symbols");
+                    var number = document.getElementById("number");
+                    var length = document.getElementById("length");
+                    
+                    // When the user clicks on the password field, show the message box
+                    Password.onfocus = function() {
+                      document.getElementById("Message").style.display = "block";
+                    }
+                    PasswordValidation.onfocus = function() {
+                      document.getElementById("Message").style.display = "block";
+                    }
+
+                    
+                    // When the user clicks outside of the password field, hide the message box
+                    Password.onblur = function() {
+                      document.getElementById("Message").style.display = "none";
+                    }
+                    PasswordValidation.onblur = function() {
+                      document.getElementById("Message").style.display = "none";
+                    }
+                    // When the user starts to type something inside the password field
+                    myInput.onkeyup = function() {
+                      // Validate lowercase letters
+                      var lowerCaseLetters = /[a-z]/g;
+                      if(myInput.value.match(lowerCaseLetters)) { 
+                        letter.classList.remove("invalid");
+                        letter.classList.add("valid");
+                      } else {
+                        letter.classList.remove("valid");
+                        letter.classList.add("invalid");
+                    }
+                    
+                      // Validate capital letters
+                      var upperCaseLetters = /[A-Z]/g;
+                      if(myInput.value.match(upperCaseLetters)) { 
+                        capital.classList.remove("invalid");
+                        capital.classList.add("valid");
+                      } else {
+                        capital.classList.remove("valid");
+                        capital.classList.add("invalid");
+                      }
+                    
+                      // Validate numbers
+                      var numbers = /[0-9]/g;
+                      if(myInput.value.match(numbers)) { 
+                        number.classList.remove("invalid");
+                        number.classList.add("valid");
+                      } else {
+                        number.classList.remove("valid");
+                        number.classList.add("invalid");
+                      }
+                    
+                      // Validate length
+                      if(myInput.value.length >= 8) {
+                        length.classList.remove("invalid");
+                        length.classList.add("valid");
+                      } else {
+                        length.classList.remove("valid");
+                        length.classList.add("invalid");
+                      }
+                    }
+            </script> -->
 
 
         </div>
@@ -168,7 +238,7 @@
         <div class="row">
             <div class="col">
                 <h4 id="h41">Örebro Universitet</h4>
-                <img id="BB" src="/Logos/Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
+                <img id="BB" src="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Logos\Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
                 <map name="ORU">
                     <area target="_blank" alt="Örebro Universitet" title="www.oru.se" href="https://www.oru.se/?" coords="-1,10,44,65" shape="rect">
                 </map>

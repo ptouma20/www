@@ -1,14 +1,133 @@
-html
+*
 {
-    font-family: "Times New Roman", Times, serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding:auto;
 }
 
 header{
+    padding:auto;
     background-color: white;
-    
    }
 
+
+main
+{
+    background-color: white;
+}
+.mainRow:after
+{
+    content:"";
+    display:table;
+    clear:both;
+}
+.mainCol1
+{
+    float:left;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+    
+}
+.mainCol2
+{
+    float:right;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+}
+/*  display:inline-block;
+    text-align:center; */
+#StudentForm
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+  
+}
+fieldset
+{
+   
+    width:50%;
+    position:relative;
+    margin:auto; 
+    border:0.5px solid; 
+}
+
+#StudentFormUser
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+
+}
+
+.Message p
+{
+    font-size: 14px;
+}
+.button1
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+}
+.button2
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:289px;
+    margin-left:22.5%;
+}
+.button2:hover
+{
+    background-color:red;
+    color:white;
+
+}
+.button1:hover
+{
+    background-color:red;
+    color:white;
+
+}
+
+/* Add a green text color and a checkmark when the requirements are right
+.valid {
+    color: green;
+}
+
+.valid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10004;";
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+/*.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "&#10006;";
+} */
 footer{
     background-color:grey;
     color:white;
@@ -24,6 +143,9 @@ footer{
     clear:both;
     display: table;
 } */
+
+
+
 .col
 {
     float:left;
@@ -40,13 +162,13 @@ footer{
 {
     text-align: center;
 }
-main
+/* main
 {
     
-} 
+}  */
 body
 {
-    background-color:white;
+    background-color: white;
     overflow-x: hidden;
     overflow-y: auto;
     margin:0px;
@@ -190,6 +312,7 @@ footer .nav a{
     color: white;
    
 }
+
 .fa-facebook:hover
 {
     opacity:0.7;
@@ -312,10 +435,10 @@ footer .nav a{
     {
         text-align: center;
     }
-    main
+    /* main
     {
         
-    } 
+    }  */
     body
     {
         background-color:white;
@@ -582,10 +705,10 @@ footer{
 {
     text-align: center;
 }
-main
+/* main
 {
     
-} 
+}  */
 body
 {
     background-color:white;
@@ -854,10 +977,10 @@ footer{
 {
     text-align: center;
 }
-main
+/* main
 {
     
-} 
+}  */
 body
 {
     background-color:white;
@@ -1126,10 +1249,10 @@ footer .nav a{
         {
             text-align: center;
         }
-        main
+        /* main
         {
             
-        } 
+        }  */
         body
         {
             background-color:white;
@@ -1398,10 +1521,10 @@ footer .nav a{
         {
             text-align: center;
         }
-        main
+        /* main
         {
             
-        } 
+        }  */
         body
         {
             background-color:white;
