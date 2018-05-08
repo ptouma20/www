@@ -36,6 +36,51 @@ main
     padding: 10px;
 }
 
+
+
+
+
+.rightBorder
+{
+    float:left;
+    width: 300px;
+    height: 460px;
+    overflow: auto;
+    position: absolute;
+    top:200px;
+    right:100px;
+    border: 1px solid black;
+}
+
+.ändraProfil
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:190px;
+    right:400px;
+}
+
+.readOnlyProfil
+{
+    
+    width: 600px;
+    height: 500px;
+    
+
+}
+#foretagProfilBild{
+width: 170px;
+height: 170px;
+overflow: auto;
+position: absolute;
+top:40px;
+right:20px;
+border: 1px solid black;
+}
+
 #StudentFormProfile
 {
     border:0.5px solid;
@@ -92,6 +137,8 @@ fieldset
     transition-duration: 0.4s;
     width:190px;
 }
+
+
 .button2
 {
     background-color:black; 
@@ -139,6 +186,97 @@ fieldset
     color:white;
 
 }
+
+.buttonÄndra
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+}
+
+.buttonAvbryt
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+}
+
+.buttonSpara
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+}
+.buttonRadera
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 9px 90px;
+    transition-duration: 0.4s;
+    width:115px;
+    height: 115px;
+    border-radius: 100%;
+    
+    
+
+}
+
+.buttonÄndra:hover
+{
+    background-color:red;
+    color:white;
+
+}
+
+.buttonSpara:hover
+{
+    background-color:red;
+    color:white;
+
+}
+.buttonAvbryt:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonRadera:hover
+{
+    background-color:red;
+    color:white;
+
+}
+
 
 /* Add a green text color and a checkmark when the requirements are right
 .valid {
