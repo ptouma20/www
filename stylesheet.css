@@ -112,14 +112,9 @@ border: 1px solid black;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    margin: 9px 90px;
+    margin: 4px 2px;
     transition-duration: 0.4s;
-    width:115px;
-    height: 115px;
-    border-radius: 100%;
-    
-    
-
+    width:190px;
 }
 
 .buttonÄndra:hover
