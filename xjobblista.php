@@ -1,8 +1,8 @@
 <?php
-$servername = "localhost";
+$servername = "10.22.20.165";
 $username = "user";
 $password = "12345";
-$dbname = "Examensprojekt";
+$dbname = "exjobb";
 class MyStruct {
     public $ID;
     public $name;
