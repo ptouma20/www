@@ -14,66 +14,141 @@ main
 {
     background-color: white;
 }
-
-
-.rightBorder
+th
 {
+    border:1px solid black;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    width:15%;
+
+}
+
+.SearchCompaniesForm2
+{
+    /* margin-left:20%; */
     float:left;
-    width: 300px;
-    height: 460px;
-    overflow: auto;
-    position: absolute;
-    top:200px;
-    right:100px;
+    width:40%;
+    height:auto;
+    margin: 1% 1%;
+    padding:1%;
+    border:1px solid black;
+}
+.SearchCompaniesForm3 p
+{
+    margin-left:4%;
+}
+.SearchCompaniesForm3
+{
+    float:right;
+    margin-right:1%;
+    width:40%;
+    border:1px solid black;
+}
+.SearchCompaniesForm1:after
+{
+    content:"";
+    display:table;
+    clear:both;
+}
+.SearchCompaniesForm1
+{
+    border: 1px solid black;
+    padding:2%;
+    margin-left:3%;
+    margin: 3%;
+    width:auto;
+    height:auto;
+    
+} 
+button#submit
+{
+    padding:1%;
+    width: 5%;
+    margin-left:-1%;
+
+}
+input#SearchC
+{
+    padding:1%;
+    margin-bottom: 1%;
+    margin-left:20%;
+    width:50%;
+    height:4%;
+    border:1px solid black;
+    border-radius:25px 0px 0px 25px;
+    font-size: 12px;
+}
+
+input#TableContent
+{
+    width:100%;  
+}
+td
+{
+    border:1px solid black;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+}
+.CompanieTable
+{
+    border-spacing:0;
+    margin-top:2%;
+    font-family: arial,sans-serif;
+    border-collapse: collapse;
+    width:100%;
     border: 1px solid black;
 }
+.Company:after
+{
+    
+    content:"";
+    display:table;
+    clear:both;
 
-.ändraProfil
+}
+.CompanyProfile
 {
     float:left;
-    width: 600px;
-    height: 500px;
-    overflow: auto;
-    position: absolute;
-    top:190px;
-    right:400px;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+  
 }
-
-.readOnlyProfil
+.CompanyLogin
 {
-    
-    width: 600px;
-    height: 500px;
-    
-
+    float:right;
+    width:45%;
+    margin: 5px;
+    padding: 10px;   
 }
-#foretagProfilBild{
-width: 170px;
-height: 170px;
-overflow: auto;
-position: absolute;
-top:40px;
-right:20px;
-border: 1px solid black;
-}
-
-
-.buttonÄndra
+#CompanyProfilReadOnly
 {
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+#CompanyChangeProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
 }
 
-.buttonAvbryt
+#CompanyLoginInformation
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+#DeleteButtonForm
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+.SaveButton
 {
     background-color:black; 
     border:none;
@@ -84,12 +159,13 @@ border: 1px solid black;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+    margin-left: 25%;
     transition-duration: 0.4s;
     width:190px;
 }
-
-.buttonSpara
+.ChangeProfileButton
 {
+    
     background-color:black; 
     border:none;
     color:white;
@@ -99,54 +175,45 @@ border: 1px solid black;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+    margin-left: 25%;
     transition-duration: 0.4s;
     width:190px;
 }
-.buttonRadera
+.DeleteButton
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 9px 90px;
+    font-size: 14px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:115px;
-    height: 115px;
-    border-radius: 100%;
-    
-    
-
+    width:120px;
 }
 
-.buttonÄndra:hover
+.ChangeProfileButton:hover
 {
     background-color:red;
     color:white;
 
 }
 
-.buttonSpara:hover
+.SaveButton:hover
 {
     background-color:red;
     color:white;
 
 }
-.buttonAvbryt:hover
-{
-    background-color:red;
-    color:white;
-}
 
-.buttonRadera:hover
+.DeleteButton:hover
 {
     background-color:red;
     color:white;
 
-}
+} 
 
 /*företag start sidan*/
 .buttonSeAnmälan 
@@ -414,7 +481,7 @@ fieldset
     transition-duration: 0.4s;
     width:300px;
     margin-left:21%;
-}
+} 
 .AddButton
 {
     background-color:black; 
