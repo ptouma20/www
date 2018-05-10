@@ -8,13 +8,34 @@
 
 <body>
         <!-- this UL will be populated with the data from the php array -->
-        <ul></ul>
+        <div id="myList"></div>
 
         <script type="text/javascript">
 
-        var result = sok("mon");
-        console.log(result);
-                
+                var result = sokforetag("mon");
+
+                function arrToUl(result) { // Ett sätt att skriva en lista
+                        var div = document.getElementById('myList');
+                        var ol = document.createElement('ul'); // ul = punktlista, ol = numrerad lista
+
+                        for (var i = 0; i < result.length; i++) {
+                                var li = document.createElement('li');
+                                li.appendChild(document.createTextNode(result[i].title)); // bestämmer vad som ska skrivas ut i listan
+                                console.log(ol.appendChild(li));
+                                div.appendChild(ol);
+                        }
+                }
+
+                arrToUl(result);
+
+                result.forEach(function (foretagsobj) // Funkion för att skriva ut ett attribut från resultatet
+                {
+
+                        console.log(foretagsobj.title);
+                });
+
+                console.log(result);
+
         </script>
         <script></script>
 </body>

@@ -277,6 +277,157 @@ fieldset
 
 }
 
+/*företag start sidan*/
+.buttonSeAnmälan 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonSeAnmälan:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonTaBortExjobb 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonTaBortExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonÄndraExjobb 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonÄndraExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
+
+
+.kontaktStudent 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.kontaktStudent:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonLäggtillExjobb 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonLäggtillExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
+
+
+
+.row1b
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:180px;
+    right:850px;
+}
+
+.row2
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:230px;
+    right:300px;
+    
+}
+
+.row3
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:200px;
+    right:-150px;
+  
+}
+
+
+
 
 /* Add a green text color and a checkmark when the requirements are right
 .valid {
@@ -1919,6 +2070,9 @@ footer .nav a{
         {
             opacity:0.7;
         } 
+
+        
+
     }
 
 
