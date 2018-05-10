@@ -1,13 +1,12 @@
-function sok(string) {
-  // var Fuse = require('fuse.js');
+function sokforetag(string) {
    //var jsVar = require('xjobblista.php')
    var options = {
      shouldSort: true,
-     tokenize: true,
-     matchAllTokens: true,
-     threshold: 0,
+     //tokenize: true,
+     //matchAllTokens: true,
+     threshold: 0.6,
      location: 0,
-     distance: 1000,
+     distance: 100,
      maxPatternLength: 32,
      minMatchCharLength: 2,
      keys: [
@@ -17,7 +16,7 @@ function sok(string) {
  
    var list = [
      {
-       title: "Modiga studenter titta hit! Vi söker en självsäker student med kunskaper inom c++ och objektorienterad programmering i allmänhet. Databaskunskaper är meriterande men inget krav.",
+       title: "Old Man's War",
        author: {
          firstName: "John",
          lastName: "Scalzi",
@@ -25,7 +24,7 @@ function sok(string) {
        }
      },
      {
-       title: "Vi letar efter någon med kunskaper inom python och pascal för utveckling av en websida. Vill du lägga många timmar framför datorn med programmering är du av rätt virke.",
+       title: "The Lock Artist",
        author: {
          firstName: "Steve",
          lastName: "Hamilton",
@@ -33,7 +32,7 @@ function sok(string) {
        }
      },
      {
-       title: "Utveckla våran websida! PHP, javascript och css kommer användas men vi är öppna för andra förslag om du har smarta ideér. ",
+       title: "HTML5",
        author: {
          firstName: "Remy",
          lastName: "Sharp",
@@ -41,7 +40,7 @@ function sok(string) {
        }
      },
      {
-       title: "Programmera C# med oss! det blir kul sa dom",
+       title: "Right Ho Jeeves",
        author: {
          firstName: "P.D",
          lastName: "Woodhouse",
@@ -57,7 +56,7 @@ function sok(string) {
        }
      },
      {
-       title: "Vi söker en student som har erfarenhet inom c++ och objekt-orienterad programmering för webbdesign av en hemsida",
+       title: "Thank You Jeeves",
        author: {
          firstName: "P.D",
          lastName: "Woodhouse",
@@ -65,7 +64,7 @@ function sok(string) {
        }
      },
      {
-       title: "Vi söker javascripts kunniga studenter för utveckling av en mobilapp till våran intustri. Kunskaper inom pappersindustrin är meriterande",
+       title: "The DaVinci Code",
        author: {
          firstName: "Dan",
          lastName: "Brown",
@@ -73,7 +72,7 @@ function sok(string) {
        }
      },
      {
-       title: "Vi söker din mamma för c-programmering för att hon är ful och äcklig, humor är en meriterande egenskap.",
+       title: "Angels & Demons",
        author: {
          firstName: "Dan",
          lastName: "Brown",
@@ -81,7 +80,7 @@ function sok(string) {
        }
      },
      {
-       title: "Vi vill ha en student som kan java",
+       title: "The Silmarillion",
        author: {
          firstName: "J.R.R",
          lastName: "Tolkien",
@@ -201,23 +200,11 @@ function sok(string) {
        }
      }
    ]
- 
-   // var fuse = new Fuse (list, options); // "list" is the item array
- 
-   // var result = fuse.search("dav");
-   // console.log(result);
-   //sok("dav");
- 
-   var langden = String(string);
-   //console.log(langden.length);
-   if(langden.length < 5){
-     options.threshold = 0;
-   }
-   
-   var fuse = new Fuse(list, options); // "list" is the item array
+
+   var fuse = new Fuse(list, options);
  
    var result = fuse.search(string);
-   //console.log(result);
+
    return result;
  }
  

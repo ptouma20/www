@@ -188,10 +188,17 @@ td
     text-align:center;
     text-decoration: none;
     display: inline-block;
+<<<<<<< HEAD
     font-size: 14px;
     margin: 2px 2px;
     transition-duration: 0.4s;
     width:120px;
+=======
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+>>>>>>> 96f91496c797df7573489a40865fab11bc2f0a73
 }
 
 .ChangeProfileButton:hover
