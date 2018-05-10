@@ -4,37 +4,28 @@
         <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
         <script type="text/javascript" src='sokvagforetag.js'></script>
         <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
+
 </head>
 
 <body>
+
         <!-- this UL will be populated with the data from the php array -->
-        <div id="myList"></div>
+        <ul></ul>
 
         <script type="text/javascript">
+                // $(document).ready(function () {
+                //         /* call the php that has the php array which is json_encoded */
+                //         $.getJSON('/xjobblista.php', function (data) {
+                //                 /* data will hold the php array as a javascript object */
+                //                 console.log(data);
+                //                 // $.each(data, function (key, val) {
+                //                 //         $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                //                 // });
+                //         });
 
-                var result = sokforetag("mon");
-
-                function arrToUl(result) { // Ett sätt att skriva en lista
-                        var div = document.getElementById('myList');
-                        var ol = document.createElement('ul'); // ul = punktlista, ol = numrerad lista
-
-                        for (var i = 0; i < result.length; i++) {
-                                var li = document.createElement('li');
-                                li.appendChild(document.createTextNode(result[i].title)); // bestämmer vad som ska skrivas ut i listan
-                                console.log(ol.appendChild(li));
-                                div.appendChild(ol);
-                        }
-                }
-
-                arrToUl(result);
-
-                result.forEach(function (foretagsobj) // Funkion för att skriva ut ett attribut från resultatet
-                {
-
-                        console.log(foretagsobj.title);
-                });
-
-                console.log(result);
+                // });
+                var res = sok("java");
+                console.log(res);
 
         </script>
         <script></script>
