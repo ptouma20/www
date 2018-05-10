@@ -12,6 +12,7 @@
     <!--Bootstrap..-->
 
 
+<<<<<<< HEAD
     <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
@@ -30,6 +31,26 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
+=======
+    <link rel="apple-touch-icon" sizes="57x57" href="/ICONS/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/ICONS/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/ICONS/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/ICONS/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/ICONS/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/ICONS/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/ICONS/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/ICONS/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/ICONS/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/ICONS/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/ICONS/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/ICONS/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/ICONS/favicon-16x16.png">
+    <link rel="manifest" href="/ICONS/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="/ICONS/Favicon.ico" type="image/x-icon">
+>>>>>>> b2043514b6338699c1bbfeaad25b4411a1feb403
 </head>
 
 <body>
@@ -40,12 +61,17 @@
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
             <map name="ORULOGGA">
+<<<<<<< HEAD
                 <area alt="Örebro Universitet Logga" href="../Foretag/ForetagStartsida.html" coords="916,370,1,6" shape="rect">
+=======
+                <area alt="Örebro Universitet Logga" href="../Företag/FöretagStartsida.html" coords="916,370,1,6" shape="rect">
+>>>>>>> b2043514b6338699c1bbfeaad25b4411a1feb403
             </map>
         </div>
         <div class="navigation">
             <ul class="dropdown">
                 <li>
+<<<<<<< HEAD
                     <a class="active" href="ForetagStartsida.html">Startsida</a>
                 </li>
                 <li>
@@ -53,12 +79,26 @@
                 </li>
                 <li>
                     <a href="ForetagMeddelande.html">Meddelande</a>
+=======
+                    <a href="../Företag/FöretagStartsida.html">Startsida</a>
+                </li>
+                <li>
+                    <a class="active" href="../Företag/FöretagProfil.html">Profil</a>
+                </li>
+                <li>
+                    <a href="../Företag/FöretagMeddelande.html">Meddelande</a>
+>>>>>>> b2043514b6338699c1bbfeaad25b4411a1feb403
                 </li>
                 <li class="dropdown-items">
                     <a class="DropLink" >Hjälp</a>
                     <div class="dropdown-content">
+<<<<<<< HEAD
                         <a href="ForetagSupport.html">Support</a>
                         <a href="ForetagSupport.html">Q&amp;A</a>
+=======
+                        <a href="../Företag/FöretagSupport.html">Support</a>
+                        <a href="../Företag/FöretagSupport.html">Q&amp;A</a>
+>>>>>>> b2043514b6338699c1bbfeaad25b4411a1feb403
                     </div>
                 </li>
                 <li>
@@ -71,7 +111,85 @@
     </header>
     <main>
             
+<<<<<<< HEAD
        <h1>Foretag</h1>
+=======
+        <div class="ProfilForetag">
+
+                <div class="readOnlyProfil">
+
+                       
+           
+
+                        <form id="foretagProfilReadOnly">
+                                <fieldset>
+                                        <legend>Profil</legend>
+                                        <p>Namn<br> <input type ="text" id="foretagNamn"  readonly> </p>
+                                        <p>Epost<br> <input type="text" id="foretagEpost"  readonly></p>
+                                        <p>Kontakt person<br> <input type="text" id="KontaktPerson" readonly></p>
+                                        <img id="foretagProfilBild" src="../Företag/foretagProfilBild.png" alt="Profil Bild" >
+
+                                        <p>Information om företag<br><textarea id="Information" cols="60" rows="13" readonly></textarea></p>
+
+                                    </fieldset>
+
+            
+    
+                        </form> 
+
+                     
+                </div>
+                
+                
+                <div class="rightBorder">
+                        <form id="foretagLogIn">
+                                <fieldset>
+                                        <legend>Inloggningsuppgifter</legend>
+                                        <label for="foretagAnvandNamn"></label>
+                                        <p>Användarnamn<br> <input type ="text" id="foretagAnvandNamn"  readonly> </p>
+                                        
+                                        <p>Epost<br> <input type="email" id="foretag-mail" required="required" ></p>
+                                        <p>Lösenord<br> <input type="text" id="foretagLösenord" required="required"></p>
+                                        <p>Lösenord<br> <input type="text" id="foretagLösenordValid" required="required"></p>
+                                        <input type="button" class="buttonÄndra" name="andraProfil"value="Ändra/Spara"> <br>
+
+                                    
+                                    
+                                </fieldset>
+                        </form>
+
+                        <form id="raderaProfil">
+                            
+                            <input type="button" class="buttonRadera" name="raderaProfil" value="Radera Profil">
+
+                        </form>
+
+                </div>
+
+                <div class="bildProfilÄndringar">
+
+                </div>
+
+                <div class=ändraProfil>
+
+                    <form ="foretagÄndraProfil">
+                        <fieldset>
+                            <legend>Profil Ändringar</legend>
+                            <p>Namn<br> <input type ="text" id="foretagNamn" required="required"> </p>
+                            <p>Epost<br> <input type="text" id="foretagEpost" required="required"></p>
+                            <p>Kontakt person<br> <input type="text" id="KontaktPerson" required="required"></p>
+                            <img id="foretagProfilBild" src="../Företag/foretagProfilBild.png" alt="Profil Bild" >
+
+                            <p>Information<br><textarea id="Information" cols="60" rows="10"></textarea></p>
+                            
+                            <button type="button" class=buttonSpara name="saveButton">Spara</button>
+                            <button type="button" class=buttonAvbryt name="avbrytButton">Avbryt</button>
+                        
+                    </fieldset>
+                    </form>
+                </div>
+        </div>
+>>>>>>> b2043514b6338699c1bbfeaad25b4411a1feb403
     </main>
     <footer>
         <div class="row">
