@@ -16,6 +16,7 @@ main
 }
 .mainRow:after
 {
+    height: 400px;
     content:"";
     display:table;
     clear:both;
@@ -35,30 +36,89 @@ main
     margin: 5px;
     padding: 10px;
 }
+.mainCol3
+{
+    
+    float: right;
+    height: 550px;
+    width:45%;
+    margin: 0px;
+    padding: 0px;
+}
+.mainCol4
+{
+    
+    float: left;
+    height: 550px;
+    width:45%;
+    margin: 0px;
+    padding: 0px;
+}
+.mainCol5
+{
+    
+    float: left;
+    height: 550px;
+    width:45%;
+    margin: 0px;
+    padding: 0px;
+}
 /*  display:inline-block;
     text-align:center; */
 #StudentForm
 {
+    height: 90%;
     border:0.5px solid;
     padding:10px;
     margin:10px;
   
 }
+
 fieldset
 {
-   
     width:50%;
     position:relative;
     margin:auto; 
     border:0.5px solid; 
 }
 
-#StudentFormUser
+#For-keywords
 {
+    width:auto;
+    height: 400px;
+    position:relative;
+    margin:auto; 
+    border:0.5px solid; 
+}
+.Startsida
+{
+    height: 80%;
+    width:80%;
+    position:relative;
+    margin:auto; 
+    border:0.5px solid; 
+}
+legend {
+    display: grid;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+#StudentFormUser2
+{
+    overflow-y:  scroll;
+    height: 80%;
     border:0.5px solid;
     padding:10px;
     margin:10px;
-
+}
+#StudentFormUser
+{
+    overflow-y:  scroll;
+    height: 80%;
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
 }
 
 .Message p
