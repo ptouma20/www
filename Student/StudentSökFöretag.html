@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exjobb Örebro</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src='../sokvagforetag.js'></script>
+        <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
+
+
+        <!--Bootstrap..-->
+
+
+        <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../ICONS/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../ICONS/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../ICONS/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../ICONS/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../ICONS/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../ICONS/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../ICONS/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../ICONS/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../ICONS/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../ICONS/favicon-16x16.png">
+        <link rel="manifest" href="../ICONS/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="InloggLabel">
+            <label for="Inlogg">Inloggad...</label>
+        </div>
+        <div class="Logo">
+            <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
+            <map name="ORULOGGA">
+                <area alt="Örebro Universitet Logga" href="StudentStartsida.html" coords="916,370,1,6" shape="rect">
+            </map>
+        </div>
+        <div class="navigation">
+            <ul class="dropdown">
+                <li>
+                    <a href="StudentStartsida.html">Startsida</a>
+                </li>
+                <li>
+                    <a class="active" href="StudentProfil.html">Profil</a>
+                </li>
+                <li>
+                    <a href="StudentMeddelande.html">Meddelande</a>
+                </li>
+                <li class="dropdown-items">
+                    <a class="DropLink">Hjälp</a>
+                    <div class="dropdown-content">
+                        <a href="SupportAndQandA.html">Support</a>
+                        <a href="SupportAndQandA.html">Q&amp;A</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#LoggaUt">Logga ut</a>
+                </li>
+                <li>
+                    <div class="Search">
+                        <form class="SearchBar">
+                            <input type="text" id="sök" placeholder="Sök..." />
+                            <button type="submit">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="SearchCompaniesForm1">
+            <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
+            <button id="submit" type="submit" onclick="Getsok()">
+                <i id="ico" class="fa fa-search"></i>
+            </button>
+            <hr>
+
+            <div class="SearchCompaniesForm2">
+                <fieldset>
+                    <legend align="center" id = "myLeg">Företag</legend>
+                    <input type="button" id="TableContent" value="NULL">
+                    <br>
+                    <input type="button" id="TableContent" value="NULL">
+                    <br>
+                </fieldset>
+
+            </div>
+            <script>
+                var list = [
+                    {
+                        title: "Modiga studenter titta hit! Vi söker en självsäker student med kunskaper inom c++ och objektorienterad programmering i allmänhet. Databaskunskaper är meriterande men inget krav.",
+                        author: {
+                            firstName: "John",
+                            lastName: "Scalzi",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi letar efter någon med kunskaper inom python och pascal för utveckling av en websida. Vill du lägga många timmar framför datorn med programmering är du av rätt virke.",
+                        author: {
+                            firstName: "Steve",
+                            lastName: "Hamilton",
+                            egenskaper: "C++"
+                        }
+                    },
+                    {
+                        title: "Utveckla våran websida! PHP, javascript och css kommer användas men vi är öppna för andra förslag om du har smarta ideér. ",
+                        author: {
+                            firstName: "Remy",
+                            lastName: "Sharp",
+                            egenskaper: "C#"
+                        }
+                    },
+                    {
+                        title: "Programmera C# med oss! det blir kul sa dom",
+                        author: {
+                            firstName: "P.D",
+                            lastName: "Woodhouse",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "The Code of the Wooster",
+                        author: {
+                            firstName: "P.D",
+                            lastName: "Woodhouse",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi söker en student som har erfarenhet inom c++ och objekt-orienterad programmering för webbdesign av en hemsida",
+                        author: {
+                            firstName: "P.D",
+                            lastName: "Woodhouse",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi söker javascripts kunniga studenter för utveckling av en mobilapp till våran intustri. Kunskaper inom pappersindustrin är meriterande",
+                        author: {
+                            firstName: "Dan",
+                            lastName: "Brown",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi söker din mamma för c-programmering för att hon är ful och äcklig, humor är en meriterande egenskap.",
+                        author: {
+                            firstName: "Dan",
+                            lastName: "Brown",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi vill ha en student som kan java",
+                        author: {
+                            firstName: "J.R.R",
+                            lastName: "Tolkien",
+                            egenskaper: "C"
+                        }
+                    }
+                ]
+                function Getsok() {
+                    var x = document.getElementById("SearchC").value;
+                    var y = sok(x, list);
+                    console.log(y);
+                    y.forEach(element => {
+                        var btn = document.createElement("BUTTON");
+                        var t = document.createTextNode("Click me");
+                        btn.appendChild(t);
+                        document.getElementById("myLeg").appendChild(btn);
+                    });
+                }
+            </script>
+            <div class="SearchCompaniesForm3">
+                <p>Namn
+                    <br>
+                    <input type="text" id="CompanieName-Readonly" readonly> </p>
+                <p>Mail
+                    <br>
+                    <input type="text" id="CompanieMail-Readonly" readonly>
+                </p>
+                <p>Webbsida
+                    <br>
+                    <input type="text" id="CompanieWebpage-Readonly" readonly>
+                </p>
+                <p>Företagsbeskrivning
+                    <br>
+                    <textarea id="CompanieDescription-Readonly" style="height:200px;width:410px;" readonly></textarea>
+                </p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <h4 id="h41">Örebro Universitet</h4>
+                <img id="BB" src="../Logos/Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
+                <map name="ORU">
+                    <area target="_blank" alt="Örebro Universitet" title="www.oru.se" href="https://www.oru.se/?" coords="-1,10,44,65" shape="rect">
+                </map>
+
+            </div>
+            <div class="col">
+                <h4 id="h42">Följ Örebro Universitet</h4>
+                <a titel="facebook.se/oru" target="_blank" href="https://www.facebook.com/oru.se/" class="fa fa-facebook"></a>
+                <a titel="twitter.com/orebrouni" target="_blank" href="https://twitter.com/orebrouni" class="fa fa-twitter"></a>
+                <a title="linkedin.com/school/orebro-universitet" target="_blank" href="https://www.linkedin.com/school/orebro-university/"
+                    class="fa fa-linkedin"></a>
+                <a title="instagram.com/orebrouni" target="_blank" href="https://www.instagram.com/orebrouni/" class="fa fa-instagram"></a>
+                <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
+                <h4 id="TCM">Om TCM</h4>
+                <section>
+                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                        och Edin Jelecevic.
+                        <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.
+                        <br>
+                    </p>
+                </section>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

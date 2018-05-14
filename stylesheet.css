@@ -14,6 +14,372 @@ main
 {
     background-color: white;
 }
+th
+{
+    border:1px solid black;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    width:15%;
+
+}
+
+.SearchCompaniesForm2
+{
+    /* margin-left:20%; */
+    float:left;
+    width:40%;
+    height:auto;
+    margin: 1% 1%;
+    padding:1%;
+    border:1px solid black;
+}
+.SearchCompaniesForm3 p
+{
+    margin-left:4%;
+}
+.SearchCompaniesForm3
+{
+    float:right;
+    margin-right:1%;
+    width:40%;
+    border:1px solid black;
+}
+.SearchCompaniesForm1:after
+{
+    content:"";
+    display:table;
+    clear:both;
+}
+.SearchCompaniesForm1
+{
+    border: 1px solid black;
+    padding:2%;
+    margin-left:3%;
+    margin: 3%;
+    width:auto;
+    height:auto;
+    
+} 
+button#submit
+{
+    padding:1%;
+    width: 5%;
+    margin-left:-1%;
+
+}
+input#SearchC
+{
+    padding:1%;
+    margin-bottom: 1%;
+    margin-left:20%;
+    width:50%;
+    height:4%;
+    border:1px solid black;
+    border-radius:25px 0px 0px 25px;
+    font-size: 12px;
+}
+
+input#TableContent
+{
+    width:100%;  
+}
+td
+{
+    border:1px solid black;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+}
+.CompanieTable
+{
+    border-spacing:0;
+    margin-top:2%;
+    font-family: arial,sans-serif;
+    border-collapse: collapse;
+    width:100%;
+    border: 1px solid black;
+}
+.Company:after
+{
+    
+    content:"";
+    display:table;
+    clear:both;
+
+}
+.CompanyProfile
+{
+    float:left;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+  
+}
+.CompanyLogin
+{
+    float:right;
+    width:45%;
+    margin: 5px;
+    padding: 10px;   
+}
+#CompanyProfilReadOnly
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+#CompanyChangeProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+
+#CompanyLoginInformation
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+#DeleteButtonForm
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+.SaveButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 25%;
+    transition-duration: 0.4s;
+    width:190px;
+}
+.ChangeProfileButton
+{
+    
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 25%;
+    transition-duration: 0.4s;
+    width:190px;
+}
+.DeleteButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 10px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+
+.ChangeProfileButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
+
+.SaveButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
+
+.DeleteButton:hover
+{
+    background-color:red;
+    color:white;
+
+} 
+
+/*företag start sidan*/
+.buttonSeAnmälan 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonSeAnmälan:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonTaBortExjobb 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonTaBortExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonÄndraExjobb 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonÄndraExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
+
+
+.kontaktStudent 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.kontaktStudent:hover
+{
+    background-color:red;
+    color:white;
+}
+
+.buttonLäggtillExjobb 
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:190px;
+
+}
+
+.buttonLäggtillExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
+
+
+
+.row1b
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:180px;
+    right:850px;
+}
+
+.row2
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:230px;
+    right:300px;
+    
+}
+
+.row3
+{
+    float:left;
+    width: 600px;
+    height: 500px;
+    overflow: auto;
+    position: absolute;
+    top:200px;
+    right:-150px;
+  
+}
+
+
+
+.Programming:after
+{
+    content:"";
+    display:table;
+    clear:both; 
+}
+
+.PLcol
+{
+    float:left;
+    width:50%;
+    font-size: 12px;
+    
+}
 .mainRow:after
 {
     height: 400px;
@@ -36,6 +402,7 @@ main
     margin: 5px;
     padding: 10px;
 }
+<<<<<<< HEAD
 .mainCol3
 {
     
@@ -65,6 +432,16 @@ main
 }
 /*  display:inline-block;
     text-align:center; */
+=======
+
+#StudentFormProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+
+}
+>>>>>>> 1616ba0f8da0b44e9bfcb2dcbe178d330367a052
 #StudentForm
 {
     height: 90%;
@@ -74,9 +451,22 @@ main
   
 }
 
+<<<<<<< HEAD
 fieldset
 {
     width:50%;
+=======
+#DeleteStudentProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+fieldset
+{
+   
+    width:70%;
+>>>>>>> 1616ba0f8da0b44e9bfcb2dcbe178d330367a052
     position:relative;
     margin:auto; 
     border:0.5px solid; 
@@ -121,73 +511,135 @@ legend {
     margin:10px;
 }
 
-.Message p
-{
-    font-size: 14px;
-}
-.button1
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
-}
-.button2
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:289px;
-    margin-left:22.5%;
-}
-.button2:hover
-{
-    background-color:red;
-    color:white;
-
-}
-.button1:hover
-{
-    background-color:red;
-    color:white;
-
-}
-
-/* Add a green text color and a checkmark when the requirements are right
+/* Add a green text color and a checkmark when the requirements are right */
 .valid {
     color: green;
 }
 
 .valid:before {
     position: relative;
-    left: -35px;
-    content: "&#10004;";
+    left: auto;;
+    content:  "✖";
 }
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
-/*.invalid {
+.invalid {
     color: red;
 }
 
 .invalid:before {
     position: relative;
-    left: -35px;
-    content: "&#10006;";
-} */
+    left:auto;
+    content: "✔";
+}
+
+.Message p
+{
+    font-size: 14px;
+}
+
+.saveButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 10px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    width:300px;
+    margin-left:21%;
+} 
+.AddButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 8px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 4px;
+    transition-duration: 0.4s;
+    width:120px;
+    margin-left:10%;
+}
+.ResetButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 8px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 4px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+.ChangePassword
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 15px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+.DeleteProfile
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 8px 15px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    width:120px;
+}
+.DeleteProfile:hover
+{
+    background-color:red;
+    color:white;   
+}
+.AddButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
+.ResetButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
+.saveButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
+.ChangePassword:hover
+{
+    background-color:red;
+    color:white;
+
+}
+
 footer{
     background-color:grey;
     color:white;

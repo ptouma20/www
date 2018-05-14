@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exjobb Örebro</title>
+    <link rel="stylesheet" href="../stylesheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!--Bootstrap..-->
+
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../ICONS/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../ICONS/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../ICONS/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../ICONS/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../ICONS/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../ICONS/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../ICONS/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../ICONS/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../ICONS/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../ICONS/favicon-16x16.png">
+    <link rel="manifest" href="/ICONS/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="/ICONS/Favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div class="InloggLabel">
+            <label for="Inlogg">Inloggad...</label>
+        </div>
+        <div class="Logo">
+            <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
+            <map name="ORULOGGA">
+                <area alt="Örebro Universitet Logga" href="../Foretag/ForetagStartsida.html" coords="916,370,1,6" shape="rect">
+            </map>
+        </div>
+        <div class="navigation">
+            <ul class="dropdown">
+                <li>
+                    <a href="ForetagStartsida.html">Startsida</a>
+                </li>
+                <li>
+                    <a class="active" href="ForetagProfil.html">Profil</a>
+                </li>
+                <li>
+                    <a href="ForetagMeddelande.html">Meddelande</a>
+                </li>
+                <li class="dropdown-items">
+                    <a class="DropLink" >Hjälp</a>
+                    <div class="dropdown-content">
+                        <a href="ForetagSupport.html">Support</a>
+                        <a href="ForetagSupport.html">Q&amp;A</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#LoggaUt">Logga ut</a>
+                </li>
+               
+            </ul>
+        </div>
+        </div>
+    </header>
+    <main>
+        <div class="Company">
+                <div class="CompanyProfile">
+                        <form id="CompanyProfilReadOnly">
+                                <fieldset>
+                                        <legend align="center">Profil</legend>
+                                        <p>Namn<br> <input type ="text" id="CompanieName-Readonly"  readonly> </p>
+                                        <p>Mail<br> <input type="text" id="CompanieMail-Readonly"  readonly></p>
+                                        <p>Webbsida<br> <input type="text" id="CompanieWebpage-Readonly"  readonly></p>
+                                        <p>Företagsbeskrivning<br><textarea id="CompanieDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
+                                </fieldset>    
+                        </form>     
+                         <form id="CompanyChangeProfile">
+                            <fieldset>
+                                <legend align="center">Ändra Profil</legend>
+                                <p>Namn<br> <input type ="text" id="CompanieName" required="required"> </p>
+                                <p>Mail<br> <input type="text" id="CompanieMail" required="required"></p> 
+                                <p>Webbsida<br> <input type="text" id="CompanieWebPage" required="required"></p> 
+                                <p>Företagsbeskrivning<br><textarea id="CompanieDescription" style="height:200px;width:365px;"></textarea></p>   <!--Kanske får implementera cols och rows?-->
+                                <hr>
+                                <button type="button" class="SaveButton" name="SaveButton">Ändra</button>
+                            </fieldset>
+                        </form>
+                </div>
+                
+                
+                <div class="CompanyLogin">
+                        <form id="CompanyLoginInformation">
+                                <fieldset>
+                                        <legend align="center">Inloggningsuppgifter</legend>
+                                        <label for="CompanyUsername"></label>
+                                        <p>Användarnamn<br> <input type ="text" id="CompanyUsername" > </p>
+                                        <p>Lösenord<br> <input type="password" id="CompanyPassword" required="required"></p>
+                                        <p>Lösenord<br> <input type="password" id="CompanyPasswordValid" required="required"></p>
+                                        <hr>
+                                        <input type="button" class="ChangeProfileButton" name="ChangeProfileButton"value="Ändra"> <br>
+                                        <br>
+                                     <div class="Message">
+
+                                        <h4>Lösenordet måste innehålla</h4>
+                                        <p id="length" class="invalid"> Minst
+                                            <b>6 karaktärer</b>
+                                        </p>
+                                    </div>
+                                    </fieldset>
+                        </form>
+                        <br>
+                        <br>
+                        
+                        <form id="DeleteButtonForm">
+                            Vill du ta bort din profil? Tryck här <input type="button" class="DeleteButton" value="Ta bort">
+                        </form>
+
+                    
+                    </div>
+
+               
+
+               
+        </div>
+    </main>
+    <footer>
+        <div class="row">
+            <div class="col">
+                <h4 id="h41">Örebro Universitet</h4>
+                <img id="BB" src="../Logos/Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
+                <map name="ORU">
+                    <area target="_blank" alt="Örebro Universitet" title="www.oru.se" href="https://www.oru.se/?" coords="-1,10,44,65" shape="rect">
+                </map>
+                
+            </div>
+            <div class="col">
+                    <h4 id="h42">Följ Örebro Universitet</h4>
+                    <a titel="facebook.se/oru" target="_blank" href="https://www.facebook.com/oru.se/" class="fa fa-facebook"></a>
+                    <a titel="twitter.com/orebrouni" target="_blank" href="https://twitter.com/orebrouni" class="fa fa-twitter"></a>
+                    <a title="linkedin.com/school/orebro-universitet" target="_blank" href="https://www.linkedin.com/school/orebro-university/" class="fa fa-linkedin"></a>
+                    <a  title ="instagram.com/orebrouni" target="_blank" href="https://www.instagram.com/orebrouni/" class="fa fa-instagram"></a>
+                    <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
+                <h4 id="TCM">Om TCM</h4>
+                <section>
+                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma och Edin Jelecevic.<br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.<br></p>
+                </section>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

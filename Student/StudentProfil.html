@@ -6,34 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exjobb Örebro</title>
-    <link rel="stylesheet" href="../stylesheet.css"> 
+    <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
-    <!--Bootstrap..-->
+        <!--Bootstrap..-->
 
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../ICONS/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../ICONS/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../ICONS/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../ICONS/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../ICONS/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../ICONS/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../ICONS/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../ICONS/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../ICONS/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../ICONS/favicon-16x16.png">
-    <link rel="manifest" href="../ICONS/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../ICONS/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../ICONS/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../ICONS/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../ICONS/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../ICONS/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../ICONS/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../ICONS/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../ICONS/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../ICONS/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../ICONS/favicon-16x16.png">
+        <link rel="manifest" href="../ICONS/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
 </head>
 
 <body>
@@ -79,19 +79,46 @@
                     </div>
                 </li>
             </ul>
-        </div>    
+        </div>
     </header>
     <main>
         <div class="mainRow">
             <div class="mainCol1">
-                <!-- Form Överallt? -->
-                <form id="StudentForm">
-                    <!-- Image of ORU LOGGA as Profil Pic -->
 
-                    <!-- <img id="profil-pic" href="C:\Users\Pette\OneDrive\Dokument\GitHub\www\Logos\ORUL.png"> -->
-    
-                   
-                    <fieldset id="For-name" form="student-profile-content">
+                <form id="StudentFormProfile">
+                    <!-- Bild här? -->
+                    <fieldset id="Name-ReadOnly" form="StudentFormProfile">
+                        <legend>Namn</legend>
+                        <label for="FirstName-Student-Readonly">Förnamn</label>
+                        <br>
+                        <input type="text" name="FirstName-Student-Readonly" id="FirstName-Student-Readonly" readonly>
+                        <br>
+                        <label for="SecondName-Student-Readonly">Efternamn</label>
+                        <br>
+                        <input type="text" name="SecondName-Student-Readonly" id="SecondName-Student-Readonly" readonly>
+                    </fieldset>
+
+                    <fieldset id="Education-ReadOnly" form="StudentFormProfile">
+                        <legend>Utbildning</legend>
+                        <label for="Education-Student">Program</label>
+                        <br>
+                        <input type="text" name="Education-Student" id="Education-Student" readonly>
+                    </fieldset>
+
+                    <fieldset id="Keywords-ReadOnly" form="StudentFormProfile">
+                        <legend>Kunskaper</legend>
+                        <textarea name="Keywords" id="Keywords" style="width:365px;height:100px;" readonly></textarea>
+                    </fieldset>
+
+                    <fieldset id="Experience-ReadOnly" form="StudentFormProfile">
+                        <legend>Erfarenhet</legend>
+                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" readonly></textarea>
+                    </fieldset>
+                    <!-- Javascript som tar info från databasen till inputsen -->
+                </form>
+                <form id="StudentForm">
+
+                    <fieldset id="For-name" form="StudentForm">
                         <legend>Namn</legend>
                         <label for="FirstName-Student">Förnamn </label>
                         <br>
@@ -101,34 +128,63 @@
                         <br>
                         <input type="text" name="SecondName-Student" id="SecondName-Student">
                     </fieldset>
-                    <fieldset id="For-education" form="student-profile-content">
+                    <fieldset id="For-education" form="StudentForm">
                         <legend>Utbildning</legend>
                         <label for="Education-Student">Program</label>
                         <br>
                         <input type="text" name="Education-Student" id="Education-Student">
                     </fieldset>
 
-                    <fieldset id="For-keywords" form="profile-content">
+                    <fieldset id="For-keywords" form="StudentForm">
                         <legend>Kunskaper</legend>
-                        Väntar vi lite med...
+                        <div class="Programming">
+                            <div class="PLcol">
+                                <input type="checkbox" id="Robotik" value="Robotik">Robotik</input>
+                                <br>
+                                <input type="checkbox" id="Artificiell Intelligens" value="Artificiell Intelligens">Artificiell Intelligens</input>
+                                <br>
+                                <input type="checkbox" id="Elektronik" value="Elektronik">Elektronik</input>
+                                <br>
+                                <input type="checkbox" id="Datakommunikation" value="Datakommunikation">Datakommunikation</input>
+                                <br>
+                                <input type="checkbox" id="Hårdvara" value="Hårdvara">Hårdvara</input>
+                            </div>
+                            <div class="PLcol">    
+                                
+                                <input type="checkbox" id="Webbdesign" value="Webbdesign">Webbdesign</input>
+                                <br>
+                                <input type="checkbox" id="Machine Learning" value="Machine Learning">Machine Learning</input>
+                                <br>
+                                <input type="checkbox" id="Bildbehandling" value="Bildbehandling">Bild behandling</input>
+                                <br>
+                                <input type="checkbox" id="Databas" value="Databas">Databaser</input>
+                                <br>
+                                <input type="checkbox" id="Objektorienterad programmering" value="Objekt-orienterad Programmering">Objekt-orienterad prog.</input>
+                                
+                            </div>
+
+                        </div>
+                        <hr>
+                        <button type="button" class="AddButton" name="AddButton">Lägg till</button>
+                        <button type="reset" class="ResetButton" name="ResetButton">Rensa val</button>
                     </fieldset>
 
-                    <fieldset id="For-Experience" form="student-profile-content">
+                    <fieldset id="For-Experience" form="StudentForm">
                         <legend>Erfarenhet</legend>
-                        Hur ska vi göra här...
+                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" placeholder="Skriv din arbetserfarenhet här..."></textarea>
                     </fieldset>
                     <br>
-                    <button type="button" class="button2" name="saveButton" >Spara</button> 
-                   
+                    <button type="button" class="saveButton" name="saveButton">Ändra</button>
+                    <!-- Knappen ska spara informationen från inputs till databasen -->
                 </form>
             </div>
 
             <div class="mainCol2">
                 <form id="StudentFormUser">
-    
-                    <fieldset id="For-userlogin" form="student-user-content">
+
+                    <fieldset id="For-userlogin" form="StudentFormUser">
                         <legend>Inloggningsuppgifter</legend>
-                       
+
                         <div class="Login">
                             <label for="UserName-Student">Användarnamn</label>
                             <br>
@@ -140,89 +196,55 @@
                             <input type="email" name="Mail-Student" id="Mail-Student">
 
                             <br>
-                            <label for="password-Student">Password</label>
+                            <label for="password-Student">Lösenord</label>
                             <br>
-                            <input type="password" name="password-Student" id="password-Student" pattern="^.*(?=.{6,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" required >
-                            
+                            <input type="password" name="password-Student" id="password-Student" pattern=".{6,}" required>
+
                             <br>
-                            <label for="password-Student-Valid">Password</label>
+                            <label for="password-Student-Valid">Lösenord</label>
                             <br>
-                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern="^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).*$" required>
+                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern=".{6,}" required>
                             <br>
                             <br>
-                            <input type="button" class="button1" name="ChangePassword"value="Ändra">
+                            <input type="button" class="ChangePassword" name="ChangePassword" value="Ändra">
+                            <!-- Javascript som matchar lösenorden och minst 6 karaktärer och spara till databas genom knappen -->
                         </div>
                         <div class="Message">
-                            
+
                             <h4>Lösenordet måste innehålla</h4>
-                            <p id="letter" class="invalid">Minst en <b>versal</b> av A till Z</p>
-                            <p id="capital" class="invalid">Minst en <b>gemen</b> av a till z</p>
-                            <p id="symbols" class="invalid">Minst en <b>symbol</b> av (!@#$%¨*-_+=) /p>
-                            <p id="number" class="invalid">En <b>siffra</b> mellan 0 till 9</p>
-                            <p id="length" class="invalid"> Lösenordet måste innehålla minst <b>8 karaktärer</b></p>
+                            <p id="length" class="invalid"> Minst
+                                <b>6 karaktärer</b>
+                            </p>
                         </div>
                     </fieldset>
+                </form>
+                <form id="DeleteStudentProfile">
+                    <!-- script med pop up, javascript  -->
+                    <h5> Vill du ta bort din profil? Tryck på
+                        <input type="button" class="DeleteProfile" name="DeleteProfile"
+                            value="Radera Profil"> </h5>
+
                 </form>
             </div>
             <!-- <script>
                     var Password = document.getElementById("password-Student");
                     var PasswordValidation= document.getElementById("password-Student-Valid");
-                    var letter = document.getElementById("letter");
-                    var capital = document.getElementById("capital");
-                    var symbols= document.getElementById("symbols");
-                    var number = document.getElementById("number");
                     var length = document.getElementById("length");
-                    
-                    // When the user clicks on the password field, show the message box
-                    Password.onfocus = function() {
-                      document.getElementById("Message").style.display = "block";
-                    }
-                    PasswordValidation.onfocus = function() {
-                      document.getElementById("Message").style.display = "block";
-                    }
-
-                    
-                    // When the user clicks outside of the password field, hide the message box
-                    Password.onblur = function() {
-                      document.getElementById("Message").style.display = "none";
-                    }
-                    PasswordValidation.onblur = function() {
-                      document.getElementById("Message").style.display = "none";
-                    }
-                    // When the user starts to type something inside the password field
-                    myInput.onkeyup = function() {
-                      // Validate lowercase letters
-                      var lowerCaseLetters = /[a-z]/g;
-                      if(myInput.value.match(lowerCaseLetters)) { 
-                        letter.classList.remove("invalid");
-                        letter.classList.add("valid");
-                      } else {
-                        letter.classList.remove("valid");
-                        letter.classList.add("invalid");
-                    }
-                    
-                      // Validate capital letters
-                      var upperCaseLetters = /[A-Z]/g;
-                      if(myInput.value.match(upperCaseLetters)) { 
-                        capital.classList.remove("invalid");
-                        capital.classList.add("valid");
-                      } else {
-                        capital.classList.remove("valid");
-                        capital.classList.add("invalid");
-                      }
-                    
-                      // Validate numbers
-                      var numbers = /[0-9]/g;
-                      if(myInput.value.match(numbers)) { 
-                        number.classList.remove("invalid");
-                        number.classList.add("valid");
-                      } else {
-                        number.classList.remove("valid");
-                        number.classList.add("invalid");
-                      }
-                    
+                  
+                    Password.onkeyup = function()
+                    {   
                       // Validate length
-                      if(myInput.value.length >= 8) {
+                      if(Password.value.length >= 6) {
+                        length.classList.remove("invalid");
+                        length.classList.add("valid");
+                      } else {
+                        length.classList.remove("valid");
+                        length.classList.add("invalid");
+                      }
+                    }  
+                      PasswordValidation.onkeyup = function() {   
+                      // Validate length
+                      if(Password.value.length >= 6) {
                         length.classList.remove("invalid");
                         length.classList.add("valid");
                       } else {
@@ -230,9 +252,11 @@
                         length.classList.add("invalid");
                       }
                     }
+                    
+                    var p1=document.getElementById().value;
+                    var p2=document.getElementById().value;
+            
             </script> -->
-
-
         </div>
     </main>
     <footer>

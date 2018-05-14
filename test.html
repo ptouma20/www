@@ -4,17 +4,29 @@
         <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js'></script>
         <script type="text/javascript" src='sokvagforetag.js'></script>
         <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
+
 </head>
 
 <body>
+
         <!-- this UL will be populated with the data from the php array -->
         <ul></ul>
 
         <script type="text/javascript">
+                $(document).ready(function () {
+                        /* call the php that has the php array which is json_encoded */
+                        $.getJSON('/xjobblista.php', function (data) {
+                                /* data will hold the php array as a javascript object */
+                                //console.log(data);
+                                $.each(data, function (key, val) {
+                                        $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                                });
+                        });
 
-        var result = sok("mon");
-        console.log(result);
-                
+                });
+                var res = sok("java");
+                console.log(res);
+
         </script>
         <script></script>
 </body>
