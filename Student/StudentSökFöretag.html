@@ -11,6 +11,8 @@
     <href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src='../sokvagforetag.js'></script>
+        <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
 
 
         <!--Bootstrap..-->
@@ -83,39 +85,126 @@
     </header>
     <main>
         <div class="SearchCompaniesForm1">
-            <input type="search" id="SearchC" placeholder="Företag..." />
-            <button id="submit" type="submit">
+            <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
+            <button id="submit" type="submit" onclick="Getsok()">
                 <i id="ico" class="fa fa-search"></i>
             </button>
             <hr>
-            
+
             <div class="SearchCompaniesForm2">
                 <fieldset>
-                    <legend align="center">Företag</legend>
-                            <input type="button" id="TableContent" value="NULL">
-                            <br>
-                            <input type="button" id="TableContent" value="NULL">
-                            <br>
+                    <legend align="center" id = "myLeg">Företag</legend>
+                    <input type="button" id="TableContent" value="NULL">
+                    <br>
+                    <input type="button" id="TableContent" value="NULL">
+                    <br>
                 </fieldset>
-                  
+
             </div>
+            <script>
+                var list = [
+                    {
+                        title: "Modiga studenter titta hit! Vi söker en självsäker student med kunskaper inom c++ och objektorienterad programmering i allmänhet. Databaskunskaper är meriterande men inget krav.",
+                        author: {
+                            firstName: "John",
+                            lastName: "Scalzi",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi letar efter någon med kunskaper inom python och pascal för utveckling av en websida. Vill du lägga många timmar framför datorn med programmering är du av rätt virke.",
+                        author: {
+                            firstName: "Steve",
+                            lastName: "Hamilton",
+                            egenskaper: "C++"
+                        }
+                    },
+                    {
+                        title: "Utveckla våran websida! PHP, javascript och css kommer användas men vi är öppna för andra förslag om du har smarta ideér. ",
+                        author: {
+                            firstName: "Remy",
+                            lastName: "Sharp",
+                            egenskaper: "C#"
+                        }
+                    },
+                    {
+                        title: "Programmera C# med oss! det blir kul sa dom",
+                        author: {
+                            firstName: "P.D",
+                            lastName: "Woodhouse",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "The Code of the Wooster",
+                        author: {
+                            firstName: "P.D",
+                            lastName: "Woodhouse",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi söker en student som har erfarenhet inom c++ och objekt-orienterad programmering för webbdesign av en hemsida",
+                        author: {
+                            firstName: "P.D",
+                            lastName: "Woodhouse",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi söker javascripts kunniga studenter för utveckling av en mobilapp till våran intustri. Kunskaper inom pappersindustrin är meriterande",
+                        author: {
+                            firstName: "Dan",
+                            lastName: "Brown",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi söker din mamma för c-programmering för att hon är ful och äcklig, humor är en meriterande egenskap.",
+                        author: {
+                            firstName: "Dan",
+                            lastName: "Brown",
+                            egenskaper: "C"
+                        }
+                    },
+                    {
+                        title: "Vi vill ha en student som kan java",
+                        author: {
+                            firstName: "J.R.R",
+                            lastName: "Tolkien",
+                            egenskaper: "C"
+                        }
+                    }
+                ]
+                function Getsok() {
+                    var x = document.getElementById("SearchC").value;
+                    var y = sok(x, list);
+                    console.log(y);
+                    y.forEach(element => {
+                        var btn = document.createElement("BUTTON");
+                        var t = document.createTextNode("Click me");
+                        btn.appendChild(t);
+                        document.getElementById("myLeg").appendChild(btn);
+                    });
+                }
+            </script>
             <div class="SearchCompaniesForm3">
-                    <p>Namn
-                        <br>
-                        <input type="text" id="CompanieName-Readonly" readonly> </p>
-                    <p>Mail
-                        <br>
-                        <input type="text" id="CompanieMail-Readonly" readonly>
-                    </p>
-                    <p>Webbsida
-                        <br>
-                        <input type="text" id="CompanieWebpage-Readonly" readonly>
-                    </p>
-                    <p>Företagsbeskrivning
-                        <br>
-                        <textarea id="CompanieDescription-Readonly" style="height:200px;width:410px;" readonly></textarea>
-                    </p>
-            </div> 
+                <p>Namn
+                    <br>
+                    <input type="text" id="CompanieName-Readonly" readonly> </p>
+                <p>Mail
+                    <br>
+                    <input type="text" id="CompanieMail-Readonly" readonly>
+                </p>
+                <p>Webbsida
+                    <br>
+                    <input type="text" id="CompanieWebpage-Readonly" readonly>
+                </p>
+                <p>Företagsbeskrivning
+                    <br>
+                    <textarea id="CompanieDescription-Readonly" style="height:200px;width:410px;" readonly></textarea>
+                </p>
+            </div>
         </div>
     </main>
     <footer>

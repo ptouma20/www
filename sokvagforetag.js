@@ -1,4 +1,4 @@
-function sok(string) {
+function sok(string, array) {
   // var Fuse = require('fuse.js');
    //var jsVar = require('xjobblista.php')
    var options = {
@@ -214,7 +214,7 @@ function sok(string) {
      options.threshold = 0;
    }
    
-   var fuse = new Fuse(list, options); // "list" is the item array
+   var fuse = new Fuse(array, options); // "list" is the item array
  
    var result = fuse.search(string);
    //console.log(result);
