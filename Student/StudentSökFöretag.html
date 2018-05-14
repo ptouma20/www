@@ -85,21 +85,15 @@
     </header>
     <main>
         <div class="SearchCompaniesForm1">
-            <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
-            <button id="submit" type="submit" onclick="Getsok()">
-                <i id="ico" class="fa fa-search"></i>
-            </button>
-            <hr>
-
             <div class="SearchCompaniesForm2">
-                <fieldset>
-                    <legend align="center" id = "myLeg">Företag</legend>
-                    <input type="button" id="TableContent" value="NULL">
-                    <br>
-                    <input type="button" id="TableContent" value="NULL">
-                    <br>
-                </fieldset>
-
+                <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
+                <button id="submit" type="submit" onclick="Getsok()">
+                    <i id="ico" class="fa fa-search"></i>
+                </button>
+                <hr>
+                <ul id="CompanieList">
+                    <li>Test</li>
+                </ul>
             </div>
             <script>
                 var list = [
