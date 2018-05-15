@@ -91,9 +91,7 @@
                     <i id="ico" class="fa fa-search"></i>
                 </button>
                 <hr>
-                <ul id="CompanieList">
-                    <li>Test</li>
-                </ul>
+                <ul id="CompanieList"></ul>
             </div>
             <script>
                 var list = [
@@ -170,15 +168,39 @@
                         }
                     }
                 ]
+                $(document).ready(function () {
+                    /* call the php that has the php array which is json_encoded */
+                    $.getJSON('../getforetag.php', function (data) {
+                        /* data will hold the php array as a javascript object */
+                        $.each(data, function (key, val) {
+                            $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                        });
+                    });
+
+                });
                 function Getsok() {
                     var x = document.getElementById("SearchC").value;
                     var y = sok(x, list);
+
                     console.log(y);
+                    document.getElementById("CompanieList").innerHTML = "";
                     y.forEach(element => {
-                        var btn = document.createElement("BUTTON");
-                        var t = document.createTextNode("Click me");
-                        btn.appendChild(t);
-                        document.getElementById("myLeg").appendChild(btn);
+                        var li = document.createElement("li");
+                        var t = document.createTextNode(element.author.firstName);
+                        li.appendChild(t);
+
+                        li.addEventListener("click", function (e) {
+                            // e.target is our targetted element.
+                            // try doing console.log(e.target.nodeName), it will result LI
+                            //console.log(e.createTextNode);
+                            if (e.target && e.target.nodeName == "LI") {
+                                console.log(element.author.firstName + " was clicked");
+                                document.getElementById("CompanieName-Readonly").value = element.author.firstName;
+
+                            }
+                        });
+
+                        document.getElementById("CompanieList").appendChild(li);
                     });
                 }
             </script>
