@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exjobb Örebro</title>
-    <link rel="stylesheet" href="/stylesheet.css">
+    <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!--Bootstrap..-->
@@ -38,27 +38,27 @@
             <label for="Inlogg">Inloggad...</label>
         </div>
         <div class="Logo">
-            <img src="/Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
+            <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
             <map name="ORULOGGA">
-                <area alt="Örebro Universitet Logga" href="/Företag/FöretagStartsida.html" coords="916,370,1,6" shape="rect">
+                <area alt="Örebro Universitet Logga" href="/Foretag/ForetagStartsida.html" coords="916,370,1,6" shape="rect">
             </map>
         </div>
         <div class="navigation">
             <ul class="dropdown">
                 <li>
-                    <a href="/Företag/FöretagStartsida.html">Startsida</a>
+                    <a href="ForetagStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a href="/Företag/FöretagProfil.html">Profil</a>
+                    <a href="ForetagProfil.html">Profil</a>
                 </li>
                 <li>
-                    <a href="/Företag/FöretagMeddelande.html">Meddelande</a>
+                    <a href="ForetagMeddelande.html">Meddelande</a>
                 </li>
                 <li class="dropdown-items">
                     <a class="active" class="DropLink">Hjälp</a>
                     <div class="dropdown-content">
-                        <a href="/Företag/FöretagSupport.html">Support</a>
-                        <a href="/Företag/FöretagSupport.html">Q&amp;A</a>
+                        <a href="ForetagSupport.html">Support</a>
+                        <a href="ForetagSupport.html">Q&amp;A</a>
                     </div>
                 </li>
                 <li>
@@ -70,13 +70,28 @@
         </div>
     </header>
     <main>
-            <h1>Företag...</h1>
+            <div id="SupportForm">
+                <div id="supportDiv">
+                        Tja! hur kan vi hjälpa till?
+
+
+                    <form id="supportForm">
+                        <p><input type="text" name="name" id="input-name" placeholder="Namn" required></p>
+                        <p> <input type="email" name="email" id="input-email" placeholder="Din mailadress" required></p>
+                        <p><input type="text" name="subject" id="input-subject" placeholder="Ämne" required></p>
+                        
+                        <textarea name="message" id="input-message" cols="30" rows="8" maxlength="60000" placeholder="Skriv ditt meddelande här..." required></textarea>
+                        <br>
+                        <input type="submit" name="submit" id="input-submit" value="Skicka till support">
+                    </form>
+                </div>
+            </div>
     </main>
     <footer>
         <div class="row">
             <div class="col">
                 <h4 id="h41">Örebro Universitet</h4>
-                <img id="BB" src="/Logos/Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
+                <img id="BB" src="../Logos/Bb_learn_small.png" alt="Örebro Universitet" style="width:65px;height:65px" usemap="ORU">
                 <map name="ORU">
                     <area target="_blank" alt="Örebro Universitet" title="www.oru.se" href="https://www.oru.se/?" coords="-1,10,44,65" shape="rect">
                 </map>
