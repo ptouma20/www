@@ -31,6 +31,70 @@ th
     
 }
 
+
+.MessageForm
+{
+    margin-left:24%;
+}
+.MailDiv
+{
+    border: 0.75px solid black;
+    margin-left:30%;
+    padding:3%;
+    margin:3%;
+    width:55%;
+}
+
+#MailForm
+{
+    border: 0.25px solid black;
+    height:auto;
+    width:auto;
+    padding:1%;
+    margin:1%;
+   
+}
+#MailForm input
+{
+    margin:1%;
+    margin-left:10%;
+    
+    padding:1%;
+}
+
+#MailForm textarea{
+    
+    margin:1%;
+    margin-left:10%;
+    height:70%;
+    width:75%;
+}
+#MailForm #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+/*  background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 25%;
+    transition-duration: 0.4s;
+    width:190px; */
 #CompanieList li
 {
     border: 1px solid #ddd;
