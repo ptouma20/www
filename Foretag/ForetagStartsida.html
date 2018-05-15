@@ -108,9 +108,96 @@
         </div>
     </header>
     <main>
-            
 
-       <h1>Foretag</h1>
+        <div class="foretagStartSidan">
+            <div class="raw1col1">
+                <form id="exjobbLista">
+
+                    <fieldset>
+                        <legend>Listan av Exjobb</legend>
+                    <label class="container">Exjobb1
+                        <input type="radio" checked="checked" name="name" id="ExjobbList">
+                        <span class="checkmark"></span>
+                    </label>
+
+                    <label class="container">Exjobb2
+                            <input type="radio"  name="name" id="ExjobbList">
+                            <span class="checkmark"></span>
+                     </label>
+
+                     <label class="container">Exjobb3
+                            <input type="radio"  name="name" id="ExjobbList">
+                            <span class="checkmark"></span>
+                    </label>
+
+                    </fieldset>
+
+                    <button type="button" class="buttonSeAnmälan" name="seAnmälanButton">Se anmälan</button><br>
+                    <button type="button" class="buttonÄndraExjobb" name="ändraExjobbButton">Ändra</button><br>
+                    <button type="button" class="buttonTaBortExjobb" name="taBortExjobbButton">Ta bort</button><br>
+
+
+                        
+
+                </form>
+
+                <form id="studentLista">
+                        <fieldset>
+                                <legend>Listan av student</legend>
+                            <label class="container">Student1
+                                <input type="radio" checked="checked" name="name" id="studentList">
+                                <span class="checkmark"></span>
+                            </label>
+        
+                            <label class="container">student2
+                                    <input type="radio"  name="name" id="studentList">
+                                    <span class="checkmark"></span>
+                             </label>
+        
+                             <label class="container">student3
+                                    <input type="radio"  name="name" id="studentList">
+                                    <span class="checkmark"></span>
+                            </label>
+        
+                            </fieldset>
+        
+
+                </form>
+
+            </div>
+
+
+            <div class="rawCol2">
+                <form id="addCompany">
+                    <fieldset>
+                        <legend>Ändra/Lägg till exjobb</legend>
+                        Title<br><input type="text" name="title" id="exjobbTitle"><br>
+                        Om exjobb<br><textarea name="DiscriptionExjobb" id="DiscriptionExjobb" style="height:200px;width:320px;" placeholder="Skriv om Exjobb här..."></textarea>
+                        <button type="button" class="AddExjobb" name="AddExjobb">Lägg till</button>
+        
+                    </fieldset>
+                </form>
+
+                <form id="StudentProfileExjobb">
+                    <fieldset>
+                        <legend>Student profil</legend>
+
+                        Användar Namn<br> <input type="text" name="username" id="userName" readonly><br>
+                        Kunskap<br><input type="text" name="kunskap" id="kunskap" readonly><br>
+                        Utbildning<br><input type="text" name="utbildning" id="utbildning" readonly>
+                   
+                    </fieldset>
+                </form>
+
+
+            </div>
+
+
+        
+
+
+        </div>
+
 
         
 
