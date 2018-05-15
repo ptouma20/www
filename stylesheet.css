@@ -14,52 +14,247 @@ main
 {
     background-color: white;
 }
-
-
-.rightBorder
+th
 {
+    border:1px solid black;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    width:15%;
+
+}
+#CompanieList
+{
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;
+    
+}
+
+
+.MessageForm
+{
+    margin-left:24%;
+}
+.MailDiv
+{
+    border: 0.75px solid black;
+    margin-left:30%;
+    padding:3%;
+    margin:3%;
+    width:55%;
+}
+
+#MailForm
+{
+    border: 0.25px solid black;
+    height:auto;
+    width:auto;
+    padding:1%;
+    margin:1%;
+   
+}
+#MailForm input
+{
+    margin:1%;
+    margin-left:10%;
+    
+    padding:1%;
+}
+
+#MailForm textarea{
+    
+    margin:1%;
+    margin-left:10%;
+    height:70%;
+    width:75%;
+}
+#MailForm #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+/*  background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 25%;
+    transition-duration: 0.4s;
+    width:190px; */
+#CompanieList li
+{
+    border: 1px solid #ddd;
+    margin-top:-1px;
+    padding:12px;
+    text-decoration:none;
+    font-size:16px;
+    color:black;
+    display: block;
+    width:75%;
+
+}
+#CompanieList li:hover:not(.header)
+{
+    background-color:#eee;
+}
+.SearchCompaniesForm2
+{
+    /* margin-left:20%; */
     float:left;
-    width: 300px;
-    height: 460px;
-    overflow: auto;
-    position: absolute;
-    top:200px;
-    right:100px;
+    width:40%;
+    height:auto;
+    margin: 1% 1%;
+    padding:1%;
+    border:1px solid black;
+}
+.SearchCompaniesForm3 p
+{
+    margin-left:4%;
+}
+.SearchCompaniesForm3
+{
+    float:right;
+    margin-right:1%;
+    width:40%;
+    border:1px solid black;
+}
+.SearchCompaniesForm1:after
+{
+    content:"";
+    display:table;
+    clear:both;
+}
+.SearchCompaniesForm1
+{
+    border: 1px solid black;
+    padding:2%;
+    margin-left:3%;
+    margin: 3%;
+    width:auto;
+    height:auto;
+    
+} 
+button#submit
+{
+    padding:0.75%; 
+    width: 7%;
+    margin-top:1%;
+    /* margin-right:-2%; */
+    border-radius: 2% 1% 1% 2%;
+
+}
+input#SearchC
+{
+    padding:1%;
+    margin-bottom: 1%;
+    margin-left:20%;
+    width:50%;
+    height:4%;
+    border:1px solid black;
+    border-radius:25px 25px 25px 25px;
+    font-size: 12px;
+}
+
+input#TableContent
+{
+    width:100%;  
+}
+td
+{
+    border:1px solid black;
+    text-align: left;
+    padding: 8px;
+    font-size: 12px;
+}
+.CompanieTable
+{
+    border-spacing:0;
+    margin-top:2%;
+    font-family: arial,sans-serif;
+    border-collapse: collapse;
+    width:100%;
     border: 1px solid black;
 }
+.Company:after
+{
+    
+    content:"";
+    display:table;
+    clear:both;
 
-.ändraProfil
+}
+.CompanyProfile
 {
     float:left;
-    width: 600px;
-    height: 500px;
-    overflow: auto;
-    position: absolute;
-    top:190px;
-    right:400px;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+  
+}
+.CompanyLogin
+{
+    float:right;
+    width:45%;
+    margin: 5px;
+    padding: 10px;   
+}
+#CompanyProfilReadOnly
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+#CompanyChangeProfile
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
 }
 
-.readOnlyProfil
+#CompanyLoginInformation
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+#DeleteButtonForm
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+.SaveButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 20px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    margin-left: 25%;
+    transition-duration: 0.4s;
+    width:190px;
+}
+.ChangeProfileButton
 {
     
-    width: 600px;
-    height: 500px;
-    
-
-}
-#foretagProfilBild{
-width: 170px;
-height: 170px;
-overflow: auto;
-position: absolute;
-top:40px;
-right:20px;
-border: 1px solid black;
-}
-
-
-.buttonÄndra
-{
     background-color:black; 
     border:none;
     color:white;
@@ -69,79 +264,45 @@ border: 1px solid black;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
+    margin-left: 25%;
     transition-duration: 0.4s;
     width:190px;
 }
-
-.buttonAvbryt
+.DeleteButton
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:190px;
+    width:120px;
 }
 
-.buttonSpara
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
-}
-.buttonRadera
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
-}
-
-.buttonÄndra:hover
+.ChangeProfileButton:hover
 {
     background-color:red;
     color:white;
 
 }
 
-.buttonSpara:hover
+.SaveButton:hover
 {
     background-color:red;
     color:white;
 
 }
-.buttonAvbryt:hover
-{
-    background-color:red;
-    color:white;
-}
 
-.buttonRadera:hover
+.DeleteButton:hover
 {
     background-color:red;
     color:white;
 
-}
+} 
 
 
 
@@ -430,6 +591,7 @@ border: 1px solid black;
 }
 .mainRow:after
 {
+    height: 400px;
     content:"";
     display:table;
     clear:both;
@@ -449,6 +611,36 @@ border: 1px solid black;
     margin: 5px;
     padding: 10px;
 }
+.mainCol3
+{
+    
+    float: right;
+    height: 550px;
+    width:45%;
+    margin: 0px;
+    padding: 0px;
+}
+.mainCol4
+{
+    
+    float: left;
+    height: 550px;
+    width:45%;
+    margin: 0px;
+    padding: 0px;
+}
+.mainCol5
+{
+    
+    float: left;
+    height: 550px;
+    width:45%;
+    margin: 0px;
+    padding: 0px;
+}
+/*  display:inline-block;
+    text-align:center; */
+
 
 #StudentFormProfile
 {
@@ -460,12 +652,18 @@ border: 1px solid black;
 
 #StudentForm
 {
+    height: 90%;
     border:0.5px solid;
     padding:10px;
     margin:10px;
   
 }
 
+
+fieldset
+{
+    width:50%;
+}
 #DeleteStudentProfile
 {
     border:0.5px solid;
@@ -481,12 +679,43 @@ fieldset
     border:0.5px solid; 
 }
 
-#StudentFormUser
+#For-keywords
 {
+    width:auto;
+    height: 400px;
+    position:relative;
+    margin:auto; 
+    border:0.5px solid; 
+}
+.Startsida
+{
+    height: 80%;
+    width:80%;
+    position:relative;
+    margin:auto; 
+    border:0.5px solid; 
+}
+legend {
+    display: grid;
+    padding-left: 2px;
+    padding-right: 2px;
+    border: none;
+}
+#StudentFormUser2
+{
+    overflow-y:  scroll;
+    height: 80%;
     border:0.5px solid;
     padding:10px;
     margin:10px;
-
+}
+#StudentFormUser
+{
+    overflow-y:  scroll;
+    height: 80%;
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
 }
 
 /* Add a green text color and a checkmark when the requirements are right */
@@ -530,7 +759,7 @@ fieldset
     transition-duration: 0.4s;
     width:300px;
     margin-left:21%;
-}
+} 
 .AddButton
 {
     background-color:black; 
