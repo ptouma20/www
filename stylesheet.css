@@ -396,6 +396,61 @@ td
 }
 
 
+#SupportForm
+{
+    margin-left:24%;
+}
+
+#supportDiv
+{
+    border: 0.75px solid black;
+    margin-left:30%;
+    padding:3%;
+    margin:3%;
+    width:55%;
+}
+
+#supportForm
+{
+    border: 0.25px solid black;
+    height:auto;
+    width:auto;
+    padding:1%;
+    margin:1%;
+   
+}
+
+#supportForm input
+{
+    margin:1%;
+    margin-left:10%;
+    
+    padding:1%;
+}
+
+#supportForm textarea{
+    
+    margin:1%;
+    margin-left:10%;
+    height:70%;
+    width:75%;
+}
+#supportForm #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+
+
 
 #addCompany
 {
@@ -1111,7 +1166,7 @@ footer .nav a{
 {
     opacity:0.7;
 }
-
+/*
 @media only screen and (max-width:600px)
 
 {html
@@ -1128,7 +1183,7 @@ footer .nav a{
         background-color:grey;
         color:white;
         /* width: auto;
-        height:auto; */
+        height:auto; 
         box-sizing: border-box;  
         position: relative;
         height:400px;
@@ -1138,11 +1193,11 @@ footer .nav a{
         content: "";
         clear:both;
         display: table;
-    } */
+    } 
     .col
     {
         float:left;
-        /* width:25%; */
+        /* width:25%; 
         margin: 10px 50px;
     }
     .col a
@@ -1158,7 +1213,7 @@ footer .nav a{
     /* main
     {
         
-    }  */
+    }  
     body
     {
         background-color:white;
@@ -1398,7 +1453,7 @@ footer{
     background-color:grey;
     color:white;
     /* width: auto;
-    height:auto; */
+    height:auto; 
     box-sizing: border-box;  
     position: relative;
     height:400px;
@@ -1408,11 +1463,11 @@ footer{
     content: "";
     clear:both;
     display: table;
-} */
+} 
 .col
 {
     float:left;
-    /* width:25%; */
+    /* width:25%; 
     margin: 10px 50px;
 }
 .col a
@@ -1428,7 +1483,7 @@ footer{
 /* main
 {
     
-}  */
+}  
 body
 {
     background-color:white;
@@ -1654,7 +1709,7 @@ footer .nav a{
 }
     }
     
-    /* Medium devices (landscape tablets, 768px and up) */
+    /* Medium devices (landscape tablets, 768px and up) 
     @media only screen and (min-width: 768px) {
         html
 {
@@ -1670,7 +1725,7 @@ footer{
     background-color:grey;
     color:white;
     /* width: auto;
-    height:auto; */
+    height:auto; 
     box-sizing: border-box;  
     position: relative;
     height:400px;
@@ -1680,11 +1735,11 @@ footer{
     content: "";
     clear:both;
     display: table;
-} */
+} 
 .col
 {
     float:left;
-    /* width:25%; */
+    /* width:25%; 
     margin: 10px 50px;
 }
 .col a
@@ -1700,7 +1755,7 @@ footer{
 /* main
 {
     
-}  */
+}  
 body
 {
     background-color:white;
@@ -1926,7 +1981,7 @@ footer .nav a{
 }
     } 
     
-    /* Large devices (laptops/desktops, 992px and up) */
+    /* Large devices (laptops/desktops, 992px and up) 
     @media only screen and (min-width: 992px) {
         html
         {
@@ -1942,7 +1997,7 @@ footer .nav a{
             background-color:grey;
             color:white;
             /* width: auto;
-            height:auto; */
+            height:auto; 
             box-sizing: border-box;  
             position: relative;
             height:400px;
@@ -1952,11 +2007,11 @@ footer .nav a{
             content: "";
             clear:both;
             display: table;
-        } */
+        } 
         .col
         {
             float:left;
-            /* width:25%; */
+            /* width:25%; 
             margin: 10px 50px;
         }
         .col a
@@ -1972,7 +2027,7 @@ footer .nav a{
         /* main
         {
             
-        }  */
+        }  
         body
         {
             background-color:white;
@@ -2198,7 +2253,7 @@ footer .nav a{
         } 
     } 
     
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    /* Extra large devices (large laptops and desktops, 1200px and up) 
     @media only screen and (min-width: 1200px) {
         html
         {
@@ -2214,7 +2269,7 @@ footer .nav a{
             background-color:grey;
             color:white;
             /* width: auto;
-            height:auto; */
+            height:auto; 
             box-sizing: border-box;  
             position: relative;
             height:400px;
@@ -2224,11 +2279,11 @@ footer .nav a{
             content: "";
             clear:both;
             display: table;
-        } */
+        } 
         .col
         {
             float:left;
-            /* width:25%; */
+            /* width:25%; 
             margin: 10px 50px;
         }
         .col a
@@ -2244,7 +2299,7 @@ footer .nav a{
         /* main
         {
             
-        }  */
+        }  
         body
         {
             background-color:white;
@@ -2469,7 +2524,7 @@ footer .nav a{
             opacity:0.7;
         } 
     }
-
+*/
 
 
 
