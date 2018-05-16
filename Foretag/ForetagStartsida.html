@@ -49,7 +49,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" href="/ICONS/Favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -64,142 +64,97 @@
 
                 <area alt="Örebro Universitet Logga" href="../Foretag/ForetagStartsida.html" coords="916,370,1,6" shape="rect">
 
-                <area alt="Örebro Universitet Logga" href="../Foretag/ForetagStartsida.html" coords="916,370,1,6" shape="rect">
 
             </map>
         </div>
         <div class="navigation">
             <ul class="dropdown">
                 <li>
+                    <a class="active" href="../Foretag/ForetagStartsida.html">Startsida</a>
+                </li>
+                <li>
+                    <a href="../Foretag/ForetagProfil.html">Profil</a>
+                </li>
 
-                    <a class="active" href="ForetagStartsida.html">Startsida</a>
-                </li>
                 <li>
-                    <a  href="ForetagProfil.html">Profil</a>
-                </li>
-                <li>
-
-                    <a href= class="active" "ForetagStartsida.html">Startsida</a>
-                </li>
-                <li>
-                    <a href="ForetagProfil.html">Profil</a>
-                </li>
-                <li>
-                    <a href="ForetagMeddelande.html">Meddelande</a>
+                    <a href="../Foretag/ForetagMeddelande.html">Meddelande</a>
 
                 </li>
                 <li class="dropdown-items">
-                    <a class="DropLink" >Hjälp</a>
+                    <a class="DropLink">Hjälp</a>
                     <div class="dropdown-content">
-                        <a href="ForetagSupport.html">Support</a>
-                        <a href="ForetagSupport.html">Q&amp;A</a>
+                        <a href="../Foretag/ForetagSupport.html">Support</a>
+                        <a href="../Foretag/ForetagSupport.html">Q&amp;A</a>
 
-                        <a href="ForetagSupport.html">Support</a>
-                        <a href="ForetagSupport.html">Q&amp;A</a>
+
 
                     </div>
                 </li>
                 <li>
                     <a href="#LoggaUt">Logga ut</a>
                 </li>
-               
+
             </ul>
         </div>
         </div>
     </header>
     <main>
+        <div class="CompanyStartPage">
+            <div class="Nav-with-exjobb">
+                <!-- Se studenter ska vara automatiskt visas när man trycker på ett exjobb 
+                    och info ska också komma upp om exjobbet om man vill ändra det 
+                    och ska också existera en knapp där man kan ta bort exjobb -->
 
-        <div class="foretagStartSidan">
-            <div class="raw1col1">
-                <form id="exjobbLista">
+                <!-- Form med exjobb ska vara en ul med hover och radiobutton likt med ett eventlistener istället -->
+                <!-- Form man ska kunna se studenter efter att man har tryckt på ett exjobb och -->
 
-                    <fieldset>
-                        <legend>Listan av Exjobb</legend>
-                    <label class="container">Exjobb1
-                        <input type="radio" checked="checked" name="name" id="ExjobbList">
-                        <span class="checkmark"></span>
-                    </label>
-
-                    <label class="container">Exjobb2
-                            <input type="radio"  name="name" id="ExjobbList">
-                            <span class="checkmark"></span>
-                     </label>
-
-                     <label class="container">Exjobb3
-                            <input type="radio"  name="name" id="ExjobbList">
-                            <span class="checkmark"></span>
-                    </label>
-
+                <form id="ExjobbForm">
+                    <fieldset id="Fieldset-ExJForm">
+                        <legend align="center">Lista av Exjobb</legend>
+                        <ul class="UL-Exjobb">
+                            <li>ExjobbTest</li>
+                        </ul>
+                        <input type="button" name="DeleteExjobb" id="DeleteExjobb" value="Ta bort">
                     </fieldset>
 
-                    <button type="button" class="buttonSeAnmälan" name="seAnmälanButton">Se anmälan</button><br>
-                    <button type="button" class="buttonÄndraExjobb" name="ändraExjobbButton">Ändra</button><br>
-                    <button type="button" class="buttonTaBortExjobb" name="taBortExjobbButton">Ta bort</button><br>
-
-
-                        
-
+                    <fieldset id="Fieldset-SF-Exjobb">
+                        <legend align="center">Intresseanmälan</legend>
+                        <ul class="UL-Exjobb">
+                            <li>StudentProfilTest</li>
+                        </ul>
+                    </fieldset>
+                    <fieldset id="SPanelPinfo">
+                            <legend align="center">Student</legend>
+                            <p>
+                                <input redonly type="text" style="padding: 1%;"name="ShowStudent" id="ShowStudent" placeholder="Student" >
+                            </p>
+                            <p>
+                                <textarea readonly name="StudentSkills" style="height:100%;width:99%;" id="StudentSkills" maxlength="60000" rows="12" placeholder="Studentens kunskaper.." ></textarea>
+                            </p>
+                            <p>
+                                <textarea readonly name="StudentExperience" id="StudentExperience" style="height:100%;width:99%;" placeholder="Studentens erfarenhet.."maxlength="60000" rows="12"></textarea>
+                            </p>
+                        </fieldset>
                 </form>
-
-                <form id="studentLista">
-                        <fieldset>
-                                <legend>Listan av student</legend>
-                            <label class="container">Student1
-                                <input type="radio" checked="checked" name="name" id="studentList">
-                                <span class="checkmark"></span>
-                            </label>
-        
-                            <label class="container">student2
-                                    <input type="radio"  name="name" id="studentList">
-                                    <span class="checkmark"></span>
-                             </label>
-        
-                             <label class="container">student3
-                                    <input type="radio"  name="name" id="studentList">
-                                    <span class="checkmark"></span>
-                            </label>
-        
-                            </fieldset>
-        
-
-                </form>
-
             </div>
 
-
-            <div class="rawCol2">
-                <form id="addCompany">
-                    <fieldset>
-                        <legend>Ändra/Lägg till exjobb</legend>
-                        Title<br><input type="text" name="title" id="exjobbTitle"><br>
-                        Om exjobb<br><textarea name="DiscriptionExjobb" id="DiscriptionExjobb" style="height:200px;width:320px;" placeholder="Skriv om Exjobb här..."></textarea>
-                        <button type="button" class="AddExjobb" name="AddExjobb">Lägg till</button>
-        
+            
+            <div class="Panel-Add-Exjobb">
+                <form id="Add-Exjobb">
+                    <fieldset id="A-Exjobb">
+                        <legend align="center">Lägg till Exjobb</legend>
+                        <p><input type="text" style="width:50%;height:25%;"placeholder="Exjobb Title"></p>
+                        <p>
+                            <textarea name="Exjobb-Bio" id="Exjobb-Bio" style="width:99%;height:100%;"maxlength="60000" rows="20" placeholder="Om Exjobb..."></textarea>
+                        </p>
+                        <input type="button" name="AddExjobb" id="AddExjobb" value="Spara">
                     </fieldset>
                 </form>
-
-                <form id="StudentProfileExjobb">
-                    <fieldset>
-                        <legend>Student profil</legend>
-
-                        Användar Namn<br> <input type="text" name="username" id="userName" readonly><br>
-                        Kunskap<br><input type="text" name="kunskap" id="kunskap" readonly><br>
-                        Utbildning<br><input type="text" name="utbildning" id="utbildning" readonly>
-                   
-                    </fieldset>
-                </form>
-
-
-            </div>
-
-
-        
-
-
+            </div>            
         </div>
 
 
-        
+
 
     </main>
     <footer>
@@ -210,21 +165,27 @@
                 <map name="ORU">
                     <area target="_blank" alt="Örebro Universitet" title="www.oru.se" href="https://www.oru.se/?" coords="-1,10,44,65" shape="rect">
                 </map>
-                
+
             </div>
             <div class="col">
-                    <h4 id="h42">Följ Örebro Universitet</h4>
-                    <a titel="facebook.se/oru" target="_blank" href="https://www.facebook.com/oru.se/" class="fa fa-facebook"></a>
-                    <a titel="twitter.com/orebrouni" target="_blank" href="https://twitter.com/orebrouni" class="fa fa-twitter"></a>
-                    <a title="linkedin.com/school/orebro-universitet" target="_blank" href="https://www.linkedin.com/school/orebro-university/" class="fa fa-linkedin"></a>
-                    <a  title ="instagram.com/orebrouni" target="_blank" href="https://www.instagram.com/orebrouni/" class="fa fa-instagram"></a>
-                    <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
+                <h4 id="h42">Följ Örebro Universitet</h4>
+                <a titel="facebook.se/oru" target="_blank" href="https://www.facebook.com/oru.se/" class="fa fa-facebook"></a>
+                <a titel="twitter.com/orebrouni" target="_blank" href="https://twitter.com/orebrouni" class="fa fa-twitter"></a>
+                <a title="linkedin.com/school/orebro-universitet" target="_blank" href="https://www.linkedin.com/school/orebro-university/"
+                    class="fa fa-linkedin"></a>
+                <a title="instagram.com/orebrouni" target="_blank" href="https://www.instagram.com/orebrouni/" class="fa fa-instagram"></a>
+                <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
                 <h4 id="TCM">Om TCM</h4>
                 <section>
-                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma och Edin Jelecevic.<br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.<br></p>
+                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                        och Edin Jelecevic.
+                        <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.
+                        <br>
+                    </p>
                 </section>
             </div>
         </div>
     </footer>
 </body>
+
 </html>
