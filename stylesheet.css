@@ -83,18 +83,7 @@ th
     text-align:center;
 }
 
-/*  background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    margin-left: 25%;
-    transition-duration: 0.4s;
-    width:190px; */
+
 #CompanieList li
 {
     border: 1px solid #ddd;
@@ -305,147 +294,108 @@ td
 } 
 
 
-/*företag support sidan*/
-#SupportForm
-{
-    margin-left:24%;
+.CompanyStartPage:after {
+    content: "";
+    display:table;
+    clear:both;
 }
 
-#supportDiv
+.Nav-with-exjobb
 {
-    border: 0.75px solid black;
-    margin-left:30%;
-    padding:3%;
-    margin:3%;
-    width:55%;
-}
-
-#supportForm
-{
-    border: 0.25px solid black;
-    height:auto;
-    width:auto;
-    padding:1%;
-    margin:1%;
-   
-}
-
-#supportForm input
-{
-    margin:1%;
-    margin-left:10%;
     
-    padding:1%;
+    float:left;
+    width:50%;
+    margin: 0%;
+    padding: 0%;
 }
 
-#supportForm textarea{
-    
+#ExjobbForm
+{
+    float:left;
     margin:1%;
-    margin-left:10%;
-    height:70%;
+    padding:1%;
+    min-width: 70%;
+
+}
+
+#Fieldset-ExJForm
+{
+    width:100%;   
+}
+#Fieldset-SF-Exjobb
+{
+    width:100%;
+}
+
+.UL-Exjobb
+{  
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;
+}
+
+.UL-Exjobb li
+{   
+    border: 1px solid #ddd;
+    margin-top:-1px;
+    padding:8px;
+    text-decoration:none;
+    font-size:14px;
+    color:black;
+    display: block;
+    margin-left:5%;
     width:75%;
-}
-#supportForm #submit
-{
-    background-color:black;
-    color:white;
-    transition-duration: 0.4s;
-    width:130px;
-    border-radius: 1% 1% 1% 1%;
-    padding: 10px 10px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
+    float:left;
     text-align:center;
 }
-
-
-
-
-/*företag start sidan*/
-
-
-
-
-
-/* The container */
-.container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-/* Hide the browser's default radio button */
-.container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-}
-
-/* Create a custom radio button */
-.checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
-    border-radius: 50%;
-}
-
-/* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-    background-color: #ccc;
-}
-
-/* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
-    background-color: #2196F3;
-}
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-}
-
-/* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
-    display: block;
-}
-
-/* Style the indicator (dot/circle) */
-.container .checkmark:after {
- 	top: 9px;
-	left: 9px;
-	width: 8px;
-	height: 8px;
-	border-radius: 50%;
-	background: white;
-}
-
-#exjobbLista
+.UL-Exjobb li:hover:not(.header)
 {
-    border:0.5px solid;
-    padding:10px;
-    margin:10px;
+    background-color:#eee;
 }
 
-
-#studentLista
+#StudentsForm-Exjobb
 {
-    border:0.5px solid;
-    padding:10px;
-    margin:10px;
+    float:left;
+    margin:1%;
+    padding:1%;
 }
+
+.Panel-Add-Exjobb
+{
+    float:right;
+    margin-right:3%;
+    width:50%;
+    margin: 0%;
+    padding: 0%;
+    height:auto;
+    
+}
+.Panel-Add-Exjobb input
+{
+ padding:1%;   
+}
+
+#Add-Exjobb
+{
+    float:right;
+    margin:1%;
+    padding:1%;
+    width:100%;
+    height:100%;
+}
+
+#A-Exjobb
+{
+    width:96%;
+}
+
+
+#SPanelPinfo
+{
+    width:100%;   
+}
+
+
 
 #addCompany
 {
@@ -459,11 +409,7 @@ td
     border:0.5px solid;
     padding:10px;
     margin:10px;
-
-    
 }
-
-
 
 /* .raw1col1
 {
@@ -481,50 +427,51 @@ td
     padding: 10px;
 } */
 
-.buttonSeAnmälan 
+#DeleteExjobb
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:190px;
+    width:100px;
+    margin-left:38%;
 
 }
 
-.buttonSeAnmälan:hover
+#DeleteExjobb:hover
 {
     background-color:red;
     color:white;
 }
 
-.buttonTaBortExjobb 
+#AddExjobb 
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:190px;
-
+    margin-left:3%;
+    width:150px;
 }
 
-.buttonTaBortExjobb:hover
+#AddExjobb:hover
 {
     background-color:red;
     color:white;
 }
-
+/* 
 .buttonÄndraExjobb 
 {
     background-color:black; 
@@ -538,16 +485,15 @@ td
     margin: 4px 2px;
     transition-duration: 0.4s;
     width:190px;
-
 }
 
 .buttonÄndraExjobb:hover
 {
     background-color:red;
     color:white;
-}
+} */
 
-
+/* 
 .kontaktStudent 
 {
     background-color:black; 
@@ -590,7 +536,7 @@ td
 {
     background-color:red;
     color:white;
-}
+} */
 
 
 
@@ -694,8 +640,7 @@ td
     margin: 0px;
     padding: 0px;
 }
-/*  display:inline-block;
-    text-align:center; */
+
 
 
 #StudentFormProfile
