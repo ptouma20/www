@@ -23,7 +23,83 @@ th
     width:15%;
 
 }
+#CompanieList
+{
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;
+    
+}
 
+
+.MessageForm
+{
+    margin-left:24%;
+}
+.MailDiv
+{
+    border: 0.75px solid black;
+    margin-left:30%;
+    padding:3%;
+    margin:3%;
+    width:55%;
+}
+
+#MailForm
+{
+    border: 0.25px solid black;
+    height:auto;
+    width:auto;
+    padding:1%;
+    margin:1%;
+   
+}
+#MailForm input
+{
+    margin:1%;
+    margin-left:10%;
+    
+    padding:1%;
+}
+
+#MailForm textarea{
+    
+    margin:1%;
+    margin-left:10%;
+    height:70%;
+    width:75%;
+}
+#MailForm #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+
+#CompanieList li
+{
+    border: 1px solid #ddd;
+    margin-top:-1px;
+    padding:12px;
+    text-decoration:none;
+    font-size:16px;
+    color:black;
+    display: block;
+    width:75%;
+
+}
+#CompanieList li:hover:not(.header)
+{
+    background-color:#eee;
+}
 .SearchCompaniesForm2
 {
     /* margin-left:20%; */
@@ -63,9 +139,11 @@ th
 } 
 button#submit
 {
-    padding:1%;
-    width: 5%;
-    margin-left:-1%;
+    padding:0.75%; 
+    width: 7%;
+    margin-top:1%;
+    /* margin-right:-2%; */
+    border-radius: 2% 1% 1% 2%;
 
 }
 input#SearchC
@@ -76,7 +154,7 @@ input#SearchC
     width:50%;
     height:4%;
     border:1px solid black;
-    border-radius:25px 0px 0px 25px;
+    border-radius:25px 25px 25px 25px;
     font-size: 12px;
 }
 
@@ -215,51 +293,240 @@ td
 
 } 
 
-/*företag start sidan*/
-.buttonSeAnmälan 
+
+.CompanyStartPage:after {
+    content: "";
+    display:table;
+    clear:both;
+}
+
+.Nav-with-exjobb
+{
+    
+    float:left;
+    width:50%;
+    margin: 0%;
+    padding: 0%;
+}
+
+#ExjobbForm
+{
+    float:left;
+    margin:1%;
+    padding:1%;
+    min-width: 70%;
+
+}
+
+#Fieldset-ExJForm
+{
+    width:100%;   
+}
+#Fieldset-SF-Exjobb
+{
+    width:100%;
+}
+
+.UL-Exjobb
+{  
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;
+}
+
+.UL-Exjobb li
+{   
+    border: 1px solid #ddd;
+    margin-top:-1px;
+    padding:8px;
+    text-decoration:none;
+    font-size:14px;
+    color:black;
+    display: block;
+    margin-left:5%;
+    width:75%;
+    float:left;
+    text-align:center;
+}
+.UL-Exjobb li:hover:not(.header)
+{
+    background-color:#eee;
+}
+
+#StudentsForm-Exjobb
+{
+    float:left;
+    margin:1%;
+    padding:1%;
+}
+
+.Panel-Add-Exjobb
+{
+    float:right;
+    margin-right:3%;
+    width:50%;
+    margin: 0%;
+    padding: 0%;
+    height:auto;
+    
+}
+.Panel-Add-Exjobb input
+{
+ padding:1%;   
+}
+
+#Add-Exjobb
+{
+    float:right;
+    margin:1%;
+    padding:1%;
+    width:100%;
+    height:100%;
+}
+
+#A-Exjobb
+{
+    width:96%;
+}
+
+
+#SPanelPinfo
+{
+    width:100%;   
+}
+
+
+#SupportForm
+{
+    margin-left:24%;
+}
+
+#supportDiv
+{
+    border: 0.75px solid black;
+    margin-left:30%;
+    padding:3%;
+    margin:3%;
+    width:55%;
+}
+
+#supportForm
+{
+    border: 0.25px solid black;
+    height:auto;
+    width:auto;
+    padding:1%;
+    margin:1%;
+   
+}
+
+#supportForm input
+{
+    margin:1%;
+    margin-left:10%;
+    
+    padding:1%;
+}
+
+#supportForm textarea{
+    
+    margin:1%;
+    margin-left:10%;
+    height:70%;
+    width:75%;
+}
+#supportForm #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+
+
+
+#addCompany
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+
+}
+#StudentProfileExjobb
+{
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
+
+/* .raw1col1
+{
+    float:;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+
+}
+.rawCol2
+{
+    float:right;
+    width:45%;
+    margin: 5px;
+    padding: 10px;
+} */
+
+#DeleteExjobb
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:190px;
+    width:100px;
+    margin-left:38%;
 
 }
 
-.buttonSeAnmälan:hover
+#DeleteExjobb:hover
 {
     background-color:red;
     color:white;
 }
 
-.buttonTaBortExjobb 
+#AddExjobb 
 {
     background-color:black; 
     border:none;
     color:white;
-    padding: 10px 20px;
+    padding: 10px 10px;
     text-align:center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 14px;
+    margin: 2px 2px;
     transition-duration: 0.4s;
-    width:190px;
-
+    margin-left:3%;
+    width:150px;
 }
 
-.buttonTaBortExjobb:hover
+#AddExjobb:hover
 {
     background-color:red;
     color:white;
 }
-
+/* 
 .buttonÄndraExjobb 
 {
     background-color:black; 
@@ -273,16 +540,15 @@ td
     margin: 4px 2px;
     transition-duration: 0.4s;
     width:190px;
-
 }
 
 .buttonÄndraExjobb:hover
 {
     background-color:red;
     color:white;
-}
+} */
 
-
+/* 
 .kontaktStudent 
 {
     background-color:black; 
@@ -325,7 +591,7 @@ td
 {
     background-color:red;
     color:white;
-}
+} */
 
 
 
@@ -402,7 +668,6 @@ td
     margin: 5px;
     padding: 10px;
 }
-<<<<<<< HEAD
 .mainCol3
 {
     
@@ -430,9 +695,8 @@ td
     margin: 0px;
     padding: 0px;
 }
-/*  display:inline-block;
-    text-align:center; */
-=======
+
+
 
 #StudentFormProfile
 {
@@ -441,7 +705,7 @@ td
     margin:10px;
 
 }
->>>>>>> 1616ba0f8da0b44e9bfcb2dcbe178d330367a052
+
 #StudentForm
 {
     height: 90%;
@@ -451,11 +715,11 @@ td
   
 }
 
-<<<<<<< HEAD
+
 fieldset
 {
     width:50%;
-=======
+}
 #DeleteStudentProfile
 {
     border:0.5px solid;
@@ -466,7 +730,6 @@ fieldset
 {
    
     width:70%;
->>>>>>> 1616ba0f8da0b44e9bfcb2dcbe178d330367a052
     position:relative;
     margin:auto; 
     border:0.5px solid; 
@@ -903,7 +1166,7 @@ footer .nav a{
 {
     opacity:0.7;
 }
-
+/*
 @media only screen and (max-width:600px)
 
 {html
@@ -920,7 +1183,7 @@ footer .nav a{
         background-color:grey;
         color:white;
         /* width: auto;
-        height:auto; */
+        height:auto; 
         box-sizing: border-box;  
         position: relative;
         height:400px;
@@ -930,11 +1193,11 @@ footer .nav a{
         content: "";
         clear:both;
         display: table;
-    } */
+    } 
     .col
     {
         float:left;
-        /* width:25%; */
+        /* width:25%; 
         margin: 10px 50px;
     }
     .col a
@@ -950,7 +1213,7 @@ footer .nav a{
     /* main
     {
         
-    }  */
+    }  
     body
     {
         background-color:white;
@@ -1190,7 +1453,7 @@ footer{
     background-color:grey;
     color:white;
     /* width: auto;
-    height:auto; */
+    height:auto; 
     box-sizing: border-box;  
     position: relative;
     height:400px;
@@ -1200,11 +1463,11 @@ footer{
     content: "";
     clear:both;
     display: table;
-} */
+} 
 .col
 {
     float:left;
-    /* width:25%; */
+    /* width:25%; 
     margin: 10px 50px;
 }
 .col a
@@ -1220,7 +1483,7 @@ footer{
 /* main
 {
     
-}  */
+}  
 body
 {
     background-color:white;
@@ -1446,7 +1709,7 @@ footer .nav a{
 }
     }
     
-    /* Medium devices (landscape tablets, 768px and up) */
+    /* Medium devices (landscape tablets, 768px and up) 
     @media only screen and (min-width: 768px) {
         html
 {
@@ -1462,7 +1725,7 @@ footer{
     background-color:grey;
     color:white;
     /* width: auto;
-    height:auto; */
+    height:auto; 
     box-sizing: border-box;  
     position: relative;
     height:400px;
@@ -1472,11 +1735,11 @@ footer{
     content: "";
     clear:both;
     display: table;
-} */
+} 
 .col
 {
     float:left;
-    /* width:25%; */
+    /* width:25%; 
     margin: 10px 50px;
 }
 .col a
@@ -1492,7 +1755,7 @@ footer{
 /* main
 {
     
-}  */
+}  
 body
 {
     background-color:white;
@@ -1718,7 +1981,7 @@ footer .nav a{
 }
     } 
     
-    /* Large devices (laptops/desktops, 992px and up) */
+    /* Large devices (laptops/desktops, 992px and up) 
     @media only screen and (min-width: 992px) {
         html
         {
@@ -1734,7 +1997,7 @@ footer .nav a{
             background-color:grey;
             color:white;
             /* width: auto;
-            height:auto; */
+            height:auto; 
             box-sizing: border-box;  
             position: relative;
             height:400px;
@@ -1744,11 +2007,11 @@ footer .nav a{
             content: "";
             clear:both;
             display: table;
-        } */
+        } 
         .col
         {
             float:left;
-            /* width:25%; */
+            /* width:25%; 
             margin: 10px 50px;
         }
         .col a
@@ -1764,7 +2027,7 @@ footer .nav a{
         /* main
         {
             
-        }  */
+        }  
         body
         {
             background-color:white;
@@ -1990,7 +2253,7 @@ footer .nav a{
         } 
     } 
     
-    /* Extra large devices (large laptops and desktops, 1200px and up) */
+    /* Extra large devices (large laptops and desktops, 1200px and up) 
     @media only screen and (min-width: 1200px) {
         html
         {
@@ -2006,7 +2269,7 @@ footer .nav a{
             background-color:grey;
             color:white;
             /* width: auto;
-            height:auto; */
+            height:auto; 
             box-sizing: border-box;  
             position: relative;
             height:400px;
@@ -2016,11 +2279,11 @@ footer .nav a{
             content: "";
             clear:both;
             display: table;
-        } */
+        } 
         .col
         {
             float:left;
-            /* width:25%; */
+            /* width:25%; 
             margin: 10px 50px;
         }
         .col a
@@ -2036,7 +2299,7 @@ footer .nav a{
         /* main
         {
             
-        }  */
+        }  
         body
         {
             background-color:white;
@@ -2261,7 +2524,7 @@ footer .nav a{
             opacity:0.7;
         } 
     }
-
+*/
 
 
 

@@ -39,6 +39,7 @@
 </head>
 
 <body>
+    <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad...</label>
@@ -85,21 +86,13 @@
     </header>
     <main>
         <div class="SearchCompaniesForm1">
-            <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
-            <button id="submit" type="submit" onclick="Getsok()">
-                <i id="ico" class="fa fa-search"></i>
-            </button>
-            <hr>
-
             <div class="SearchCompaniesForm2">
-                <fieldset>
-                    <legend align="center" id = "myLeg">Företag</legend>
-                    <input type="button" id="TableContent" value="NULL">
-                    <br>
-                    <input type="button" id="TableContent" value="NULL">
-                    <br>
-                </fieldset>
-
+                <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
+                <button id="submit" type="submit" onclick="Getsok()">
+                    <i id="ico" class="fa fa-search"></i>
+                </button>
+                <hr>
+                <ul id="CompanieList"></ul>
             </div>
             <script>
                 var list = [
@@ -176,15 +169,46 @@
                         }
                     }
                 ]
+                var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>';
+                var myList = JSON.parse(JSON_List);
+                //var jsonString = JSON.stringify(JSON_List);
+                //console.log(jsonString);
+                //console.log(JSON_List);
+                //console.log(myList[0].name);
+                console.log(myList);
+                // $(document).ready(function () {
+                //     /* call the php that has the php array which is json_encoded */
+                //     $.getJSON('../getforetag.php', function (data) {
+                //         /* data will hold the php array as a javascript object */
+                //         $.each(data, function (key, val) {
+                //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                //         });
+                //     });
+
+                // });
                 function Getsok() {
                     var x = document.getElementById("SearchC").value;
-                    var y = sok(x, list);
+                    var y = sok(x, myList);
+                    console.log(myList);
                     console.log(y);
+                    document.getElementById("CompanieList").innerHTML = "";
                     y.forEach(element => {
-                        var btn = document.createElement("BUTTON");
-                        var t = document.createTextNode("Click me");
-                        btn.appendChild(t);
-                        document.getElementById("myLeg").appendChild(btn);
+                        var li = document.createElement("li");
+                        var t = document.createTextNode(element.name);
+                        li.appendChild(t);
+
+                        li.addEventListener("click", function (e) {
+                            // e.target is our targetted element.
+                            // try doing console.log(e.target.nodeName), it will result LI
+                            //console.log(e.createTextNode);
+                            if (e.target && e.target.nodeName == "LI") {
+                                console.log(element.name + " was clicked");
+                                document.getElementById("CompanieName-Readonly").value = element.name;
+
+                            }
+                        });
+
+                        document.getElementById("CompanieList").appendChild(li);
                     });
                 }
             </script>
