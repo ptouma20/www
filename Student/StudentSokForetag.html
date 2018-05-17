@@ -97,21 +97,9 @@
             <script>
                 var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>';
                 var myList = JSON.parse(JSON_List);
-                //var jsonString = JSON.stringify(JSON_List);
-                //console.log(jsonString);
-                //console.log(JSON_List);
-                //console.log(myList[0].name);
-                console.log(myList);
-                // $(document).ready(function () {
-                //     /* call the php that has the php array which is json_encoded */
-                //     $.getJSON('../getforetag.php', function (data) {
-                //         /* data will hold the php array as a javascript object */
-                //         $.each(data, function (key, val) {
-                //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
-                //         });
-                //     });
 
-                // });
+                console.log(myList);
+
                 function Getsok() {
                     var x = document.getElementById("SearchC").value;
                     var y = sok(x, myList);
@@ -124,9 +112,7 @@
                         li.appendChild(t);
 
                         li.addEventListener("click", function (e) {
-                            // e.target is our targetted element.
-                            // try doing console.log(e.target.nodeName), it will result LI
-                            //console.log(e.createTextNode);
+
                             if (e.target && e.target.nodeName == "LI") {
                                 console.log(element.name + " was clicked");
                                 document.getElementById("CompanieName-Readonly").value = element.name;

@@ -15,13 +15,14 @@ function sok(string, sokarray) {
        "ID",
        "name",
        "webpage",
-       "email"
+       "email",
+       "bio"
      ]
    };
 
    var langden = String(string);
 
-   if(langden.length < 5){
+   if(langden.length < 3){
      options.threshold = 0;
    }
    else{
