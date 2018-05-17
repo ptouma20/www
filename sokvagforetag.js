@@ -1,6 +1,7 @@
 function sok(string, array) {
   // var Fuse = require('fuse.js');
    //var jsVar = require('xjobblista.php')
+   console.log(array);
    var options = {
      shouldSort: true,
      tokenize: true,
@@ -11,7 +12,10 @@ function sok(string, array) {
      maxPatternLength: 32,
      minMatchCharLength: 2,
      keys: [
-       "webpage"
+       "ID",
+       "name",
+       "webpage",
+       "email"
      ]
    };
 
@@ -19,6 +23,9 @@ function sok(string, array) {
 
    if(langden.length < 5){
      options.threshold = 0;
+   }
+   else{
+     options.threshold = 0.5;
    }
    
    var fuse = new Fuse(array, options); // "list" is the item array
