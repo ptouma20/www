@@ -216,7 +216,7 @@ td
 
 #CompanyLoginInformation
 {
-    border:0.5px solid;
+    border:0.5px solid black;
     padding:10px;
     margin:10px;
 }
@@ -450,8 +450,6 @@ td
 }
 
 
-
-
 #addCompany
 {
     border:0.5px solid;
@@ -526,72 +524,6 @@ td
     background-color:red;
     color:white;
 }
-/* 
-.buttonÄndraExjobb 
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
-}
-
-.buttonÄndraExjobb:hover
-{
-    background-color:red;
-    color:white;
-} */
-
-/* 
-.kontaktStudent 
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
-
-}
-
-.kontaktStudent:hover
-{
-    background-color:red;
-    color:white;
-}
-
-.buttonLäggtillExjobb 
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 20px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-    width:190px;
-
-}
-
-.buttonLäggtillExjobb:hover
-{
-    background-color:red;
-    color:white;
-} */
 
 
 
@@ -781,8 +713,8 @@ legend {
 
 .valid:before {
     position: relative;
-    left: auto;;
-    content:  "✖";
+    left: auto;
+    content: "✔";
 }
 
 /* Add a red text color and an "x" icon when the requirements are wrong */
@@ -793,12 +725,24 @@ legend {
 .invalid:before {
     position: relative;
     left:auto;
-    content: "✔";
+    content:  "✖";
 }
-
-.Message p
+div#Message
+{
+    border:0.5px solid black;
+    padding:10px;
+    margin:10px;
+}
+.Message p 
 {
     font-size: 14px;
+    text-align: left;
+    margin:10px;
+}
+.Message h4
+{
+    text-align:left;
+    margin:10px;
 }
 
 .saveButton
@@ -878,6 +822,8 @@ legend {
     background-color:red;
     color:white;   
 }
+
+
 .AddButton:hover
 {
     background-color:red;
@@ -902,22 +848,60 @@ legend {
     color:white;
 
 }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
 
 footer{
     background-color:grey;
     color:white;
-    /* width: auto;
-    height:auto; */
+    width: 100%;
+    height:auto; 
     box-sizing: border-box;  
     position: absolute;
     padding: auto;
 }
-/* .row::after
+.row::after
 {
     content: "";
     clear:both;
     display: table;
-} */
+}
 
 
 
