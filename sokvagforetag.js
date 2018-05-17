@@ -1,6 +1,7 @@
-function sok(string, array) {
+function sok(string, sokarray) {
   // var Fuse = require('fuse.js');
    //var jsVar = require('xjobblista.php')
+   array = JSON.parse(sokarray);
    var options = {
      shouldSort: true,
      tokenize: true,
@@ -27,10 +28,11 @@ function sok(string, array) {
      options.threshold = 0.5;
    }
    
-   //var fuse = new Fuse(array, options); // "list" is the item array
+   var fuse = new Fuse(array, options); // "list" is the item array
  
-   //var result = fuse.search(string);
+   var result = fuse.search(string);
    //console.log(result);
+   
    return array;
  }
  
