@@ -174,7 +174,7 @@
                 //var jsonString = JSON.stringify(JSON_List);
                 //console.log(jsonString);
                 //console.log(JSON_List);
-                console.log(myList[0].name);
+                //console.log(myList[0].name);
                 console.log(myList);
                 // $(document).ready(function () {
                 //     /* call the php that has the php array which is json_encoded */
@@ -192,7 +192,7 @@
 
                     console.log(y);
                     document.getElementById("CompanieList").innerHTML = "";
-                    y.forEach(element => {
+                    myList.forEach(element => {
                         var li = document.createElement("li");
                         var t = document.createTextNode(element.name);
                         li.appendChild(t);
