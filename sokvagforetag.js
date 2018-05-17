@@ -5,7 +5,7 @@ function sok(string, array) {
      shouldSort: true,
      tokenize: true,
      matchAllTokens: true,
-     threshold: 0,
+     threshold: 0.5,
      location: 0,
      distance: 1000,
      maxPatternLength: 32,
