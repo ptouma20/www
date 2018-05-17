@@ -1,7 +1,6 @@
 function sok(string, array) {
   // var Fuse = require('fuse.js');
    //var jsVar = require('xjobblista.php')
-   console.log(array);
    var options = {
      shouldSort: true,
      tokenize: true,

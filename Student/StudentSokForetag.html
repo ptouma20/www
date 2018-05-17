@@ -189,7 +189,7 @@
                 function Getsok() {
                     var x = document.getElementById("SearchC").value;
                     var y = sok(x, myList);
-
+                    console.log(myList);
                     console.log(y);
                     document.getElementById("CompanieList").innerHTML = "";
                     y.forEach(element => {
