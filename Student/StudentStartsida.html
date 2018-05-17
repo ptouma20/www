@@ -38,7 +38,7 @@
     <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <?php include 'xjobblista.php'; ?>
+    <?php include 'xjobb.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad...</label>
@@ -135,7 +135,7 @@
                                     <button type="button" class="AddButton" name="AddButton" onclick="Getsokexjobb()">Sök</button>
                                 </fieldset>
                             </fieldset>
-                            
+                            <ul id="Exjobblist"></ul>
                             <script>
                                     var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
                                     var myList = JSON.parse(JSON_List);
@@ -159,7 +159,7 @@
                                         var y = sok(x, myList);
                                         console.log(myList);
                                         console.log(y);
-                                        document.getElementById("CompanieList").innerHTML = "";
+                                        document.getElementById("Exjobblist").innerHTML = "";
                                         y.forEach(element => {
                                             var li = document.createElement("li");
                                             var t = document.createTextNode(element.Title);
@@ -171,11 +171,11 @@
                                                 //console.log(e.createTextNode);
                                                 if (e.target && e.target.nodeName == "LI") {
                                                     console.log(element.Title + " was clicked");
-                                                    document.getElementById("CompanieName-Readonly").value = element.Title;
+                                                    document.getElementById("Exjobblist-Readonly").value = element.Title;
                                                 }
                                             });
                     
-                                            document.getElementById("CompanieList").appendChild(li);
+                                            document.getElementById("Exjobblist").appendChild(li);
                                         });
                                     }
                                 </script>
