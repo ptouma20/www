@@ -28,7 +28,7 @@ function sok(string, sokarray) {
      options.threshold = 0.5;
    }
    
-   var fuse = new Fuse(array, options); // "list" is the item array
+   var fuse = new Fuse(sokarray, options); // "list" is the item array
  
    var result = fuse.search(string);
    //console.log(result);
