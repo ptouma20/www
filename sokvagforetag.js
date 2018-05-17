@@ -31,6 +31,6 @@ function sok(string, array) {
  
    var result = fuse.search(string);
    //console.log(result);
-   return result;
+   return array;
  }
  
