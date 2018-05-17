@@ -123,15 +123,58 @@
                                         <p></p>
                                             <label for="Education-Student">Egna önskemål</label>
                                             <br>
-                                            <input type="text" name="Education-Student" id="Education-Student">
+                                            <input type="search" name="Education-Student" id="sokexjobb">
                                             <br>
                                     </div>
                                 </p>
                                     <br>
-                                    <button type="button" class="AddButton" name="AddButton">Sök</button>
+                                    <button type="button" class="AddButton" name="AddButton" onclick="Getsokexjobb()">Sök</button>
                                 </fieldset>
                             </fieldset>
-                            
+                            <?php include 'xjobb.php'; ?>
+                            <script>
+                                    var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
+                                    var myList = JSON.parse(JSON_List);
+                                    //var jsonString = JSON.stringify(JSON_List);
+                                    //console.log(jsonString);
+                                    //console.log(JSON_List);
+                                    //console.log(myList[0].name);
+                                    console.log(myList);
+                                    // $(document).ready(function () {
+                                    //     /* call the php that has the php array which is json_encoded */
+                                    //     $.getJSON('../getforetag.php', function (data) {
+                                    //         /* data will hold the php array as a javascript object */
+                                    //         $.each(data, function (key, val) {
+                                    //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                                    //         });
+                                    //     });
+                    
+                                    // });
+                                    function Getsokexjobb() {
+                                        var x = document.getElementById("sokexjobb").value;
+                                        var y = sok(x, myList);
+                                        console.log(myList);
+                                        console.log(y);
+                                        document.getElementById("CompanieList").innerHTML = "";
+                                        y.forEach(element => {
+                                            var li = document.createElement("li");
+                                            var t = document.createTextNode(element.Title);
+                                            li.appendChild(t);
+                    
+                                            li.addEventListener("click", function (e) {
+                                                // e.target is our targetted element.
+                                                // try doing console.log(e.target.nodeName), it will result LI
+                                                //console.log(e.createTextNode);
+                                                if (e.target && e.target.nodeName == "LI") {
+                                                    console.log(element.Title + " was clicked");
+                                                    document.getElementById("CompanieName-Readonly").value = element.Title;
+                                                }
+                                            });
+                    
+                                            document.getElementById("CompanieList").appendChild(li);
+                                        });
+                                    }
+                                </script>
                                 <fieldset class="Startsida" form="student-user-content">
                                     <legend align ="center">Examensarbeten enligt dina krav</legend>
                                     <fieldset id="For-keywords" form="StudentForm">
