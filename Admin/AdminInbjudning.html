@@ -12,6 +12,11 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 
+  
+   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" >
+
+  
     <!--Bootstrap..-->
 
     
@@ -42,7 +47,9 @@
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
             <map name="ORULOGGA">
-                
+
+                <area alt="Örebro Universitet Logga" href="AdminStartsida.html" coords="916,370,1,6" shape="rect">
+
                 <area alt="Örebro Universitet Logga" href="AdminStartsida.html" coords="916,370,1,6" shape="rect">
 
             </map>
@@ -51,14 +58,13 @@
             <ul class="dropdown">
                 <li>
 
-                    <a class="active" href="AdminStartsida.html">Startsida</a>
+                    <a href="AdminStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a href="AdminInbjudning.html">Inbjudning</a>
+                    <a class ="active" href="AdminInbjudning.html">Inbjudning</a>
                 </li>
                 <li>
                     <a href="AdminInkorg.html">Inkorg</a>
-
                 </li>
                 <li>
                     <a href="#LoggaUt">Logga ut</a>
@@ -77,32 +83,51 @@
         </div>    
     </header>
     <main>
-            <div class="SearchCompaniesForm1">
-                    <div class="SearchCompaniesForm2">
-                        <input style="width: 500px" type="search" id="SearchC" placeholder="Företag eller student" />
-                        <button  id="submit" type="submit" onclick="Getsok()">
-                            <i id="ico" class="fa fa-search"></i>
-                        </button>
-                        <hr>
-                        <ul id="CompanieList"></ul>
-                    </div>
-                    
-                    <div class="SearchCompaniesForm3">
-                        <p>Namn
-                            <br>
-                            <input type="text" id="CompanieName-Readonly" readonly> </p>
-
-                            <input name="type" type="radio" style="margin-left: 4%">Ta bort konto</input>
+            <div class="container">
+                    <!-- Form Started -->
+                    <div class="container form-top">
+                        <div class="row">
+                            <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12">
+                                <div class="panel panel-danger">
+                                    <div class="panel-body">
+                                        <form id="reused_form">
+                                            <div class="form-group">
+                                                <label><i class="fa fa-user" aria-hidden="true"></i> Namn/Företagsnamn</label>
+                                                <input type="text" name="name" class="form-control" placeholder="Namn">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><i class="fa fa-envelope" aria-hidden="true"></i> Email</label>
+                                                <input type="email" name="email" class="form-control" placeholder="Email">
+                                            </div>
+                                            <div class="form-group">
+                                                <label><i class="fa fa-comment" aria-hidden="true"></i> Meddelande</label>
+                                                <textarea rows="3" name="message" class="form-control" placeholder="Meddelande"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                    <input name="type" type="radio">Student</input>
                                                     
-                            <input name="type" type="radio" style="margin-left: 1%">Varna</input>
-                            
-                        <p>Meddelande
-                            <br>
-                        <textarea rows="10" style="width: 350px;" name="message" class="form-control"></textarea>
-                            <br>
-                            <button>Skicka</button>
-
+                                                    <input name="type" type="radio" style="margin-left: 1%">Företag</input>
+                                                    
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-raised btn-block btn-danger">Skicka Inbjudan &rarr;</button>
+                                            </div>
+                                        </form>
+                                        <div id="error_message" style="width:100%; height:100%; display:none; ">
+                                            <h4>
+                                                Error
+                                            </h4>
+                                            Sorry there was an error sending your form. 
+                                        </div>
+                                        <div id="success_message" style="width:100%; height:100%; display:none; ">
+        <h2>Success! Your Message was Sent Successfully.</h2>
+        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+                    <!-- Form Ended -->
                 </div>
     </main>
     <footer>
