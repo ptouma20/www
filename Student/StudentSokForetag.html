@@ -39,6 +39,7 @@
 </head>
 
 <body>
+    <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad...</label>
@@ -168,25 +169,30 @@
                         }
                     }
                 ]
-                $(document).ready(function () {
-                    /* call the php that has the php array which is json_encoded */
-                    $.getJSON('../getforetag.php', function (data) {
-                        /* data will hold the php array as a javascript object */
-                        $.each(data, function (key, val) {
-                            $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
-                        });
-                    });
+                var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>';
+                var myList = JSON.parse(JSON_List);
+                var jsonString = JSON.stringify(JSON_List);
+                console.log(jsonString);
+                console.log(JSON_List);
+                // $(document).ready(function () {
+                //     /* call the php that has the php array which is json_encoded */
+                //     $.getJSON('../getforetag.php', function (data) {
+                //         /* data will hold the php array as a javascript object */
+                //         $.each(data, function (key, val) {
+                //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                //         });
+                //     });
 
-                });
+                // });
                 function Getsok() {
                     var x = document.getElementById("SearchC").value;
-                    var y = sok(x, list);
+                    var y = sok(x, myList);
 
                     console.log(y);
                     document.getElementById("CompanieList").innerHTML = "";
                     y.forEach(element => {
                         var li = document.createElement("li");
-                        var t = document.createTextNode(element.author.firstName);
+                        var t = document.createTextNode(element.name);
                         li.appendChild(t);
 
                         li.addEventListener("click", function (e) {
@@ -194,8 +200,8 @@
                             // try doing console.log(e.target.nodeName), it will result LI
                             //console.log(e.createTextNode);
                             if (e.target && e.target.nodeName == "LI") {
-                                console.log(element.author.firstName + " was clicked");
-                                document.getElementById("CompanieName-Readonly").value = element.author.firstName;
+                                console.log(element.name + " was clicked");
+                                document.getElementById("CompanieName-Readonly").value = element.name;
 
                             }
                         });
