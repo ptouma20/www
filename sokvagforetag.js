@@ -11,7 +11,7 @@ function sok(string, array) {
      maxPatternLength: 32,
      minMatchCharLength: 2,
      keys: [
-       "name"
+       "webpage"
      ]
    };
 
