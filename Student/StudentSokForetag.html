@@ -171,6 +171,8 @@
                 ]
                 var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>';
                 var myList = JSON.parse(JSON_List);
+                var jsonString = JSON.stringify(JSON_List);
+                console.log(jsonString);
                 // $(document).ready(function () {
                 //     /* call the php that has the php array which is json_encoded */
                 //     $.getJSON('../getforetag.php', function (data) {
