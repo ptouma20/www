@@ -490,6 +490,9 @@ td
     padding: 10px;
 } */
 
+
+
+
 #DeleteExjobb
 {
     background-color:black; 
@@ -503,16 +506,37 @@ td
     margin: 2px 2px;
     transition-duration: 0.4s;
     width:100px;
-    margin-left:38%;
+    margin-left:auto;
 
 }
 
+#AddToExjobb
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 10px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    width:100px;
+    margin-left:25%;
+
+}
 #DeleteExjobb:hover
 {
     background-color:red;
     color:white;
 }
 
+#AddToExjobb:hover
+{
+    background-color:red;
+    color:white;
+}
 #AddExjobb 
 {
     background-color:black; 
