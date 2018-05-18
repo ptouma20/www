@@ -143,12 +143,14 @@
                                     }
                                     function exjobbFEED() {
                             
-                            var y2 = myList.ID.sort((a,b) => a<b).slice(0.5);
-                            
+                            var nyaexjobb = myList.sort(function (a,b){
+                                return b.ID - a.ID
+                            });
+                            console.log(nyaexjobb);
                 
                             document.getElementById("ExjobblistFEED").innerHTML = "";
                 
-                            y2.forEach(element => {
+                            nyaexjobb.forEach(element => {
                                 var li = document.createElement("li");
                                 var t = document.createTextNode(element.Title);
                                 li.appendChild(t);
