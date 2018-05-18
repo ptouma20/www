@@ -14,8 +14,7 @@
     <script type="text/javascript" src='../sokvagforetag.js'></script>
     <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+
     <!--Bootstrap..-->
 
     
@@ -105,8 +104,7 @@
                                         <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="Getsokexjobb()">Sök</button> 
                                         <hr>
                                         <ul id="Exjobblist">
-                                                <li>hej</li>
-                                            </ul>                
+                                        </ul>                
                             </fieldset>
                             <script>
                                     var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
@@ -133,7 +131,9 @@
                                                 //console.log(e.createTextNode);
                                                 if (e.target && e.target.nodeName == "LI") {
                                                     console.log(element.Title + " was clicked");
-                                                    document.getElementById("Exjobblist-Readonly").value = element.Title;
+                                                    document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                                    document.getElementById("Exjobbcompname-Readonly").value = element.Title;
+                                                    document.getElementById("ExjobbDescription-Readonly").value = element.Title;
                                                 }
                                             });
                     
@@ -159,10 +159,9 @@
                         <fieldset style="height:auto;" class="Startsida" form="student-user-content">
                                 <legend align ="center">Information om det valda examensarbetet</legend>
     
-                                <p>Företagsnamn<br> <input type ="text" id="CompanieName-Readonly"  readonly> </p>
-                                <p>Datum för examensarbetet<br> <input type="text" id="CompanieMail-Readonly"  readonly></p>
-                                <p>Företagssida<br> <input type="text" id="CompanieWebpage-Readonly"  readonly></p>
-                                <p>Beskrivning om examensarbetet<br><textarea id="CompanieDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
+                                <p>Examensarbete<br> <input type="text" id="Exjobbtitle-Readonly"  readonly></p>
+                                <p>Företagsnamn<br> <input type ="text" id="Exjobbcompname-Readonly"  readonly> </p>
+                                <p>Beskrivning om examensarbetet<br><textarea id="ExjobbDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
                                 <input type="submit" class="AddButton" name="AddButton" style="margin-left:3%;" value="Ansök Exjobb">
                         </fieldset>
                 </div>
