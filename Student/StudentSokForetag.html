@@ -39,10 +39,10 @@
 
 <body>
     <?php include 'xjobblista.php'; ?>
-
+    <?php require 'reding.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad <?php session_start(); echo $_SESSION["Name"]; ?> </label>
+            <label for="Inlogg">Inloggad <?php echo $_SESSION["Name"]; ?> </label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -97,6 +97,7 @@
             <script>
                 var JSON_List = '<?php echo $res ?>';
                 console.log(JSON_List);
+                console.log('<?php session_start(); echo $_SESSION["Name"]; ?>');
                 function jsonEscape(str) {
                     return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                 }
