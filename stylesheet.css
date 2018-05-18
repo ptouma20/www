@@ -30,6 +30,12 @@ th
     background-color: white;
     
 }
+#Exjobblist
+{
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;   
+}
 
 
 .MessageForm
@@ -89,6 +95,22 @@ th
     background-color: red;
 }
 
+#Exjobblist li
+{
+    border: 1px solid #ddd;
+    margin-top:-1px;
+    padding:12px;
+    text-decoration:none;
+    font-size:16px;
+    color:black;
+    display: block;
+    width:75%;
+
+}
+#Exjobblist li:hover:not(.header)
+{
+    background-color:#eee;
+}
 #CompanieList li
 {
     border: 1px solid #ddd;
@@ -101,6 +123,7 @@ th
     width:75%;
 
 }
+
 #CompanieList li:hover:not(.header)
 {
     background-color:#eee;

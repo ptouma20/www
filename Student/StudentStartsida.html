@@ -95,10 +95,8 @@
                     <div class="mainCol4">
                             <fieldset style="height:45%;"class="Startsida" form="student-user-content">
                                 <legend align ="center">Sök examensarbete</legend>
-                                <fieldset style="height:85%;" id="For-keyword" form="StudentForm">
-                                    <legend>Innehåll</legend>
                                     <div class="Programming">
-                                        <div class="PLcol">
+                                        <!-- <div class="PLcol">
                                             <input type="radio" name="sok" id="Robotik" value="Robotik">Robotik</input>
                                             <br>
                                             <input type="radio" name="sok" id="Artificiell Intelligens" value="Artificiell Intelligens">Artificiell Intelligens</input>
@@ -119,39 +117,30 @@
                                             <input type="radio" name="sok" id="Databas" value="Databas">Databaser</input>
                                             <br>
                                             <input type="radio" name="sok" id="Objektorienterad programmering" value="Objekt-orienterad Programmering">Objekt-orienterad prog.</input>
-                                        </div>
+                                        </div> -->
                                         <!-- <hr>
                                         <br>
                                         <label for="Education-Student">Egna önskemål </label>
                                         <input type="search" name="Education-Student" id="sokexjobb">
                                         <button type="button" class="AddButton" name="AddButton" onclick="Getsokexjobb()">Sök</button> -->
                                     </div>
-                                    <hr>
                                         
-                                        <label for="Education-Student" style="font-size: 15px;">Egna önskemål </label>
                                         <br>
-                                        <input type="search" name="Education-Student" id="sokexjobb" style="width:45%;padding:1%;"placeholder="Sök Exjobb..">
-                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:10%;width:25%;"onclick="Getsokexjobb()">Sök</button>             
-                                </fieldset>
+                                        <input type="search" name="Education-Student" id="sokexjobb" style="width:65%;padding:1%;margin-left: 3%"placeholder="Sök Exjobb..">
+                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="Getsokexjobb()">Sök</button> 
+                                        <hr>
+                                        <ul id="Exjobblist">
+                                                <li>hej</li>
+                                            </ul>                
                             </fieldset>
                             <script>
                                     var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
                                     var myList = JSON.parse(JSON_List);
-                                    //var jsonString = JSON.stringify(JSON_List);
-                                    //console.log(jsonString);
-                                    //console.log(JSON_List);
-                                    //console.log(myList[0].name);
+
+
                                     console.log(myList);
-                                    // $(document).ready(function () {
-                                    //     /* call the php that has the php array which is json_encoded */
-                                    //     $.getJSON('../getforetag.php', function (data) {
-                                    //         /* data will hold the php array as a javascript object */
-                                    //         $.each(data, function (key, val) {
-                                    //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
-                                    //         });
-                                    //     });
-                    
-                                    // });
+
+
                                     function Getsokexjobb() {
                                         var x = document.getElementById("sokexjobb").value;
                                         var y = sok(x, myList);
@@ -178,24 +167,13 @@
                                     }
                                 </script>
                             <br>
-                                <fieldset class="Startsida" form="student-user-content">
+                                <!-- <fieldset class="Startsida" form="student-user-content">
                                     <legend align ="center">Examensarbeten enligt dina krav</legend>
-                                    <fieldset style="overflow-y:scroll;"id="For-keyword" form="StudentForm">  
-                                        <ul id="Exjobblist">
-                                            <li> hej </li>
-                                        </ul>       
+                                    <fieldset style="overflow-y:scroll;"id="For-keyword" form="StudentForm">     
                                     </fieldset>
-                                </fieldset>
+                                </fieldset> -->
                             </div>
                             
-                            <style>
-                                #Exjobblist
-{
-    list-style-type: none;
-    overflow:hidden;
-    background-color: rgb(189, 160, 160);   
-}
-                            </style>
                 <div class="mainCol3">
                     <fieldset style="width:80%;height:60%;"class="Startsida" form="student-user-content">
                             <legend align ="center">Nyligen tillagda examensarbete</legend>
