@@ -142,6 +142,42 @@
                                         });
                                     }
                                 </script>
+                                <script>
+                                        var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
+                                        var myList = JSON.parse(JSON_List);
+                                
+                                
+                                        console.log(myList);
+                                
+                                
+                                        function exjobbFEED() {
+                                
+                                            var y2 = myList.ID.sort((a,b) => a<b).slice(0.5);
+                                
+                                
+                                            document.getElementById("ExjobblistFEED").innerHTML = "";
+                                
+                                            y2.forEach(element => {
+                                                var li = document.createElement("li");
+                                                var t = document.createTextNode(element.Title);
+                                                li.appendChild(t);
+                                
+                                                li.addEventListener("click", function (e) {
+                                                    // e.target is our targetted element.
+                                                    // try doing console.log(e.target.nodeName), it will result LI
+                                                    //console.log(e.createTextNode);
+                                                    if (e.target && e.target.nodeName == "LI") {
+                                                        console.log(element.Title + " was clicked");
+                                                        document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                                        document.getElementById("Exjobbcompname-Readonly").value = element.ID;
+                                                        document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                                    }
+                                                });
+                                
+                                                document.getElementById("ExjobblistFEED").appendChild(li);
+                                            });
+                                        }
+                                    </script>
                             <br>
                                 <!-- <fieldset class="Startsida" form="student-user-content">
                                     <legend align ="center">Examensarbeten enligt dina krav</legend>
@@ -153,8 +189,7 @@
                 <div class="mainCol3">
                     <fieldset style="width:80%;height:60%;"class="Startsida" form="student-user-content">
                             <legend align ="center">Nyligen tillagda examensarbete</legend>
-                            <!-- <form style="width:98%;height:88%;"id="StudentFormUser">
-                            </form> -->
+                            <ul id="ExjobblistFEED"></ul>
                             <fieldset  style="width:auto;height:90%;overflow-y:scroll;"class="Startsida"></fieldset>
                     </fieldset>
                         <fieldset style="height:auto;" class="Startsida" form="student-user-content">
