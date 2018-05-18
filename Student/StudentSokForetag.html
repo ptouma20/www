@@ -96,7 +96,10 @@
             </div>
             <script>
                 var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>';
-                var myList = JSON.parse(JSON_List);
+                function jsonEscape(str) {
+                    return str.replace(/\n/g, "\\\\n").replace(/\r/g, "\\\\r").replace(/\t/g, "\\\\t");
+                }
+                var myList = JSON.parse(jsonEscape(JSON_List));
 
                 console.log(myList);
 
