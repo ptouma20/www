@@ -41,7 +41,7 @@
     <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad <input type="text" id="namn" /> </label>
+            <label for="Inlogg">Inloggad <input type="text" id="namn" value= "" /> </label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -95,7 +95,7 @@
             </div>
             <script>
                 var InloggatNamn = '<?php echo $_SESSION["Name"]';
-                document.getElementById("namn").value = InloggatNamn;
+                document.getElementById("namn").innerHTML = InloggatNamn;
                 var JSON_List = '<?php echo $res ?>';
                 console.log(JSON_List);
                 function jsonEscape(str) {
