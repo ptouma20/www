@@ -94,8 +94,8 @@
                 <ul id="CompanieList"></ul>
             </div>
             <script>
-                var InloggatNamn = '<?php echo $_SESSION["Name"]?>';
-                document.getElementById("namn").innerHTML = InloggatNamn;
+                var InloggatNamn = '<?php echo json_encode($_SESSION["Name"])?>';
+                document.getElementById("namn").innerHTML = JSON.parse(InloggatNamn);
                 var JSON_List = '<?php echo $res ?>';
                 console.log(JSON_List);
                 function jsonEscape(str) {
