@@ -42,7 +42,7 @@
     <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad...</label>
+            <label for="Inlogg">Inloggad  </label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -95,7 +95,8 @@
                 <ul id="CompanieList"></ul>
             </div>
             <script>
-                var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>';
+                var JSON_List = '<?php echo $res ?>';
+                console.log(JSON_List);
                 function jsonEscape(str) {
                     return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                 }
