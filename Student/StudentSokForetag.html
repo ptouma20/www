@@ -94,7 +94,7 @@
                 <ul id="CompanieList"></ul>
             </div>
             <script>
-                var InloggatNamn = '<?php echo $_SESSION["Name"]';
+                var InloggatNamn = '<?php echo $_SESSION["Name"]?>';
                 document.getElementById("namn").innerHTML = InloggatNamn;
                 var JSON_List = '<?php echo $res ?>';
                 console.log(JSON_List);
