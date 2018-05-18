@@ -93,9 +93,9 @@
     <main>
             <div class="mainRow">
                     <div class="mainCol4">
-                            <fieldset class="Startsida" form="student-user-content">
+                            <fieldset style="height:45%;"class="Startsida" form="student-user-content">
                                 <legend align ="center">Sök examensarbete</legend>
-                                <fieldset id="For-keywords" form="StudentForm">
+                                <fieldset style="height:85%;" id="For-keyword" form="StudentForm">
                                     <legend>Innehåll</legend>
                                     <div class="Programming">
                                         <div class="PLcol">
@@ -109,8 +109,7 @@
                                             <br>
                                             <input type="radio" name="sok" id="Hårdvara" value="Hårdvara">Hårdvara</input>
                                         </div>
-                                        <div class="PLcol">    
-                                            
+                                        <div class="PLcol">                                                
                                             <input type="radio" name="sok" id="Webbdesign" value="Webbdesign">Webbdesign</input>
                                             <br>
                                             <input type="radio" name="sok" id="Machine Learning" value="Machine Learning">Machine Learning</input>
@@ -121,21 +120,20 @@
                                             <br>
                                             <input type="radio" name="sok" id="Objektorienterad programmering" value="Objekt-orienterad Programmering">Objekt-orienterad prog.</input>
                                         </div>
-                                        <p>
+                                        <!-- <hr>
                                         <br>
-                                        <hr>
-                                        <p></p>
-                                            <label for="Education-Student">Egna önskemål</label>
-                                            <br>
-                                            <input type="search" name="Education-Student" id="sokexjobb">
-                                            <br>
+                                        <label for="Education-Student">Egna önskemål </label>
+                                        <input type="search" name="Education-Student" id="sokexjobb">
+                                        <button type="button" class="AddButton" name="AddButton" onclick="Getsokexjobb()">Sök</button> -->
                                     </div>
-                                </p>
-                                    <br>
-                                    <button type="button" class="AddButton" name="AddButton" onclick="Getsokexjobb()">Sök</button>
+                                    <hr>
+                                        
+                                        <label for="Education-Student" style="font-size: 15px;">Egna önskemål </label>
+                                        <br>
+                                        <input type="search" name="Education-Student" id="sokexjobb" style="width:45%;padding:1%;"placeholder="Sök Exjobb..">
+                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:10%;width:25%;"onclick="Getsokexjobb()">Sök</button>             
                                 </fieldset>
                             </fieldset>
-                            <ul id="Exjobblist"></ul>
                             <script>
                                     var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
                                     var myList = JSON.parse(JSON_List);
@@ -179,33 +177,36 @@
                                         });
                                     }
                                 </script>
+                            <br>
+                            <div class="SearchCompaniesForm2">
                                 <fieldset class="Startsida" form="student-user-content">
                                     <legend align ="center">Examensarbeten enligt dina krav</legend>
-                                    <fieldset id="For-keywords" form="StudentForm">
-                                        
+                                    <fieldset style="overflow-y:scroll;"id="For-keyword" form="StudentForm">
+                                            <ul id="Exjobblist"></ul>            
                                     </fieldset>
                                 </fieldset>
+                            </div>
                         </div>
                             
                 <div class="mainCol3">
-                    <fieldset class="Startsida" form="student-user-content">
+                    <fieldset style="width:80%;height:60%;"class="Startsida" form="student-user-content">
                             <legend align ="center">Nyligen tillagda examensarbete</legend>
-                    <form id="StudentFormUser">
-        
-         
-                            </form>
-                        </fieldset>
-                        <fieldset class="Startsida" form="student-user-content">
+                            <!-- <form style="width:98%;height:88%;"id="StudentFormUser">
+                            </form> -->
+                            <fieldset  style="width:auto;height:90%;overflow-y:scroll;"class="Startsida"></fieldset>
+                    </fieldset>
+                        <fieldset style="height:auto;" class="Startsida" form="student-user-content">
                                 <legend align ="center">Information om det valda examensarbetet</legend>
     
                                 <p>Företagsnamn<br> <input type ="text" id="CompanieName-Readonly"  readonly> </p>
                                 <p>Datum för examensarbetet<br> <input type="text" id="CompanieMail-Readonly"  readonly></p>
                                 <p>Företagssida<br> <input type="text" id="CompanieWebpage-Readonly"  readonly></p>
                                 <p>Beskrivning om examensarbetet<br><textarea id="CompanieDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
-
-                            </fieldset>
+                                <input type="submit" class="AddButton" name="AddButton" style="margin-left:3%;" value="Ansök Exjobb">
+                        </fieldset>
                 </div>
             </div>
+            <br>
     </main>
     <footer>
         <div class="row">
