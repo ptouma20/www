@@ -146,6 +146,7 @@
                             var nyaexjobb = myList.sort(function (a,b){
                                 return b.ID - a.ID
                             });
+                            
                             console.log(nyaexjobb);
                 
                             document.getElementById("ExjobblistFEED").innerHTML = "";
@@ -178,8 +179,10 @@
                 <div class="mainCol3">
                     <fieldset style="width:80%;height:60%;"class="Startsida" form="student-user-content">
                             <legend align ="center">Nyligen tillagda examensarbete</legend>
-                            <fieldset  style="width:auto;height:90%;overflow-y:scroll;"class="Startsida"></fieldset>
-                            <ul id="ExjobblistFEED"></ul>
+                            <fieldset  style="width:auto;height:90%;overflow-y:scroll;"class="Startsida">
+                                <ul id="ExjobblistFEED">
+                                </ul>
+                            </fieldset>
                     </fieldset>
 
                         <fieldset style="height:auto;" class="Startsida" form="student-user-content">
