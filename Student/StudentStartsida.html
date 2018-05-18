@@ -102,7 +102,7 @@
                                         
                                         <br>
                                         <input type="search" name="Education-Student" id="sokexjobb" style="width:65%;padding:1%;margin-left: 3%"placeholder="Sök Exjobb..">
-                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="Getsokexjobb()">Sök</button> 
+                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="exjobbFEED()">Sök</button> 
                                         <hr>
                                         <ul id="Exjobblist">
                                         </ul>                
@@ -141,13 +141,36 @@
                                             document.getElementById("Exjobblist").appendChild(li);
                                         });
                                     }
+                                    function exjobbFEED() {
+                            
+                            var y2 = myList.ID.sort((a,b) => a<b).slice(0.5);
+                            
+                
+                            document.getElementById("ExjobblistFEED").innerHTML = "";
+                
+                            y2.forEach(element => {
+                                var li = document.createElement("li");
+                                var t = document.createTextNode(element.Title);
+                                li.appendChild(t);
+                
+                                li.addEventListener("click", function (e) {
+                                    // e.target is our targetted element.
+                                    // try doing console.log(e.target.nodeName), it will result LI
+                                    //console.log(e.createTextNode);
+                                    if (e.target && e.target.nodeName == "LI") {
+                                        console.log(element.Title + " was clicked");
+                                        document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                        document.getElementById("Exjobbcompname-Readonly").value = element.ID;
+                                        document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                    }
+                                });
+                
+                                document.getElementById("ExjobblistFEED").appendChild(li);
+                            });
+                        }
                                 </script>
                                
-                                <!-- <fieldset class="Startsida" form="student-user-content">
-                                    <legend align ="center">Examensarbeten enligt dina krav</legend>
-                                    <fieldset style="overflow-y:scroll;"id="For-keyword" form="StudentForm">     
-                                    </fieldset>
-                                </fieldset> -->
+                              
                             </div>
 
                 <div class="mainCol3">
