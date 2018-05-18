@@ -30,6 +30,13 @@ th
     background-color: white;
     
 }
+#Exjobblist
+{
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;
+    
+}
 
 
 .MessageForm
