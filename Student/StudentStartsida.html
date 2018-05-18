@@ -134,56 +134,58 @@
                                         <button type="button" class="AddButton" name="AddButton" style="margin-left:10%;width:25%;"onclick="Getsokexjobb()">Sök</button>             
                                 </fieldset>
                             </fieldset>
+                            <script>
+                                    var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
+                                    var myList = JSON.parse(JSON_List);
+                                    //var jsonString = JSON.stringify(JSON_List);
+                                    //console.log(jsonString);
+                                    //console.log(JSON_List);
+                                    //console.log(myList[0].name);
+                                    console.log(myList);
+                                    // $(document).ready(function () {
+                                    //     /* call the php that has the php array which is json_encoded */
+                                    //     $.getJSON('../getforetag.php', function (data) {
+                                    //         /* data will hold the php array as a javascript object */
+                                    //         $.each(data, function (key, val) {
+                                    //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
+                                    //         });
+                                    //     });
+                    
+                                    // });
+                                    function Getsokexjobb() {
+                                        var x = document.getElementById("sokexjobb").value;
+                                        var y = sok(x, myList);
+                                        console.log(myList);
+                                        console.log(y);
+                                        document.getElementById("Exjobblist").innerHTML = "";
+                                        y.forEach(element => {
+                                            var li = document.createElement("li");
+                                            var t = document.createTextNode(element.Title);
+                                            li.appendChild(t);
+                    
+                                            li.addEventListener("click", function (e) {
+                                                // e.target is our targetted element.
+                                                // try doing console.log(e.target.nodeName), it will result LI
+                                                //console.log(e.createTextNode);
+                                                if (e.target && e.target.nodeName == "LI") {
+                                                    console.log(element.Title + " was clicked");
+                                                    document.getElementById("Exjobblist-Readonly").value = element.Title;
+                                                }
+                                            });
+                    
+                                            document.getElementById("Exjobblist").appendChild(li);
+                                        });
+                                    }
+                                </script>
                             <br>
+                            <div class="SearchCompaniesForm2">
                                 <fieldset class="Startsida" form="student-user-content">
                                     <legend align ="center">Examensarbeten enligt dina krav</legend>
                                     <fieldset style="overflow-y:scroll;"id="For-keyword" form="StudentForm">
                                             <ul id="Exjobblist"></ul>            
                                     </fieldset>
                                 </fieldset>
-                                <script>
-                                        var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
-                                        var myList = JSON.parse(JSON_List);
-                                        //var jsonString = JSON.stringify(JSON_List);
-                                        //console.log(jsonString);
-                                        //console.log(JSON_List);
-                                        //console.log(myList[0].name);
-                                        console.log(myList);
-                                        // $(document).ready(function () {
-                                        //     /* call the php that has the php array which is json_encoded */
-                                        //     $.getJSON('../getforetag.php', function (data) {
-                                        //         /* data will hold the php array as a javascript object */
-                                        //         $.each(data, function (key, val) {
-                                        //             $('ul').append('<li id="' + key + '">' + val.ID + ' ' + val.name + ' ' + val.webpage + ' ' + val.email + '</li>');
-                                        //         });
-                                        //     });
-                        
-                                        // });
-                                        function Getsokexjobb() {
-                                            var x = document.getElementById("sokexjobb").value;
-                                            var y = sok(x, myList);
-                                            console.log(myList);
-                                            console.log(y);
-                                            document.getElementById("Exjobblist").innerHTML = "";
-                                            y.forEach(element => {
-                                                var li = document.createElement("li");
-                                                var t = document.createTextNode(element.Title);
-                                                li.appendChild(t);
-                        
-                                                li.addEventListener("click", function (e) {
-                                                    // e.target is our targetted element.
-                                                    // try doing console.log(e.target.nodeName), it will result LI
-                                                    //console.log(e.createTextNode);
-                                                    if (e.target && e.target.nodeName == "LI") {
-                                                        console.log(element.Title + " was clicked");
-                                                        document.getElementById("Exjobblist-Readonly").value = element.Title;
-                                                    }
-                                                });
-                        
-                                                document.getElementById("Exjobblist").appendChild(li);
-                                            });
-                                        }
-                                    </script>
+                            </div>
                         </div>
                             
                 <div class="mainCol3">
