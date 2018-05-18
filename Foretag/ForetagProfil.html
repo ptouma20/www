@@ -35,7 +35,7 @@
 <body>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad...</label>
+            <label for="Inlogg">Inloggad som <?php session_start(); echo $_SESSION["Name"]; ?></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -81,46 +81,46 @@
                                         <p>Företagsbeskrivning<br><textarea id="CompanieDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
                                 </fieldset>    
                         </form>      -->
-                <form id="CompanyChangeProfile">
+                <form id="CompanyChangeProfile" method = "post" action = "uppdateforetagData.php">
                     <fieldset>
                         <legend align="center">Ändra Profil</legend>
                         <p>Namn
                             <br>
-                            <input type="text" id="CompanieName" required="required"> </p>
+                            <input type="text" id="CompanieName" name="CompanieName" required="required" value="<?php echo $_SESSION["Name"]; ?>"> </p>
                         <p>Mail
                             <br>
-                            <input type="text" id="CompanieMail" required="required">
+                            <input type="text" id="CompanieMail" name ="CompanieMail" required="required" value="<?php echo $_SESSION["Email"]; ?>">
                         </p>
                         <p>Webbsida
                             <br>
-                            <input type="text" id="CompanieWebPage" required="required">
+                            <input type="text" id="CompanieWebPage" name="CompanieWebPage" required="required" value="<?php echo $_SESSION["Webpage"]; ?>">
                         </p>
                         <p>Företagsbeskrivning
                             <br>
-                            <textarea id="CompanieDescription" style="height:200px;width:365px;"></textarea>
+                            <textarea id="CompanieDescription" name ="CompanieDescription" style="height:200px;width:365px;"><?php echo $_SESSION["Bio"]; ?></textarea>
                         </p>
                         <!--Kanske får implementera cols och rows?-->
                         <!-- <hr> -->
-                        <button type="button" class="SaveButton" name="SaveButton">Ändra</button>
+                        <button type="submit" class="SaveButton" name="SaveButton">Ändra</button>
                     </fieldset>
                 </form>
             </div>
             <div class="CompanyLogin">
-                <form id="CompanyLoginInformation">
+                <form id="CompanyLoginInformation" method = "post" action = "passowrdcheng.php">
                     <fieldset>
                         <!-- Javascript funktion -->
                         <legend align="center">Inloggningsuppgifter</legend>
                         <label for="CompanyUsername"></label>
                         <p>Användarnamn
                             <br>
-                            <input type="text" id="CompanyUsername"> </p>
+                            <input type="text" id="CompanyUsername" name="Cusername"> </p>
                         <p>Lösenord
                             <br>
-                            <input type="password" onkeyup="PasswordConfirmation()" id="CompanyPassword" pattern=".{6,}" required="required">
+                            <input type="password" onkeyup="PasswordConfirmation()" id="CompanyPassword" name="pass1" pattern=".{6,}" required="required">
                         </p>
                         <p>Lösenord
                             <br>
-                            <input type="password" onkeyup="PasswordConfirmation()" id="CompanyPasswordValid" pattern=".{6,}" required="required">
+                            <input type="password" onkeyup="PasswordConfirmation()" id="CompanyPasswordValid" name ="pass2" pattern=".{6,}" required="required">
                         </p>
                         <hr>
                         <input type="submit" class="ChangeProfileButton" name="ChangeProfileButton" value="Ändra">
