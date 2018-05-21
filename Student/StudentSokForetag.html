@@ -39,7 +39,7 @@
 <body>
     <?php include 'xjobblista.php'; ?>
     <?php include 'SSF.php'; ?>
-    
+
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">
@@ -102,7 +102,7 @@
                     <ul id="CompanieList">
                         <li>test</li>
                     </ul>
-                    
+
                 </form>
                 <br>
                 <form id="SearchCompanieForm2_2">
@@ -121,18 +121,18 @@
                         <br>
                         <textarea id="CompanieDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
                     </p>
-                    
+
                     <form id="ExjobbContainerForm">
-                            <fieldset style="width:88%;height:90%;margin:1%;margin-left:4%;margin-bottom:4%;">
-                                <legend align="center">Lista av Exjobb</legend>
-                                
-                                 <ul id="ExjobbContainerUL">
-                                     <li>test</li>
-                                     <li>test</li>
-                                 </ul>
-                                 
-                            </fieldset>     
-                        </form>
+                        <fieldset style="width:88%;height:90%;margin:1%;margin-left:4%;margin-bottom:4%;">
+                            <legend align="center">Lista av Exjobb</legend>
+
+                            <ul id="ExjobbContainerUL">
+                                <li>test</li>
+                                <li>test</li>
+                            </ul>
+
+                        </fieldset>
+                    </form>
                 </form>
             </div>
             <script>
@@ -170,14 +170,16 @@
                         document.getElementById("CompanieList").appendChild(li);
                     });
                 }
+            </script>
+            <script>
                 var JSON_List2 = '<?php echo $res2 ?>';
                 function jsonEscape(str) {
                     return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
-                function GetExjobb(){
+                function GetExjobb() {
                     document.getElementById("CompanieList").innerHTML = "";
-                    y.forEach(element => {
+                    myList2.forEach(element => {
                         var li = document.createElement("li");
                         var t = document.createTextNode(element.name);
                         li.appendChild(t);
@@ -192,29 +194,29 @@
                             }
                         });
 
-                    document.getElementById("ExjobbContainerUL").appendChild(li);
-                }
+                        document.getElementById("ExjobbContainerUL").appendChild(li);
+                    });
             </script>
 
 
             <div class="ExjobbContainer">
-               
+
                 <form id="ExjobbContainerInformation">
-                        
-                        <legend align="center" style="margin-top:1%;">Information om examensarbetet</legend>
-                        <hr>
-                        <p>Examensarbete
-                            <br>
-                            <input type="text" id="Exjobbtitle-Readonly" readonly>
-                        </p>
-                        <p>Företagsnamn
-                            <br>
-                            <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
-                        <p>Beskrivning om examensarbetet
-                            <br>
-                            <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="14"readonly></textarea>
-                        </p>
-                        <input type="button" value="Ansök om Exjobb" id="StudentSearchCompanyButton">
+
+                    <legend align="center" style="margin-top:1%;">Information om examensarbetet</legend>
+                    <hr>
+                    <p>Examensarbete
+                        <br>
+                        <input type="text" id="Exjobbtitle-Readonly" readonly>
+                    </p>
+                    <p>Företagsnamn
+                        <br>
+                        <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
+                    <p>Beskrivning om examensarbetet
+                        <br>
+                        <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="14" readonly></textarea>
+                    </p>
+                    <input type="button" value="Ansök om Exjobb" id="StudentSearchCompanyButton">
                 </form>
             </div>
 
