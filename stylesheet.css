@@ -771,6 +771,13 @@ StudentSearchCompanyButton:hover
     padding:10px;
     margin:10px;
 }
+#StudentFormUserNew
+{
+    height: 80%;
+    border:0.5px solid;
+    padding:10px;
+    margin:10px;
+}
 
 .ChangePassword:hover
 {
