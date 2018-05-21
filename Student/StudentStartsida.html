@@ -120,7 +120,6 @@
                     }
                     var myList = JSON.parse(jsonEscape(JSON_List));
 
-
                     function Getsokexjobb() {
                         var x = document.getElementById("sokexjobb").value;
                         var y = sok(x, myList);
@@ -153,6 +152,8 @@
                             return b.ID - a.ID
                         });
 
+                        console.log(nyaexjobb);
+                        nyaexjobb.splice(5,nyaexjobb.length);
                         console.log(nyaexjobb);
 
                         document.getElementById("ExjobblistFEED").innerHTML = "";
