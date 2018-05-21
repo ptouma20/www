@@ -42,7 +42,7 @@
         <div class="InloggLabel">
             <label for="Inlogg">
                 <font color=red font face='Cambria' size='3pt'>Inloggad som
-                    <?php session_start(); ;echo $_SESSION["Name"] ?>
+                    <?php echo $_SESSION["Name"] ?>
                 </font>
             </label>
         </div>
@@ -93,7 +93,7 @@
             <div class="SearchCompaniesForm2">
                 <form id="SearchCompanieForm2_1">
                     <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
-                    <button id="submit" type="submit" onclick="Getsok()">
+                    <button id="submit" type="button" onclick="Getsok()">
                         <i id="ico" class="fa fa-search"></i>
                     </button>
                     <hr>
