@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -39,7 +40,8 @@
 <body>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad...</label>
+            <label for="Inlogg"><font color=blue font face='arial' size='5pt'>Inloggad som 
+                <?php session_start(); ;echo $_SESSION["Name"] ?></font></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -85,115 +87,118 @@
         <div class="mainRow">
             <div class="mainCol1">
 
-                <form id="StudentFormProfile">
-                    <!-- Bild här? -->
+                <!-- <form id="StudentFormProfile">
+                    
                     <fieldset id="Name-ReadOnly" form="StudentFormProfile">
                         <legend>Namn</legend>
                         <label for="FirstName-Student-Readonly">Förnamn</label>
                         <br>
-                        <input type="text" name="FirstName-Student-Readonly" id="FirstName-Student-Readonly" readonly>
+                        <input type="text" name="FirstName-Student-Readonly" id="FirstName-Student-Readonly" value=" <?php echo $_SESSION["Name"] ?>"  readonly>
                         <br>
                         <label for="SecondName-Student-Readonly">Efternamn</label>
                         <br>
-                        <input type="text" name="SecondName-Student-Readonly" id="SecondName-Student-Readonly" readonly>
+                        <input type="text" name="SecondName-Student-Readonly" id="SecondName-Student-Readonly" value=" <?php echo $_SESSION["Lastname"] ?>" readonly>
                     </fieldset>
 
                     <fieldset id="Education-ReadOnly" form="StudentFormProfile">
                         <legend>Utbildning</legend>
                         <label for="Education-Student">Program</label>
                         <br>
-                        <input type="text" name="Education-Student" id="Education-Student" readonly>
+                        <input type="text" name="Education-Student" id="Education-Student" value=" <?php echo $_SESSION["Education"] ?>" readonly>
                     </fieldset>
 
                     <fieldset id="Keywords-ReadOnly" form="StudentFormProfile">
                         <legend>Kunskaper</legend>
-                        <textarea name="Keywords" id="Keywords" style="width:365px;height:100px;" readonly></textarea>
+                        <?php include 'kewords.php'; ?>
+                        <textarea name="Keywords" id="Keywords" style="width:365px;height:100px;" readonly><?php  foreach ($_SESSION["keywords"] as $value){echo "- ".$value."\n "; } ?></textarea>
                     </fieldset>
 
                     <fieldset id="Experience-ReadOnly" form="StudentFormProfile">
                         <legend>Erfarenhet</legend>
-                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" readonly></textarea>
+                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" readonly><?php echo $_SESSION["Bio"] ?></textarea>
                     </fieldset>
-                    <!-- Javascript som tar info från databasen till inputsen -->
-                </form>
-                <form id="StudentForm">
-
-                    <fieldset id="For-name" form="StudentForm">
+                                    </form> -->
+                <?php include 'checkdkeywords2.php'; ?>
+                <form id="StudentForm" method="post" action="uppdateStudentData.php">
+                    
+                    <fieldset id="For-name" form="StudentForm" >
                         <legend>Namn</legend>
                         <label for="FirstName-Student">Förnamn </label>
                         <br>
-                        <input type="text" name="FirstName-Student" id="FirstName-Student">
+                        <input type="text" name="FirstName-Student" id="FirstName-Student" value="<?php echo $_SESSION["Name"] ?>" readwrite >
                         <br>
                         <label for="SecondName-Student">Efternamn </label>
                         <br>
-                        <input type="text" name="SecondName-Student" id="SecondName-Student">
+                        <input type="text" name="SecondName-Student" id="SecondName-Student" value="<?php echo $_SESSION["Lastname"] ?>" readwrite >
                     </fieldset>
-                    <fieldset id="For-education" form="StudentForm">
+                    <fieldset id="For-education" form="StudentForm" >
                         <legend>Utbildning</legend>
                         <label for="Education-Student">Program</label>
                         <br>
-                        <input type="text" name="Education-Student" id="Education-Student">
+                        <input type="text" name="Education-Student" id="Education-Student"  value="<?php echo $_SESSION["Education"] ?>" readwrite >
                     </fieldset>
-
-                    <fieldset id="For-keywords" form="StudentForm">
+                    <!-- <form method="post" action="deletekeywords.php"> -->
+                    <fieldset id="For-keywords" form="StudentForm" >
                         <legend>Kunskaper</legend>
                         <div class="Programming">
                             <div class="PLcol">
-                                <input type="checkbox" id="Robotik" value="Robotik">Robotik</input>
+                                <input type="checkbox" id="Robotik" name="Robotik" value="Robotik" <?php echo $_SESSION["Robotik"]; ?>>Robotik</input>
                                 <br>
-                                <input type="checkbox" id="Artificiell Intelligens" value="Artificiell Intelligens">Artificiell Intelligens</input>
+                                <input type="checkbox" id="ArtificiellIntelligens" name="ArtificiellIntelligens" value="Artificiell Intelligens" <?php echo $_SESSION["ArtificiellIntelligens"]; ?>>Artificiell Intelligens</input>
                                 <br>
-                                <input type="checkbox" id="Elektronik" value="Elektronik">Elektronik</input>
+                                <input type="checkbox" id="Elektronik" name="Elektronik" value="Elektronik" <?php echo $_SESSION["Elektronik"]; ?>>Elektronik</input>
                                 <br>
-                                <input type="checkbox" id="Datakommunikation" value="Datakommunikation">Datakommunikation</input>
+                                <input type="checkbox" id="Datakommunikation" name="Datakommunikation" value="Datakommunikation" <?php echo $_SESSION["Datakommunikation"]; ?>>Datakommunikation</input>
                                 <br>
-                                <input type="checkbox" id="Hårdvara" value="Hårdvara">Hårdvara</input>
+                                <input type="checkbox" id="Hårdvara" name="Hårdvara" value="Hårdvara" <?php echo $_SESSION["Hårdvara"]; ?>>Hårdvara</input>
                             </div>
                             <div class="PLcol">    
                                 
-                                <input type="checkbox" id="Webbdesign" value="Webbdesign">Webbdesign</input>
+                                <input type="checkbox" id="Webbdesign" name="Webbdesign" value="Webbdesign" <?php echo $_SESSION["Webbdesign"]; ?>>Webbdesign</input>
                                 <br>
-                                <input type="checkbox" id="Machine Learning" value="Machine Learning">Machine Learning</input>
+                                <input type="checkbox" id="MachineLearning" name="MachineLearning" value="Machine Learning" <?php echo $_SESSION["MachineLearning"]; ?>>Machine Learning</input>
                                 <br>
-                                <input type="checkbox" id="Bildbehandling" value="Bildbehandling">Bild behandling</input>
+                                <input type="checkbox" id="Bildbehandling" name="Bildbehandling" value="Bildbehandling" <?php echo $_SESSION["Bildbehandling"]; ?>>Bild behandling</input>
                                 <br>
-                                <input type="checkbox" id="Databas" value="Databas">Databaser</input>
+                                <input type="checkbox" id="Databas" name="Databas" value="Databas" <?php echo $_SESSION["Databas"]; ?>>Databaser</input>
                                 <br>
-                                <input type="checkbox" id="Objektorienterad programmering" value="Objekt-orienterad Programmering">Objekt-orienterad prog.</input>
-                                
+                                <input type="checkbox" id="Objektorienteradprogrammering" name="Objektorienteradprogrammering" value="Objekt-orienterad Programmering" <?php echo $_SESSION["Objektorienteradprogrammering"]; ?>>Objekt-orienterad prog.</input>
+                                <br>
+                                <input type="checkbox" id="Realtidsprogrammering" name="Realtidsprogrammering" value="Realtidsprogrammering" <?php echo $_SESSION["Realtidsprogrammering"]; ?>>Realtidsprogrammering.</input>
                             </div>
 
                         </div>
                         <hr>
-                        <button type="button" class="AddButton" name="AddButton">Lägg till</button>
-                        <button type="reset" class="ResetButton" name="ResetButton">Rensa val</button>
+                        
+                        <!-- <button type="submit" class="ResetButton" name="ResetButton" >Ta bort val</button> -->
+                        <!-- </form>     -->
                     </fieldset>
 
                     <fieldset id="For-Experience" form="StudentForm">
                         <legend>Erfarenhet</legend>
-                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" placeholder="Skriv din arbetserfarenhet här..."></textarea>
+                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:320px;" placeholder="Skriv din arbetserfarenhet här..."><?php echo $_SESSION["Bio"] ?></textarea>
                     </fieldset>
                     <br>
-                    <button type="button" class="saveButton" name="saveButton">Ändra</button>
+                    <button type="submit" class="saveButton" name="saveButton">Spara</button>
                     <!-- Knappen ska spara informationen från inputs till databasen -->
                 </form>
             </div>
 
             <div class="mainCol2">
-                <form id="StudentFormUser">
+                <form id="StudentFormUser" method = "post" action = "passowrdcheng.php">
 
                     <fieldset id="For-userlogin" form="StudentFormUser">
                         <legend>Inloggningsuppgifter</legend>
 
                         <div class="Login">
-                            <label for="UserName-Student">Användarnamn</label>
+                            <label for="UserName-Student"></label>
                             <br>
-                            <input type="text" name="UserName-Student" id="UserName-Student" readonly>
+                            <input type="text" name="UserName-Student" id="UserName-Student" value="<?php echo $_SESSION["usernamee1"] ?>" readwrite >
 
                             <br>
                             <label for="Mail-Student">Mail</label>
                             <br>
-                            <input type="email" name="Mail-Student" id="Mail-Student">
+                            <input type="email" name="Mail-Student" id="Mail-Student" >
 
                             <br>
                             <label for="password-Student">Lösenord</label>
@@ -203,60 +208,107 @@
                             <br>
                             <label for="password-Student-Valid">Lösenord</label>
                             <br>
-                            <input type="password" name="password-Student-Valid" id="password-Student-Valid" pattern=".{6,}" required>
+                            <input type="password" onkeyup="PasswordConfirmation()" name="password-Student-Valid" id="password-Student-Valid" pattern=".{6,}" required>
                             <br>
                             <br>
-                            <input type="button" class="ChangePassword" name="ChangePassword" value="Ändra">
+                            <button type="submit" onkeyup="PasswordConfirmation()" class="ChangePassword" name="ChangePassword">Ändra</button>
                             <!-- Javascript som matchar lösenorden och minst 6 karaktärer och spara till databas genom knappen -->
-                        </div>
-                        <div class="Message">
-
-                            <h4>Lösenordet måste innehålla</h4>
-                            <p id="length" class="invalid"> Minst
-                                <b>6 karaktärer</b>
-                            </p>
+                     
                         </div>
                     </fieldset>
                 </form>
-                <form id="DeleteStudentProfile">
-                    <!-- script med pop up, javascript  -->
-                    <h5> Vill du ta bort din profil? Tryck på
-                        <input type="button" class="DeleteProfile" name="DeleteProfile"
-                            value="Radera Profil"> </h5>
 
-                </form>
-            </div>
-            <!-- <script>
-                    var Password = document.getElementById("password-Student");
-                    var PasswordValidation= document.getElementById("password-Student-Valid");
-                    var length = document.getElementById("length");
-                  
-                    Password.onkeyup = function()
-                    {   
-                      // Validate length
-                      if(Password.value.length >= 6) {
-                        length.classList.remove("invalid");
-                        length.classList.add("valid");
-                      } else {
-                        length.classList.remove("valid");
-                        length.classList.add("invalid");
-                      }
-                    }  
-                      PasswordValidation.onkeyup = function() {   
-                      // Validate length
-                      if(Password.value.length >= 6) {
-                        length.classList.remove("invalid");
-                        length.classList.add("valid");
-                      } else {
-                        length.classList.remove("valid");
-                        length.classList.add("invalid");
-                      }
-                    }
-                    
-                    var p1=document.getElementById().value;
-                    var p2=document.getElementById().value;
+                     <div id="Message" class="Message">
+                            <h4>Lösenordet måste innehålla</h4>
+                            <p id="length" class="invalid"> Minst
+                                <b>6 karaktärer</b>
+                                <?php if (isset($_SESSION["fel"])){echo $_SESSION["fel"];} ?> 
+                            </p>
+                        
+                        <p id="match" class="invalid">Lösenorden matchar varandra</p>
+                    </div>
+                    <script>
+                            var MyPassword = document.getElementById("password-Student");
+                            var MyPasswordValidator = document.getElementById("password-Student-Valid");
+                            var len = document.getElementById("length");
+                            var matchPasswords = document.getElementById("match");
+                          
+                            var PasswordConfirmation = function () {
+                                if ((MyPassword.value == MyPasswordValidator.value)) {
+                                    matchPasswords.classList.remove("invalid");
+                                    matchPasswords.classList.add("valid");
+                                    if((MyPassword.value.length <6 && MyPasswordValidator.value.length<6))
+                                    {
+                                        matchPasswords.classList.remove("valid");
+                                        matchPasswords.classList.add("invalid");
+                                    }
+                                }
+                                else {
+                                    matchPasswords.classList.remove("valid");
+                                    matchPasswords.classList.add("invalid");
             
-            </script> -->
+                                }
+                                if (MyPassword.value.length >=6 && MyPasswordValidator.value.length>=6)
+                                 {
+                                    len.classList.remove("invalid");
+                                    len.classList.add("valid");
+                                }
+                                else {
+                                    len.classList.remove("valid");
+                                    len.classList.add("invalid");
+                                }
+                            }
+                               
+                        </script>
+                    
+                <!-- <form id="DeleteStudentProfile">
+                    
+                        Vill du ta bort din profil? Tryck på
+                        <input type="button" id="DeleteProfile" class="DeleteProfile" name="DeleteProfile"
+                            value="Ta bort"> 
+                            <div id="myModal" class="modal">
+
+                                    
+                                    <div class="modal-content">
+                                        <span class="close">&times;</span>
+                                        <p>Är du säker på att du vill ta bort din profil?
+                                            <br>Tryck "Ja" för att ta bort profilen annars tryck på krysset i högra hörnet!</p>
+                                        <button type="button" class="yesDelete" name="yesDelete">Ja</button>
+                                    </div>
+                                    <script>
+                                        // Get the modal
+                                        var modal = document.getElementById('myModal');
+            
+                                        // Get the button that opens the modal
+                                        var Delete_Button = document.getElementById("DeleteButton");
+            
+                                        // Get the <span> element that closes the modal
+                                        var span = document.getElementsByClassName("close")[0];
+            
+                                        // When the user clicks the button, open the modal 
+                                        Delete_Button.onclick = function () {
+                                            modal.style.display = "block";
+                                        }
+            
+                                        // When the user clicks on <span> (x), close the modal
+                                        span.onclick = function () {
+                                            modal.style.display = "none";
+                                        }
+            
+                                        // When the user clicks anywhere outside of the modal, close it
+                                        window.onclick = function (event) {
+                                            if (event.target == modal) {
+                                                modal.style.display = "none";
+                                            }
+                                        }
+                                    </script>
+            
+                                </div>
+            
+                </form> -->
+            </div>
+            
+
         </div>
     </main>
     <footer>

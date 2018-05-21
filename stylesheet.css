@@ -472,6 +472,41 @@ input#SearchC
     height:auto;
     
 }
+.SearchCompaniesForm2_3
+{
+    float:left;
+    width:49%;
+    border:1px solid black;
+}
+.SearchCompaniesForm2_4
+{
+    float:right;
+    width:49%;
+    border: 1px solid black;
+}
+.SearchCompaniesForm2_4 p
+{
+    margin-left:4%;
+}
+#send
+{
+
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:125px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 8px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+#send:hover
+{
+    background-color: red;
+    color:white;
+}
 .SearchCompaniesForm2
 {
     /* margin-left:20%; */
