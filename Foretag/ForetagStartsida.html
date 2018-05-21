@@ -53,10 +53,13 @@
 
 </head>
 
-<body>
+<body onload="fillList()">
+    <?php include 'laggtillexjobb.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad som <?php session_start(); echo $_SESSION["Name"]; ?></label>
+            <label for="Inlogg">Inloggad som
+                <?php echo $_SESSION["Name"]; ?>
+            </label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -108,7 +111,7 @@
                 <!-- Form med exjobb ska vara en ul med hover och radiobutton likt med ett eventlistener istället -->
                 <!-- Form man ska kunna se studenter efter att man har tryckt på ett exjobb och -->
 
-                <form id="ExjobbForm">
+                <form id="ExjobbForm" method = "post" action = "exjobbtabort.php">
                     <fieldset id="Fieldset-ExJForm">
                         <legend align="center">Lista av Exjobb</legend>
                         <ul id="exjoblist" class="UL-Exjobb" type="button">
@@ -116,23 +119,46 @@
                         </ul>
                         <input type="button" name="AddToExjobb" id="AddToExjobb" value="Lägg till" onclick="titleAdd()">
                         <script>
-                            function titleAdd()
-                            {
+                            var JSON_lista = '<?php echo $res ?>';
+                            console.log(JSON_lista);
+                            function jsonEscape(str) {
+                                return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                            }
+                            var exjobblist = JSON.parse(jsonEscape(JSON_lista));
+                            var aktuellTitle;
+                            function fillList() {
+                                exjobblist.forEach(element => {
+
+                                    var li = document.createElement("li");
+                                    var t = document.createTextNode(element.Title);
+                                    li.appendChild(t);
+
+                                    li.addEventListener("click", function (e) {
+                                        console.log(element.Title + "This was clicked");
+                                        document.getElementById("ExjobbTitle").value = element.Title;
+                                        document.getElementById("Exjobb-Bio").value = element.description;
+                                        aktuellTitle = element.Title;
+                                        
+                                    }
+                                    
+                                    
+                                    )
+                                    
+                                    document.getElementById("exjoblist").appendChild(li);
+                                });  
+                            }
+                            
+                            function titleAdd(){
                                 var li = document.createElement("li");
                                 var t = document.createTextNode("Nytt Exjobb");
                                 li.appendChild(t);
-
-                                li.addEventListener("click", function(e){
-                                    console.log("This was clicked");
-                                }
-                                )
                                 document.getElementById("exjoblist").appendChild(li);
                             }
                         </script>
-                        <input type="button" name="DeleteExjobb" id="DeleteExjobb" value="Ta bort">
+                        
                     </fieldset>
                 </form>
-                <form id="ExjobbForm">       
+                <form id="ExjobbForm">
                     <fieldset id="Fieldset-SF-Exjobb">
                         <legend align="center">Intresseanmälan</legend>
                         <ul class="UL-Exjobb">
@@ -142,33 +168,39 @@
                 </form>
                 <form id="ExjobbForm">
                     <fieldset id="SPanelPinfo">
-                            <legend align="center">Student</legend>
-                            <p>
-                                <input readonly type="text" style="padding: 1%;"name="ShowStudent" id="ShowStudent" placeholder="Student" >
-                            </p>
-                            <p>
-                                <textarea readonly name="StudentSkills" style="height:100%;width:99%;" id="StudentSkills" maxlength="60000" rows="12" placeholder="Studentens kunskaper.." ></textarea>
-                            </p>
-                            <p>
-                                <textarea readonly name="StudentExperience" id="StudentExperience" style="height:100%;width:99%;" placeholder="Studentens erfarenhet.."maxlength="60000" rows="12"></textarea>
-                            </p>
-                        </fieldset>
+                        <legend align="center">Student</legend>
+                        <p>
+                            <input readonly type="text" style="padding: 1%;" name="ShowStudent" id="ShowStudent" placeholder="Student">
+                        </p>
+                        <p>
+                            <textarea readonly name="StudentSkills" style="height:100%;width:99%;" id="StudentSkills" maxlength="60000" rows="12" placeholder="Studentens kunskaper.."></textarea>
+                        </p>
+                        <p>
+                            <textarea readonly name="StudentExperience" id="StudentExperience" style="height:100%;width:99%;" placeholder="Studentens erfarenhet.."
+                                maxlength="60000" rows="12"></textarea>
+                        </p>
+                    </fieldset>
                 </form>
             </div>
 
-            
+
             <div class="Panel-Add-Exjobb">
-                <form id="Add-Exjobb">
+                <form id="Add-Exjobb" method="post" action="exjobbtabort.php">
+                        <form id="Add-Exjobb" method="post" action="laggtillexjobbspara.php">
                     <fieldset id="A-Exjobb">
                         <legend align="center">Lägg till Exjobb</legend>
-                        <p><input type="text" style="width:50%;height:25%;"placeholder="Exjobb Title"></p>
                         <p>
-                            <textarea name="Exjobb-Bio" id="Exjobb-Bio" style="width:99%;height:100%;"maxlength="60000" rows="20" placeholder="Om Exjobb..."></textarea>
+                            <input id = "ExjobbTitle" type="text" name="exjobbt" style="width:50%;height:25%;" placeholder="Exjobb Title">
                         </p>
-                        <input type="button" name="AddExjobb" id="AddExjobb" value="Spara">
+                        <p>
+                            <textarea name="Exjobb-Bio" id="Exjobb-Bio" style="width:99%;height:100%;" maxlength="60000" rows="20" placeholder="Om Exjobb..."></textarea>
+                        </p>
+                        <button type="submit" name="AddExjobb" id="AddExjobb" value="Spara">Spara</button>
+                    </form>
+                        <button type="submit" name="DeleteExjobb" id="DeleteExjobb" value= "Ta bort" >Ta bort</button>
                     </fieldset>
                 </form>
-            </div>            
+            </div>
         </div>
 
 
