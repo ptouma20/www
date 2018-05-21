@@ -178,6 +178,7 @@
                     return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
+                console.log(myList2);
                 function GetExjobb() {
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
