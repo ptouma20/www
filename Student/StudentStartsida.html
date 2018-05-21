@@ -120,7 +120,6 @@
                     }
                     var myList = JSON.parse(jsonEscape(JSON_List));
 
-
                     function Getsokexjobb() {
                         var x = document.getElementById("sokexjobb").value;
                         var y = sok(x, myList);
@@ -154,10 +153,12 @@
                         });
 
                         console.log(nyaexjobb);
+                        var nyaexjobb2 = nyaexjobb.splice(5,nyaexjobb.length);
+                        console.log(nyaexjobb2);
 
                         document.getElementById("ExjobblistFEED").innerHTML = "";
 
-                        nyaexjobb.forEach(element => {
+                        nyaexjobb2.forEach(element => {
                             var li = document.createElement("li");
                             var t = document.createTextNode(element.Title);
                             li.appendChild(t);
