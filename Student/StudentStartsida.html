@@ -184,7 +184,7 @@
             <body onload="exjobbFEED()"></body>
             </div>
                 
-            <div class="mainCol3">
+            <div class="mainCol3" method = "POST" action = "studentansoka.php">
                 <fieldset style="width:90%;height:60%;" class="Startsida" form="student-user-content">
                     <legend align="center">Nyligen tillagda examensarbete</legend>
                     <fieldset style="width:auto;height:90%;overflow-y:scroll;" class="Startsida">
@@ -193,7 +193,7 @@
                     </fieldset>
                 </fieldset>
 
-                <fieldset style="height:auto;width:90%;" class="Startsida" form="student-user-content">
+                <fieldset style="height:auto;width:90%;" class="Startsida" form="student-user-content" >
                     <legend align="center">Information om det valda examensarbetet</legend>
 
                     <p>Examensarbete
@@ -207,7 +207,7 @@
                         <br>
                         <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
                     </p>
-                    <input type="submit" class="AddButton" name="AddButton" style="margin-left:4%;" value="Ansök Exjobb">
+                    <button type="submit" class="AddButton" name="AddButton" style="margin-left:4%;" name="Ansök Exjobb">Ansök Exjobb</button>
                 </fieldset>
             </div>
         </div>
