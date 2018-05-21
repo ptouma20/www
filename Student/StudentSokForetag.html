@@ -183,7 +183,7 @@
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
                         var li = document.createElement("li");
-                        var t = document.createTextNode(element.name);
+                        var t = document.createTextNode(element.Title);
                         li.appendChild(t);
 
                         li.addEventListener("click", function (e) {
@@ -191,7 +191,7 @@
                             if (e.target && e.target.nodeName == "LI") {
                                 console.log(element.name + " was clicked");
                                 document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                document.getElementById("Exjobbcompname-Readonly").value = element.name;
+                                document.getElementById("Exjobbcompname-Readonly").value = element.Name;
                                 document.getElementById("ExjobbDescription-Readonly").value = element.description;
                             }
                         });
