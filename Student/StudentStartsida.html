@@ -41,7 +41,7 @@
     <?php include 'xjobb.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad<font color=blue font face='arial' size='5pt'>Inloggad som 
+            <label for="Inlogg"><font color=blue font face='arial' size='5pt'>Inloggad som 
                 <?php session_start(); ;echo $_SESSION["Name"] ?></font></label>
         </div>
         <div class="Logo">
@@ -103,7 +103,7 @@
                                         
                                         <br>
                                         <input type="search" name="Education-Student" id="sokexjobb" style="width:65%;padding:1%;margin-left: 3%"placeholder="Sök Exjobb..">
-                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="exjobbFEED()">Sök</button> 
+                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="Getsokexjobb()">Sök</button> 
                                         <hr>
                                         <ul id="Exjobblist">
                                         </ul>                
