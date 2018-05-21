@@ -12,6 +12,7 @@ function sok(string, sokarray) {
        maxPatternLength: 32,
        minMatchCharLength: 2,
        keys: [
+        "Title",
          "description"
        ]
      };
