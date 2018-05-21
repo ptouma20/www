@@ -35,6 +35,7 @@
     <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
 </head>
 <body>
+    <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad...</label>
@@ -79,10 +80,17 @@
     <main>
             <div class="SearchCompaniesForm1">
                     <div class="SearchCompaniesForm2">
-                        <input style="width:50%;" type="search" id="SearchC" placeholder="Företag eller student" />
+                        <legend align="center"><h2>Sök efter studenter eller företag</h2></legend>
+                        <p>                  
+                        <input style="margin-left: 35%" name="type" type="radio" id="student">Student</input>
+                        <input style="margin-left: 1%" name="type" type="radio" id="foretag">Företag</input>
+                        </p>
+                        <input style="width:50%;" type="search" id="SearchC" placeholder="Sök" />
+                        
                         <button  id="submit" type="submit" onclick="Getsok()">
                             <i id="ico" class="fa fa-search"></i>
                         </button>
+                        
                         <hr>
                         <ul id="CompanieList"></ul>
                     </div>
@@ -101,6 +109,43 @@
                         <textarea rows="10" style="width: 350px;" name="message" class="form-control"></textarea>
                             <br>
                             <button>Skicka</button>
+
+                                <script>
+                                    if(document.getElementById('foretag').checked) {
+                                        var JSON_List = '<?php echo $res ?>';
+                                        console.log(JSON_List);
+                                        function jsonEscape(str) {
+                                            return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                                        }
+                                        var myList = JSON.parse(jsonEscape(JSON_List));
+                        
+                                        console.log(myList);
+                        
+                                        function Getsok() {
+                                            var x = document.getElementById("SearchC").value;
+                                            var y = sok(x, myList);
+                                            console.log(myList);
+                                            console.log(y);
+                                            document.getElementById("CompanieList").innerHTML = "";
+                                            y.forEach(element => {
+                                                var li = document.createElement("li");
+                                                var t = document.createTextNode(element.name);
+                                                li.appendChild(t);
+                        
+                                                li.addEventListener("click", function (e) {
+                        
+                                                    if (e.target && e.target.nodeName == "LI") {
+                                                        console.log(element.name + " was clicked");
+                                                        document.getElementById("CompanieName-Readonly").value = element.name;
+                                                    }
+                                                });
+                        
+                                                document.getElementById("CompanieList").appendChild(li);
+                                            });
+                                        }
+                                    }
+                                    </script>
+                            
 
                     </div>
                 </div>
