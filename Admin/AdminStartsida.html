@@ -111,17 +111,17 @@
                             <button>Skicka</button>
 
                                 <script>
-                                    if(document.getElementById('foretag').checked) {
-                                        var JSON_List = '<?php echo $res ?>';
-                                        console.log(JSON_List);
-                                        function jsonEscape(str) {
-                                            return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
-                                        }
-                                        var myList = JSON.parse(jsonEscape(JSON_List));
-                        
-                                        console.log(myList);
-                        
-                                        function Getsok() {
+                                    var JSON_List = '<?php echo $res ?>';
+                                    console.log(JSON_List);
+                                    function jsonEscape(str) {
+                                        return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                                    }
+                                    var myList = JSON.parse(jsonEscape(JSON_List));
+                                    
+                                    console.log(myList);
+                                    
+                                    function Getsok() {
+                                        if(document.getElementById('foretag').checked) {
                                             var x = document.getElementById("SearchC").value;
                                             var y = sok(x, myList);
                                             console.log(myList);
