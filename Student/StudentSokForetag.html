@@ -164,7 +164,7 @@
                                 document.getElementById("CompanieMail-Readonly").value = element.email;
                                 document.getElementById("CompanieWebpage-Readonly").value = element.webpage;
                                 document.getElementById("CompanieDescription-Readonly").value = element.bio;
-                                GetExjobb(element.ID);
+                                GetExjobb(element.ID, element.name);
                             }
                         });
 
@@ -179,7 +179,7 @@
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
                 console.log(myList2);
-                function GetExjobb(foretagsID) {
+                function GetExjobb(foretagsID, foretagsNamn) {
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
                         if (foretagsID == element.companyID) {
@@ -192,7 +192,7 @@
                                 if (e.target && e.target.nodeName == "LI") {
                                     console.log(element.Name + " was clicked");
                                     document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                    document.getElementById("Exjobbcompname-Readonly").value = element.Name;
+                                    document.getElementById("Exjobbcompname-Readonly").value = foretagsNamn;
                                     document.getElementById("ExjobbDescription-Readonly").value = element.description;
                                 }
                             });
