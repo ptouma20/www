@@ -164,7 +164,7 @@
                                 document.getElementById("CompanieMail-Readonly").value = element.email;
                                 document.getElementById("CompanieWebpage-Readonly").value = element.webpage;
                                 document.getElementById("CompanieDescription-Readonly").value = element.bio;
-                                GetExjobb();
+                                GetExjobb(element.name);
                             }
                         });
 
@@ -179,23 +179,24 @@
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
                 console.log(myList2);
-                function GetExjobb() {
+                function GetExjobb(Foretagsnamn) {
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
-                        var li = document.createElement("li");
-                        var t = document.createTextNode(element.Title);
-                        li.appendChild(t);
+                        if (foretagsnamn == element.Name) {
+                            var li = document.createElement("li");
+                            var t = document.createTextNode(element.Title);
+                            li.appendChild(t);
 
-                        li.addEventListener("click", function (e) {
+                            li.addEventListener("click", function (e) {
 
-                            if (e.target && e.target.nodeName == "LI") {
-                                console.log(element.name + " was clicked");
-                                document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                document.getElementById("Exjobbcompname-Readonly").value = element.Name;
-                                document.getElementById("ExjobbDescription-Readonly").value = element.description;
-                            }
-                        });
-
+                                if (e.target && e.target.nodeName == "LI") {
+                                    console.log(element.name + " was clicked");
+                                    document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                    document.getElementById("Exjobbcompname-Readonly").value = element.Name;
+                                    document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                }
+                            });
+                        }
                         document.getElementById("ExjobbContainerUL").appendChild(li);
                     });
                 }
