@@ -205,22 +205,22 @@
 
             <div class="ExjobbContainer">
 
-                <form id="ExjobbContainerInformation">
+                <form id="ExjobbContainerInformation" method = "POST" action = "ansokexjobb2.php">
 
                     <legend align="center" style="margin-top:1%;">Information om examensarbetet</legend>
                     <hr>
                     <p>Examensarbete
                         <br>
-                        <input type="text" id="Exjobbtitle-Readonly" readonly>
+                        <input type="text" id="Exjobbtitle-Readonly" name = "Exarbete" readonly>
                     </p>
                     <p>Företagsnamn
                         <br>
-                        <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
+                        <input type="text" id="Exjobbcompname-Readonly" name = "Fname"  readonly> </p>
                     <p>Beskrivning om examensarbetet
                         <br>
                         <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="14" readonly></textarea>
                     </p>
-                    <input type="button" value="Ansök om Exjobb" id="StudentSearchCompanyButton">
+                    <button type="submit" name ="Ansök om Exjobb" id="StudentSearchCompanyButton">Ansök om Exjobb</button>
                 </form>
             </div>
 
