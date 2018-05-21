@@ -179,7 +179,7 @@
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
                 function GetExjobb() {
-                    document.getElementById("CompanieList").innerHTML = "";
+                    document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
                         var li = document.createElement("li");
                         var t = document.createTextNode(element.name);
