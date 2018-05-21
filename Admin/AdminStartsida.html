@@ -82,7 +82,7 @@
     </header>
     <main>
             <div class="SearchCompaniesForm1">
-                    <div class="SearchCompaniesForm2">
+                    <div class="SearchCompaniesForm2_3">
                         <legend align="center"><h2>Sök efter studenter eller företag</h2></legend>
                         <p>                  
                         <input style="margin-left: 35%" name="type" type="radio" id="student">Student</input>
@@ -98,7 +98,7 @@
                         <ul id="CompanieList"></ul>
                     </div>
                     
-                    <div class="SearchCompaniesForm3">
+                    <div class="SearchCompaniesForm2_4">
                         <p>Namn
                             <br>
                             <input type="text" id="CompanieName-Readonly" readonly> </p>
@@ -111,7 +111,7 @@
                             <br>
                         <textarea rows="10" style="width: 350px;" name="message" class="form-control"></textarea>
                             <br>
-                            <button>Skicka</button>
+                            <button id="send">Skicka</button>
 
                                 <script>
                                     var JSON_List = '<?php echo $res ?>';
