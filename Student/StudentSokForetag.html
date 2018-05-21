@@ -183,21 +183,21 @@
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
                         if (foretagsnamn == element.Name) {
-                            var li = document.createElement("li");
+                            var li2 = document.createElement("li");
                             var t = document.createTextNode(element.Title);
-                            li.appendChild(t);
+                            li2.appendChild(t);
 
-                            li.addEventListener("click", function (e) {
+                            li2.addEventListener("click", function (e) {
 
                                 if (e.target && e.target.nodeName == "LI") {
-                                    console.log(element.name + " was clicked");
+                                    console.log(element.Name + " was clicked");
                                     document.getElementById("Exjobbtitle-Readonly").value = element.Title;
                                     document.getElementById("Exjobbcompname-Readonly").value = element.Name;
                                     document.getElementById("ExjobbDescription-Readonly").value = element.description;
                                 }
                             });
                         }
-                        document.getElementById("ExjobbContainerUL").appendChild(li);
+                        document.getElementById("ExjobbContainerUL").appendChild(li2);
                     });
                 }
             </script>
