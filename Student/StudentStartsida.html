@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Exjobb Örebro</title>
-    <link rel="stylesheet" href="../stylesheet.css"> 
+    <link rel="stylesheet" href="../stylesheet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src='../StudentStartsidajs.js'></script>
-    <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
+        <script type="text/javascript" src='../StudentStartsidajs.js'></script>
+        <script type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js'></script>
 
 
-    <!--Bootstrap..-->
+        <!--Bootstrap..-->
 
-    
-    <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="../ICONS/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="../ICONS/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="../ICONS/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="../ICONS/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="../ICONS/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="../ICONS/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="../ICONS/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="../ICONS/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="../ICONS/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="../ICONS/favicon-16x16.png">
-    <link rel="manifest" href="../ICONS/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
+
+        <link rel="apple-touch-icon" sizes="57x57" href="../ICONS/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../ICONS/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../ICONS/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../ICONS/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../ICONS/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../ICONS/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../ICONS/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../ICONS/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../ICONS/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192" href="../ICONS/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../ICONS/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../ICONS/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../ICONS/favicon-16x16.png">
+        <link rel="manifest" href="../ICONS/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="shortcut icon" href="../ICONS/Favicon.ico" type="image/x-icon">
 </head>
+
 <body>
     <?php include 'xjobb.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg"><font color=blue font face='arial' size='5pt'>Inloggad som 
-                <?php session_start(); ;echo $_SESSION["Name"] ?></font></label>
+            <label for="Inlogg">
+                <font color=blue font face='arial' size='5pt'>Inloggad som
+                    <?php echo $_SESSION["Name"] ?>
+                </font>
+            </label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -69,7 +74,7 @@
                 <li class="dropdown-items">
                     <a class="DropLink">Hjälp</a>
                     <div class="dropdown-content">
-                        
+
                         <a href="../Student/SupportAndQandA.html">Support</a>
                         <a href="../Student/SupportAndQandA.html">Q&amp;A</a>
 
@@ -90,113 +95,122 @@
                     </div>
                 </li>
             </ul>
-        </div>    
+        </div>
     </header>
     <main>
-            <div class="mainRow">
-                    <div class="mainCol4">
-                            <fieldset style="height:45%;"class="Startsida" form="student-user-content">
-                                <legend align ="center">Sök examensarbete</legend>
-                                    <div class="Programming">
+        <div class="mainRow">
+            <div class="mainCol4">
+                <fieldset style="height:45%;" class="Startsida" form="student-user-content">
+                    <legend align="center">Sök examensarbete</legend>
+                    <div class="Programming">
 
-                                    </div>
-                                        
-                                        <br>
-                                        <input type="search" name="Education-Student" id="sokexjobb" style="width:65%;padding:1%;margin-left: 3%"placeholder="Sök Exjobb..">
-                                        <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;"onclick="Getsokexjobb()">Sök</button> 
-                                        <hr>
-                                        <ul id="Exjobblist">
-                                        </ul>                
-                            </fieldset>
-                            <script>
-                                    var JSON_List = '<?php echo json_encode($_SESSION["a"]) ?>'; // a = company...
-                                    var myList = JSON.parse(JSON_List);
+                    </div>
+
+                    <br>
+                    <input type="search" name="Education-Student" id="sokexjobb" style="width:65%;padding:1%;margin-left: 3%" placeholder="Sök Exjobb..">
+                    <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;" onclick="Getsokexjobb()">Sök</button>
+                    <hr>
+                    <ul id="Exjobblist">
+                    </ul>
+                </fieldset>
+                <script>
+                    var JSON_List = '<?php echo json_encode($res) ?>'; // a = company...
+
+                    function jsonEscape(str) {
+                        return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                    }
+                    var myList = JSON.parse(jsonEscape(JSON_List));
 
 
-                                    console.log(myList);
+                    function Getsokexjobb() {
+                        var x = document.getElementById("sokexjobb").value;
+                        var y = sok(x, myList);
+                        console.log(myList);
+                        console.log(y);
+                        document.getElementById("Exjobblist").innerHTML = "";
+                        y.forEach(element => {
+                            var li = document.createElement("li");
+                            var t = document.createTextNode(element.Title);
+                            li.appendChild(t);
 
-
-                                    function Getsokexjobb() {
-                                        var x = document.getElementById("sokexjobb").value;
-                                        var y = sok(x, myList);
-                                        console.log(myList);
-                                        console.log(y);
-                                        document.getElementById("Exjobblist").innerHTML = "";
-                                        y.forEach(element => {
-                                            var li = document.createElement("li");
-                                            var t = document.createTextNode(element.Title);
-                                            li.appendChild(t);
-                    
-                                            li.addEventListener("click", function (e) {
-                                                // e.target is our targetted element.
-                                                // try doing console.log(e.target.nodeName), it will result LI
-                                                //console.log(e.createTextNode);
-                                                if (e.target && e.target.nodeName == "LI") {
-                                                    console.log(element.Title + " was clicked");
-                                                    document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                                    document.getElementById("Exjobbcompname-Readonly").value = element.ID;
-                                                    document.getElementById("ExjobbDescription-Readonly").value = element.description;
-                                                }
-                                            });
-                    
-                                            document.getElementById("Exjobblist").appendChild(li);
-                                        });
-                                    }
-                                    function exjobbFEED() {
-                            
-                            var nyaexjobb = myList.sort(function (a,b){
-                                return b.ID - a.ID
+                            li.addEventListener("click", function (e) {
+                                // e.target is our targetted element.
+                                // try doing console.log(e.target.nodeName), it will result LI
+                                //console.log(e.createTextNode);
+                                if (e.target && e.target.nodeName == "LI") {
+                                    console.log(element.Title + " was clicked");
+                                    document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                    document.getElementById("Exjobbcompname-Readonly").value = element.ID;
+                                    document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                }
                             });
-                            
-                            console.log(nyaexjobb);
-                
-                            document.getElementById("ExjobblistFEED").innerHTML = "";
-                
-                            nyaexjobb.forEach(element => {
-                                var li = document.createElement("li");
-                                var t = document.createTextNode(element.Title);
-                                li.appendChild(t);
-                
-                                li.addEventListener("click", function (e) {
-                                    // e.target is our targetted element.
-                                    // try doing console.log(e.target.nodeName), it will result LI
-                                    //console.log(e.createTextNode);
-                                    if (e.target && e.target.nodeName == "LI") {
-                                        console.log(element.Title + " was clicked");
-                                        document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                        document.getElementById("Exjobbcompname-Readonly").value = element.ID;
-                                        document.getElementById("ExjobbDescription-Readonly").value = element.description;
-                                    }
-                                });
-                
-                                document.getElementById("ExjobblistFEED").appendChild(li);
+
+                            document.getElementById("Exjobblist").appendChild(li);
+                        });
+                    }
+                    function exjobbFEED() {
+
+                        var nyaexjobb = myList.sort(function (a, b) {
+                            return b.ID - a.ID
+                        });
+
+                        console.log(nyaexjobb);
+
+                        document.getElementById("ExjobblistFEED").innerHTML = "";
+
+                        nyaexjobb.forEach(element => {
+                            var li = document.createElement("li");
+                            var t = document.createTextNode(element.Title);
+                            li.appendChild(t);
+
+                            li.addEventListener("click", function (e) {
+                                // e.target is our targetted element.
+                                // try doing console.log(e.target.nodeName), it will result LI
+                                //console.log(e.createTextNode);
+                                if (e.target && e.target.nodeName == "LI") {
+                                    console.log(element.Title + " was clicked");
+                                    document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                    document.getElementById("Exjobbcompname-Readonly").value = element.ID;
+                                    document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                }
                             });
-                        }
-                                </script>
-                               
-                              
-                            </div>
 
-                <div class="mainCol3">
-                    <fieldset style="width:80%;height:60%;"class="Startsida" form="student-user-content">
-                            <legend align ="center">Nyligen tillagda examensarbete</legend>
-                            <fieldset  style="width:auto;height:90%;overflow-y:scroll;"class="Startsida">
-                                <ul id="ExjobblistFEED">
-                                </ul>
-                            </fieldset>
-                    </fieldset>
+                            document.getElementById("ExjobblistFEED").appendChild(li);
+                        });
+                    }
+                </script>
 
-                        <fieldset style="height:auto;" class="Startsida" form="student-user-content">
-                                <legend align ="center">Information om det valda examensarbetet</legend>
-    
-                                <p>Examensarbete<br> <input type="text" id="Exjobbtitle-Readonly"  readonly></p>
-                                <p>Företagsnamn<br> <input type ="text" id="Exjobbcompname-Readonly"  readonly> </p>
-                                <p>Beskrivning om examensarbetet<br><textarea id="ExjobbDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
-                                <input type="submit" class="AddButton" name="AddButton" style="margin-left:3%;" value="Ansök Exjobb">
-                        </fieldset>
-                </div>
+
             </div>
-            <br>
+
+            <div class="mainCol3">
+                <fieldset style="width:80%;height:60%;" class="Startsida" form="student-user-content">
+                    <legend align="center">Nyligen tillagda examensarbete</legend>
+                    <fieldset style="width:auto;height:90%;overflow-y:scroll;" class="Startsida">
+                        <ul id="ExjobblistFEED">
+                        </ul>
+                    </fieldset>
+                </fieldset>
+
+                <fieldset style="height:auto;" class="Startsida" form="student-user-content">
+                    <legend align="center">Information om det valda examensarbetet</legend>
+
+                    <p>Examensarbete
+                        <br>
+                        <input type="text" id="Exjobbtitle-Readonly" readonly>
+                    </p>
+                    <p>Företagsnamn
+                        <br>
+                        <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
+                    <p>Beskrivning om examensarbetet
+                        <br>
+                        <textarea id="ExjobbDescription-Readonly" style="height:200px;width:365px;" readonly></textarea>
+                    </p>
+                    <input type="submit" class="AddButton" name="AddButton" style="margin-left:3%;" value="Ansök Exjobb">
+                </fieldset>
+            </div>
+        </div>
+        <br>
     </main>
     <footer>
         <div class="row">
