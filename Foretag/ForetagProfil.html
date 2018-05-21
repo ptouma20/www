@@ -46,10 +46,10 @@
         <div class="navigation">
             <ul class="dropdown">
                 <li>
-                    <a href="ForetagStartsida.html">Startsida</a>
+                    <a href="../Foretag/ForetagStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a class="active" href="ForetagProfil.html">Profil</a>
+                    <a class="active" href="../Foretag/ForetagProfil.html">Profil</a>
                 </li>
                 <li>
                     <a href="ForetagMeddelande.html">Meddelande</a>
@@ -72,17 +72,9 @@
     <main>
         <div class="Company">
             <div class="CompanyProfile">
-                <!-- <form id="CompanyProfilReadOnly">
-                                <fieldset>
-                                        <legend align="center">Profil</legend>
-                                        <p>Namn<br> <input type ="text" id="CompanieName-Readonly"  readonly> </p>
-                                        <p>Mail<br> <input type="text" id="CompanieMail-Readonly"  readonly></p>
-                                        <p>Webbsida<br> <input type="text" id="CompanieWebpage-Readonly"  readonly></p>
-                                        <p>Företagsbeskrivning<br><textarea id="CompanieDescription-Readonly" style="height:200px;width:365px;"readonly></textarea></p>
-                                </fieldset>    
-                        </form>      -->
-                <form id="CompanyChangeProfile" method = "post" action = "uppdateforetagData.php">
-                    <fieldset>
+                
+                <form id="CompanyChangeProfile" method = "post" action = "uppdateforetagData.php" style="width:100%;">
+                    <fieldset style="width:80%;">
                         <legend align="center">Ändra Profil</legend>
                         <p>Namn
                             <br>
@@ -97,7 +89,7 @@
                         </p>
                         <p>Företagsbeskrivning
                             <br>
-                            <textarea id="CompanieDescription" name ="CompanieDescription" style="height:200px;width:365px;"><?php echo $_SESSION["Bio"]; ?></textarea>
+                            <textarea id="CompanieDescription" name ="CompanieDescription" style="height:95%;width:98%;"rows="12"><?php echo $_SESSION["Bio"]; ?></textarea>
                         </p>
                         <!--Kanske får implementera cols och rows?-->
                         <!-- <hr> -->
@@ -106,8 +98,8 @@
                 </form>
             </div>
             <div class="CompanyLogin">
-                <form id="CompanyLoginInformation" method = "post" action = "passowrdcheng.php">
-                    <fieldset>
+                <form id="CompanyLoginInformation" method = "post" action = "passowrdcheng.php"style="width:95%;">
+                    <fieldset style="width:80%;">
                         <!-- Javascript funktion -->
                         <legend align="center">Inloggningsuppgifter</legend>
                         <label for="CompanyUsername"></label>
@@ -127,7 +119,7 @@
                     </fieldset>
                 </form>
             
-                <div class="Message" id="Message">
+                <div class="Message" id="Message"style="width:95%;">
                     <h4>Lösenordet måste innehålla</h4>
                     <p id="length" class="invalid"> Minst
                         <b>6 karaktärer</b>

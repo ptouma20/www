@@ -687,9 +687,9 @@ StudentSearchCompanyButton:hover
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    margin-left: 25%;
+    margin-left: 1%;
     transition-duration: 0.4s;
-    width:190px;
+    width:40%;
 }
 
 
@@ -930,15 +930,16 @@ StudentSearchCompanyButton:hover
 .CompanyProfile
 {
     float:left;
-    width:45%;
+    width:49%;
     margin: 5px;
+    margin-left:-0.5%;
     padding: 10px;
   
 }
 .CompanyLogin
 {
     float:right;
-    width:45%;
+    width:46%;
     margin: 5px;
     padding: 10px;   
 }
@@ -953,6 +954,10 @@ StudentSearchCompanyButton:hover
     border:0.5px solid;
     padding:10px;
     margin:10px;
+}
+#CompanyChangeProfile p
+{
+    margin-left:1%;
 }
 
 #CompanyLoginInformation
@@ -1032,9 +1037,31 @@ StudentSearchCompanyButton:hover
     font-size: 14px;
     margin: 2px 2px;
     transition-duration: 0.4s;
-    width:100px;
+    width:125px;
     margin-left:auto;
 
+}
+#ContactStudentButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 10px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    width:140px;
+    margin-left:0%;
+
+}
+
+#ContactStudentButton:hover
+{
+    background-color:red; 
+    color:white;
 }
 
 #AddToExjobb
@@ -1049,8 +1076,8 @@ StudentSearchCompanyButton:hover
     font-size: 14px;
     margin: 2px 2px;
     transition-duration: 0.4s;
-    width:100px;
-    margin-left:25%;
+    width:130px;
+    margin-left:38%;
 
 }
 #DeleteExjobb:hover
@@ -1076,8 +1103,8 @@ StudentSearchCompanyButton:hover
     font-size: 14px;
     margin: 2px 2px;
     transition-duration: 0.4s;
-    margin-left:3%;
-    width:150px;
+    margin-left:0.5%;
+    width:125px;
 }
 
 #AddExjobb:hover
@@ -1131,7 +1158,7 @@ StudentSearchCompanyButton:hover
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
-    margin-left: 25%;
+    margin-left: 0.5%;
     transition-duration: 0.4s;
     width:190px;
 }
