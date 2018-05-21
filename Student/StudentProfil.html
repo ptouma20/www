@@ -118,6 +118,7 @@
                         <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" readonly><?php echo $_SESSION["Bio"] ?></textarea>
                     </fieldset>
                                     </form> -->
+
                 <?php include 'checkdkeywords2.php'; ?>
                 <form id="StudentForm" method="post" action="uppdateStudentData.php">
                     
@@ -168,7 +169,7 @@
                             </div>
 
                         </div>
-                        <hr>
+                        
                         
                         <!-- <button type="submit" class="ResetButton" name="ResetButton" >Ta bort val</button> -->
                         <!-- </form>     -->
@@ -176,7 +177,7 @@
 
                     <fieldset id="For-Experience" form="StudentForm">
                         <legend>Erfarenhet</legend>
-                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:320px;" placeholder="Skriv din arbetserfarenhet här..."><?php echo $_SESSION["Bio"] ?></textarea>
+                        <textarea name="StudentBio" id="StudentBio" style="height:95%;width:95%;margin-left:1%;" rows="12"placeholder="Skriv din arbetserfarenhet här..."><?php echo $_SESSION["Bio"] ?></textarea>
                     </fieldset>
                     <br>
                     <button type="submit" class="saveButton" name="saveButton">Spara</button>
@@ -185,9 +186,9 @@
             </div>
 
             <div class="mainCol2">
-                <form id="StudentFormUser" method = "post" action = "passowrdcheng.php">
+                <form id="StudentFormUserNew" method = "post" action = "passowrdcheng.php">
 
-                    <fieldset id="For-userlogin" form="StudentFormUser">
+                    <fieldset id="For-userlogin" form="StudentFormUserNew">
                         <legend>Inloggningsuppgifter</legend>
 
                         <div class="Login">
