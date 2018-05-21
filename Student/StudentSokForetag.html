@@ -164,7 +164,7 @@
                                 document.getElementById("CompanieMail-Readonly").value = element.email;
                                 document.getElementById("CompanieWebpage-Readonly").value = element.webpage;
                                 document.getElementById("CompanieDescription-Readonly").value = element.bio;
-                                GetExjobb(element.name);
+                                GetExjobb(element.ID);
                             }
                         });
 
@@ -179,10 +179,10 @@
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
                 console.log(myList2);
-                function GetExjobb(foretagsnamn) {
+                function GetExjobb(foretagsID) {
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
-                        if (foretagsnamn == element.Name) {
+                        if (foretagsID == element.companyID) {
                             var li2 = document.createElement("li");
                             var t = document.createTextNode(element.Title);
                             li2.appendChild(t);
