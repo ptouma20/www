@@ -111,10 +111,24 @@
                 <form id="ExjobbForm">
                     <fieldset id="Fieldset-ExJForm">
                         <legend align="center">Lista av Exjobb</legend>
-                        <ul class="UL-Exjobb">
-                            <li>ExjobbTest</li>
+                        <ul id="exjoblist" class="UL-Exjobb" type="button">
+                            <li>SKRIV DIN TITEL HÄR</li>
                         </ul>
-                        <input type="button" name="AddToExjobb" id="AddToExjobb" value="Lägg till">
+                        <input type="button" name="AddToExjobb" id="AddToExjobb" value="Lägg till" onclick="titleAdd()">
+                        <script>
+                            function titleAdd()
+                            {
+                                var li = document.createElement("li");
+                                var t = document.createTextNode("Nytt Exjobb");
+                                li.appendChild(t);
+
+                                li.addEventListener("click", function(e){
+                                    console.log("This was clicked");
+                                }
+                                )
+                                document.getElementById("exjoblist").appendChild(li);
+                            }
+                        </script>
                         <input type="button" name="DeleteExjobb" id="DeleteExjobb" value="Ta bort">
                     </fieldset>
                 </form>
