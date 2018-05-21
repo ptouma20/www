@@ -40,8 +40,11 @@
     <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg"><font color=blue font face='arial' size='5pt'>Inloggad som 
-                    <?php session_start(); ;echo $_SESSION["Name"] ?></font></label>
+            <label for="Inlogg">
+                <font color=red font face='Cambria' size='3pt'>Inloggad som
+                    <?php session_start(); echo $_SESSION["Name"] ?>
+                </font>
+            </label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -55,7 +58,7 @@
                     <a href="StudentStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a class="active" href="StudentProfil.html">Profil</a>
+                    <a href="StudentProfil.html">Profil</a>
                 </li>
                 <li>
                     <a href="StudentMeddelande.html">Meddelande</a>
@@ -84,14 +87,51 @@
         </div>
     </header>
     <main>
+        <!-- Container för att hålla exjobben för företaget man trycker på -->
+        <!--  -->
         <div class="SearchCompaniesForm1">
             <div class="SearchCompaniesForm2">
-                <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
-                <button id="submit" type="submit" onclick="Getsok()">
-                    <i id="ico" class="fa fa-search"></i>
-                </button>
-                <hr>
-                <ul id="CompanieList"></ul>
+                <form id="SearchCompanieForm2_1">
+                    <input type="search" id="SearchC" value="hej" placeholder="Företag..." />
+                    <button id="submit" type="button" onclick="Getsok()">
+                        <i id="ico" class="fa fa-search"></i>
+                    </button>
+                    <hr>
+                    <ul id="CompanieList">
+                        <li>test</li>
+                    </ul>
+                    
+                </form>
+                <br>
+                <form id="SearchCompanieForm2_2">
+                    <p>Namn
+                        <br>
+                        <input type="text" id="CompanieName-Readonly" readonly> </p>
+                    <p>Mail
+                        <br>
+                        <input type="text" id="CompanieMail-Readonly" readonly>
+                    </p>
+                    <p>Webbsida
+                        <br>
+                        <input type="text" id="CompanieWebpage-Readonly" readonly>
+                    </p>
+                    <p>Företagsbeskrivning
+                        <br>
+                        <textarea id="CompanieDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
+                    </p>
+                    
+                    <form id="ExjobbContainerForm">
+                            <fieldset style="width:88%;height:90%;margin:1%;margin-left:4%;margin-bottom:4%;">
+                                <legend align="center">Lista av Exjobb</legend>
+                                
+                                 <ul id="ExjobbContainerUL">
+                                     <li>test</li>
+                                     <li>test</li>
+                                 </ul>
+                                 
+                            </fieldset>     
+                        </form>
+                </form>
             </div>
             <script>
                 var JSON_List = '<?php echo $res ?>';
@@ -129,23 +169,30 @@
                     });
                 }
             </script>
-            <div class="SearchCompaniesForm3">
-                <p>Namn
-                    <br>
-                    <input type="text" id="CompanieName-Readonly" readonly> </p>
-                <p>Mail
-                    <br>
-                    <input type="text" id="CompanieMail-Readonly" readonly>
-                </p>
-                <p>Webbsida
-                    <br>
-                    <input type="text" id="CompanieWebpage-Readonly" readonly>
-                </p>
-                <p>Företagsbeskrivning
-                    <br>
-                    <textarea id="CompanieDescription-Readonly" style="height:200px;width:410px;" readonly></textarea>
-                </p>
+
+
+            <div class="ExjobbContainer">
+               
+                <form id="ExjobbContainerInformation">
+                        
+                        <legend align="center" style="margin-top:1%;">Information om examensarbetet</legend>
+                        <hr>
+                        <p>Examensarbete
+                            <br>
+                            <input type="text" id="Exjobbtitle-Readonly" readonly>
+                        </p>
+                        <p>Företagsnamn
+                            <br>
+                            <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
+                        <p>Beskrivning om examensarbetet
+                            <br>
+                            <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="14"readonly></textarea>
+                        </p>
+                        <input type="button" value="Ansök om Exjobb" id="StudentSearchCompanyButton">
+                </form>
             </div>
+
+
         </div>
     </main>
     <footer>
