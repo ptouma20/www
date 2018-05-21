@@ -87,42 +87,10 @@
         <div class="mainRow">
             <div class="mainCol1">
 
-                <!-- <form id="StudentFormProfile">
-                    
-                    <fieldset id="Name-ReadOnly" form="StudentFormProfile">
-                        <legend>Namn</legend>
-                        <label for="FirstName-Student-Readonly">Förnamn</label>
-                        <br>
-                        <input type="text" name="FirstName-Student-Readonly" id="FirstName-Student-Readonly" value=" <?php echo $_SESSION["Name"] ?>"  readonly>
-                        <br>
-                        <label for="SecondName-Student-Readonly">Efternamn</label>
-                        <br>
-                        <input type="text" name="SecondName-Student-Readonly" id="SecondName-Student-Readonly" value=" <?php echo $_SESSION["Lastname"] ?>" readonly>
-                    </fieldset>
-
-                    <fieldset id="Education-ReadOnly" form="StudentFormProfile">
-                        <legend>Utbildning</legend>
-                        <label for="Education-Student">Program</label>
-                        <br>
-                        <input type="text" name="Education-Student" id="Education-Student" value=" <?php echo $_SESSION["Education"] ?>" readonly>
-                    </fieldset>
-
-                    <fieldset id="Keywords-ReadOnly" form="StudentFormProfile">
-                        <legend>Kunskaper</legend>
-                        <?php include 'kewords.php'; ?>
-                        <textarea name="Keywords" id="Keywords" style="width:365px;height:100px;" readonly><?php  foreach ($_SESSION["keywords"] as $value){echo "- ".$value."\n "; } ?></textarea>
-                    </fieldset>
-
-                    <fieldset id="Experience-ReadOnly" form="StudentFormProfile">
-                        <legend>Erfarenhet</legend>
-                        <textarea name="StudentBio" id="StudentBio" style="height:200px;width:365px;" readonly><?php echo $_SESSION["Bio"] ?></textarea>
-                    </fieldset>
-                                    </form> -->
-
                 <?php include 'checkdkeywords2.php'; ?>
-                <form id="StudentForm" method="post" action="uppdateStudentData.php">
+                <form id="StudentForm" method="post" action="uppdateStudentData.php"style="width:100%;">
                     
-                    <fieldset id="For-name" form="StudentForm" >
+                    <fieldset id="For-name" form="StudentForm" style="height:70%;width:70%;">
                         <legend>Namn</legend>
                         <label for="FirstName-Student">Förnamn </label>
                         <br>
@@ -132,14 +100,14 @@
                         <br>
                         <input type="text" name="SecondName-Student" id="SecondName-Student" value="<?php echo $_SESSION["Lastname"] ?>" readwrite >
                     </fieldset>
-                    <fieldset id="For-education" form="StudentForm" >
+                    <fieldset id="For-education" form="StudentForm" style="height:70%;width:70%;">
                         <legend>Utbildning</legend>
                         <label for="Education-Student">Program</label>
                         <br>
                         <input type="text" name="Education-Student" id="Education-Student"  value="<?php echo $_SESSION["Education"] ?>" readwrite >
                     </fieldset>
                     <!-- <form method="post" action="deletekeywords.php"> -->
-                    <fieldset id="For-keywords" form="StudentForm" >
+                    <fieldset id="For-keywords" form="StudentForm" style="height:70%;width:70%;" >
                         <legend>Kunskaper</legend>
                         <div class="Programming">
                             <div class="PLcol">
@@ -175,12 +143,12 @@
                         <!-- </form>     -->
                     </fieldset>
 
-                    <fieldset id="For-Experience" form="StudentForm">
+                    <fieldset id="For-Experience" form="StudentForm" style="height:70%;width:70%;">
                         <legend>Erfarenhet</legend>
-                        <textarea name="StudentBio" id="StudentBio" style="height:95%;width:95%;margin-left:1%;" rows="12"placeholder="Skriv din arbetserfarenhet här..."><?php echo $_SESSION["Bio"] ?></textarea>
+                        <textarea name="StudentBio" id="StudentBio" style="height:98%;width:98%;" rows="12"placeholder="Skriv din arbetserfarenhet här..."><?php echo $_SESSION["Bio"] ?></textarea>
                     </fieldset>
                     <br>
-                    <button type="submit" class="saveButton" name="saveButton">Spara</button>
+                    <button type="submit" class="saveButton" style="width:50%;margin-left:24%;" name="saveButton">Spara</button>
                     <!-- Knappen ska spara informationen från inputs till databasen -->
                 </form>
             </div>

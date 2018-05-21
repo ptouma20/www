@@ -797,12 +797,12 @@ StudentSearchCompanyButton:hover
     font-size: 14px;
     margin: 4px 2px;
     transition-duration: 0.4s;
-    width:120px;
+    width:150px;
 }
 
 .mainRow:after
 {
-    height: 400px;
+    height: 100%;
     content:"";
     display:table;
     clear:both;
@@ -810,7 +810,7 @@ StudentSearchCompanyButton:hover
 .mainCol1
 {
     float:left;
-    width:45%;
+    width:49%;
     margin: 5px;
     padding: 10px;
     
@@ -818,7 +818,7 @@ StudentSearchCompanyButton:hover
 .mainCol2
 {
     float:right;
-    width:45%;
+    width:46%;
     margin: 5px;
     padding: 10px;
 }
@@ -826,17 +826,21 @@ StudentSearchCompanyButton:hover
 {
     
     float: right;
-    height: 550px;
-    width:45%;
+    height: 100%;
+    width:49%;
     margin: 0px;
     padding: 0px;
+}
+.mainCol3 p
+{
+    margin-left:4%;
 }
 .mainCol4
 {
     
     float: left;
     height: 100%;
-    width:45%;
+    width:49%;
     margin: 0px;
     padding: 0px;
 }
@@ -867,14 +871,15 @@ StudentSearchCompanyButton:hover
     background-color:black; 
     border:none;
     color:white;
-    padding: 8px 8px;
+    padding: 10px 20px;
+    margin-top:-1%;
     text-align:center;
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
     margin: 4px 4px;
     transition-duration: 0.4s;
-    width:120px;
+    width:150px;
     margin-left:10%;
 }
 .AddButton:hover
