@@ -38,6 +38,8 @@
 
 <body>
     <?php include 'xjobblista.php'; ?>
+    <?php inculde 'ssf.php'; ?>
+    
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">
@@ -167,6 +169,30 @@
 
                         document.getElementById("CompanieList").appendChild(li);
                     });
+                }
+                var JSON_List2 = '<?php echo $res2 ?>';
+                function jsonEscape(str) {
+                    return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                }
+                var myList2 = JSON.parse(jsonEscape(JSON_List2));
+                function GetExjobb(){
+                    document.getElementById("CompanieList").innerHTML = "";
+                    y.forEach(element => {
+                        var li = document.createElement("li");
+                        var t = document.createTextNode(element.name);
+                        li.appendChild(t);
+
+                        li.addEventListener("click", function (e) {
+
+                            if (e.target && e.target.nodeName == "LI") {
+                                console.log(element.name + " was clicked");
+                                document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                document.getElementById("Exjobbcompname-Readonly").value = element.name;
+                                document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                            }
+                        });
+
+                    document.getElementById("ExjobbContainerUL").appendChild(li);
                 }
             </script>
 
