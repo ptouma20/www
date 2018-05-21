@@ -667,8 +667,9 @@ StudentSearchCompanyButton:hover
     text-decoration:none;
     font-size:16px;
     color:black;
-    display: block;
-    width:75%;
+    display: inline-block;
+    margin-left:-4%;
+    width:65%;
 
 }
 #Exjobblist li:hover:not(.header)
