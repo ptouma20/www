@@ -18,7 +18,7 @@ ul
 {
     list-style-type: none;
     overflow:hidden;
-    background-color: black;
+    background-color:white;
 }
 
 li{
@@ -705,7 +705,7 @@ StudentSearchCompanyButton:hover
 {
     background-color:#eee;
 }
-#AppliedExjobblist
+#AppliedExjobblist 
 {
     
     list-style-type: none;
