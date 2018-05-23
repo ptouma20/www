@@ -39,7 +39,8 @@
     <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad...</label>
+                <label for="Inlogg"><font color=red font face='arial' size='3pt'>Inloggad:  
+                        <?php echo $_SESSION["Name"] ?></font></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -51,6 +52,9 @@
             <ul class="dropdown">
                 <li>
                     <a href="../Student/StudentStartsida.html">Startsida</a>
+                </li>
+                <li>
+                        <a href="../Student/StudentSokForetag.html">Sök Företag</a>
                 </li>
                 <li>
                     <a  href="../Student/StudentProfil.html">Profil</a>
@@ -68,7 +72,7 @@
                 <li>
                     <a href="logaut.php">Logga ut</a>
                 </li>
-                <li>
+                <!-- <li>
                     <div class="Search">
                         <form class="SearchBar">
                             <input type="text" id="sök" placeholder="Sök..." />
@@ -77,7 +81,7 @@
                             </button>
                         </form>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
         </div>
@@ -185,7 +189,11 @@
                     <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
                 <h4 id="TCM">Om TCM</h4>
                 <section>
-                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma och Edin Jelecevic.<br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.<br></p>
+                        <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                                och Edin Jelecevic.
+                                <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet där studenter<br>skulle kunna söka och ansöka exjobb.
+                                <br>
+                            </p>
                 </section>
             </div>
         </div>
