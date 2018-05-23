@@ -442,6 +442,13 @@ button#submit
     margin-top:1%;
     /* margin-right:-2%; */
     border-radius: 2% 1% 1% 2%;
+    background-color: black;
+    color:white;
+}
+button#submit:hover
+{
+    background-color: red;
+    color:white;
 
 }
 input#SearchC
@@ -673,6 +680,32 @@ StudentSearchCompanyButton:hover
 
 }
 #Exjobblist li:hover:not(.header)
+{
+    background-color:#eee;
+}
+#AppliedExjobblist
+{
+    
+    list-style-type: none;
+    overflow:hidden;
+    background-color: white;
+}
+
+#AppliedExjobblist li
+{
+    border: 1px solid #ddd;
+    margin-top:-1px;
+    padding:12px;
+    text-decoration:none;
+    font-size:16px;
+    color:black;
+    display: inline-block;
+    margin-left:10%;
+    width:65%;
+    text-align:center;
+
+}
+#AppliedExjobblist  li:hover:not(.header)
 {
     background-color:#eee;
 }
@@ -1363,134 +1396,5 @@ StudentSearchCompanyButton:hover
 /* Slut på tydligen finns ingen med denna */
 
 /* Media Queries Start */
-
-
-@media screen and (max-width:600px)
-{
-    /* Header */
-
-header
-{
-    padding:auto;
-    background-color: white;
-}
-.navigation
-{
-    width:100%;
-}       
-li a, .DropLink
-{
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 12px 14px;
-    text-decoration: none;
-    font-size:15px;
-}
-
-li a.active{
-    background-color: red;
-}
-
-li .Search
-{
-    float:right;
-    position: absolute;
-    left:75%; 
-   
-}
-
-li a:hover, .dropdown-items:hover .DropLink
-{
-    background-color: red;
-}
-
-
-li.dropdown-items
-{
-    display: inline-block;
-}
-
-.dropdown-content
-{
-    display: none;
-    position: absolute;
-    background-color: black;
-    color:white;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a
-{
-    color:white; 
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover
-{
-    background-color: red;
-}
-
-.dropdown-items:hover .dropdown-content
-{
-    display:block;
-} 
-
-.InloggLabel
-{
-    position: absolute;
-    top:10px;
-    right:200px;
-}
-
-.Logo
-{
-    position:relative;
-    left:50px;
-}
-
-li input#sök{
-    padding:6px;
-    border: none;
-    margin-top: 8px;
-    font-size: 17px;
-}
-
-li .Search button{
-    font-size:17px;
-    padding:6px;
-    position:relative;
-    border:none;
-    cursor:pointer;
-    background:white;
-  
-}
-
-li .Search button:hover
-{
-    background:red;
-}
-
-    /*End Header*/
-}
-
-
-@media screen and (max-width:768px)
-{
-
-}
-@media screen and (max-width:992px)
-{
-
-}
-@media screen and (max-width:1200px)
-{
-
-}
 
 
