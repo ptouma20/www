@@ -127,6 +127,7 @@
                             }
                             var exjobblist = JSON.parse(jsonEscape(JSON_lista));
                             var aktuellTitle;
+                            var aktuellEmail;
                             function fillList() {
                                 exjobblist.forEach(element => {
 
@@ -138,8 +139,9 @@
                                         console.log(element.Title + "This was clicked");
                                         document.getElementById("ExjobbTitle").value = element.Title;
                                         document.getElementById("Exjobb-Bio").value = element.description;
-                                        fillListansokning(element.id);
+                                        fillListansokning(element.id, element.Email);
                                         aktuellTitle = element.Title;
+                                        aktuellEmail = element.Email;
 
                                     }
 
@@ -168,7 +170,7 @@
                         </ul>
 
                         <script>
-                            function fillListansokning(ExjobbID) {
+                            function fillListansokning(ExjobbID, Studentmail) {
                                 var JSO_lista = '<?php echo $res4 ?>';
                                 console.log(JSO_lista);
                                 function jsonEscape(str) {
@@ -190,7 +192,7 @@
                                             document.getElementById("ShowProgram").value = element.Pro;
                                             document.getElementById("StudentSkills").value = element.Pro;
                                             document.getElementById("StudentExperience").value = element.Bio;
-
+                                            aktuellEmail = Studentmail;
 
                                         }
                                         )
@@ -224,7 +226,7 @@
                                 maxlength="60000" rows="12"></textarea>
                         </p>
 
-                        <input type="button" id="ContactStudentButton" onclick="window.location.href='ForetagMeddelande.html'" value="Kontakta">
+                        <input type="button" id="ContactStudentButton" onclick="window.location.href='ForetagMeddelande.html?mail=' +Studentmail" value="Kontakta">
                     </fieldset>
                 </form>
             </div>
