@@ -76,8 +76,8 @@
                         var emailadress = document.getElementById('mottagareEmail');
                         email = emailadress.value;
                         var link = "mailto:" + email
-                        + "?subject=" + escape(document.getElementById('amne').value)
-                        + "&body=" + escape(document.getElementById('content').value)
+                        + "?subject=" + escape(document.getElementById(utf8_encode('amne')).value)
+                        + "&body=" + escape(document.getElementById(utf8_encode('content')).value)
                     ;
     
                     window.location.href = link;
