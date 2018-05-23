@@ -698,7 +698,7 @@ StudentSearchCompanyButton:hover
     color:black;
     display: inline-block;
     margin-left:-3%;
-    width:65%;
+    width:59%;
 
 }
 #Exjobblist li:hover:not(.header)
@@ -722,9 +722,9 @@ StudentSearchCompanyButton:hover
     font-size:16px;
     color:black;
     display: inline-block;
-    margin-left:10%;
-    width:65%;
-    text-align:center;
+    margin-left:-4%;
+    width:59%;
+    text-align:left;
 
 }
 #AppliedExjobblist  li:hover:not(.header)
