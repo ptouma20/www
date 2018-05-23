@@ -434,6 +434,28 @@ main
 }
 /* Start Student */
 
+.DeleteButton
+{
+    background-color:black; 
+    border:none;
+    color:white;
+    padding: 10px 10px;
+    text-align:center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 2px 2px;
+    transition-duration: 0.4s;
+    width:150px;
+    margin-left:auto;
+}
+
+.DeleteButton:hover
+{
+    background-color:red;
+    color:white;
+
+}
 
 button#submit
 {
@@ -1308,27 +1330,6 @@ StudentSearchCompanyButton:hover
     margin:10px;
 }
 
-.DeleteButton
-{
-    background-color:black; 
-    border:none;
-    color:white;
-    padding: 10px 10px;
-    text-align:center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 2px 2px;
-    transition-duration: 0.4s;
-    width:120px;
-}
-
-.DeleteButton:hover
-{
-    background-color:red;
-    color:white;
-
-}
 #StudentsForm-Exjobb
 {
     float:left;
