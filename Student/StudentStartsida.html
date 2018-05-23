@@ -110,7 +110,7 @@
                     <button type="button" class="AddButton" name="AddButton" style="margin-left:3%;width:25%;" onclick="Getsokexjobb()">Sök</button>
                     <hr>
                     <ul id="Exjobblist">
-                        
+
                     </ul>
                 </fieldset>
                 <script>
@@ -154,7 +154,7 @@
                         });
 
                         console.log(nyaexjobb);
-                        nyaexjobb.splice(5,nyaexjobb.length);
+                        nyaexjobb.splice(5, nyaexjobb.length);
                         console.log(nyaexjobb);
 
                         document.getElementById("ExjobblistFEED").innerHTML = "";
@@ -181,47 +181,77 @@
                     }
                 </script>
                 <br>
-                 <form id="StudentAppliedExjobb">
-                        <fieldset style="height:45%;width:100%;margin-left:2%;">
-                            <legend align="center">Sökta Exjobb</legend>
+                <form id="StudentAppliedExjobb" onload="ExjobSokt.php">
+                    <fieldset style="height:45%;width:100%;margin-left:2%;">
+                        <legend align="center">Sökta Exjobb</legend>
 
-                            <ul id="AppliedExjobblist">
-                                <li>test</li>
-                            </ul>
-
-                        </fieldset>
-                    </form>
-
-            <body onload="exjobbFEED()"></body>
-            </div>
-        <form id = "aa" method = "POST" action = "ansokexjobb.php">
-            <div class="mainCol3" >
-                <fieldset style="width:90%;height:60%;" class="Startsida" form="student-user-content">
-                    <legend align="center">Nyligen tillagda examensarbete</legend>
-                    <fieldset style="width:auto;height:90%;overflow-y:scroll;" class="Startsida">
-                        <ul id="ExjobblistFEED">
+                        <ul id="AppliedExjobblist">
+                            <li>test</li>
                         </ul>
-                    </fieldset>
-                </fieldset>
-                <fieldset style="height:auto;width:90%;" class="Startsida" form="student-user-content" >
-                    <legend align="center">Information om det valda examensarbetet</legend>
+                        <script>
+                            var JSON_List3 = '<?php echo $res3 ?>'; // a = company...
 
-                    <p>Examensarbete
-                        <br>
-                        <input type="text" id="Exjobbtitle-Readonly" name = "Exarbete" readonly>
-                    </p>
-                    <p>Företagsnamn
-                        <br>
-                        <input type="text" id="Exjobbcompname-Readonly" name = "Fname"  readonly> </p>
-                    <p>Beskrivning om examensarbetet
-                        <br>
-                        <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
-                    </p>
-                    <button type="submit" class="AddButton" style="margin-left:4%;" name="Ansök Exjobb">Ansök Exjobb</button>
-                    <button type="submit" class="DeleteButton" style="margin-left:4%;" >Ta bort ansökan</button>
-                </fieldset>
+                            function jsonEscape(str) {
+                                return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                            }
+                            var myList3 = JSON.parse(jsonEscape(JSON_List3));
+
+                            function Getsokexjobb() {
+                                document.getElementById("AppliedExjobblist").innerHTML = "";
+                                myList3.forEach(element => {
+                                    var li = document.createElement("li");
+                                    var t = document.createTextNode(element.Title);
+                                    li.appendChild(t);
+
+                                    li.addEventListener("click", function (e) {
+                                        // e.target is our targetted element.
+                                        // try doing console.log(e.target.nodeName), it will result LI
+                                        //console.log(e.createTextNode);
+                                        if (e.target && e.target.nodeName == "LI") {
+                                            console.log(element.Title + " was clicked");
+                                            document.getElementById("Exjobbtitle-Readonly").value = element.Title;
+                                            document.getElementById("Exjobbcompname-Readonly").value = element.Name;
+                                            document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                        }
+                                    });
+
+                                    document.getElementById("AppliedExjobblist").appendChild(li);
+                                });
+                            }
+                        </script>
+                    </fieldset>
+                </form>
+
+                <body onload="exjobbFEED()"></body>
             </div>
-        </form>
+            <form id="aa" method="POST" action="ansokexjobb.php">
+                <div class="mainCol3">
+                    <fieldset style="width:90%;height:60%;" class="Startsida" form="student-user-content">
+                        <legend align="center">Nyligen tillagda examensarbete</legend>
+                        <fieldset style="width:auto;height:90%;overflow-y:scroll;" class="Startsida">
+                            <ul id="ExjobblistFEED">
+                            </ul>
+                        </fieldset>
+                    </fieldset>
+                    <fieldset style="height:auto;width:90%;" class="Startsida" form="student-user-content">
+                        <legend align="center">Information om det valda examensarbetet</legend>
+
+                        <p>Examensarbete
+                            <br>
+                            <input type="text" id="Exjobbtitle-Readonly" name="Exarbete" readonly>
+                        </p>
+                        <p>Företagsnamn
+                            <br>
+                            <input type="text" id="Exjobbcompname-Readonly" name="Fname" readonly> </p>
+                        <p>Beskrivning om examensarbetet
+                            <br>
+                            <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
+                        </p>
+                        <button type="submit" class="AddButton" style="margin-left:4%;" name="Ansök Exjobb">Ansök Exjobb</button>
+                        <button type="submit" class="DeleteButton" style="margin-left:4%;">Ta bort ansökan</button>
+                    </fieldset>
+                </div>
+            </form>
         </div>
         <br>
     </main>
