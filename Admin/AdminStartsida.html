@@ -39,6 +39,7 @@
 </head>
 <body>
     <?php include '../Student/xjobblista.php'; ?>
+    <?php include '../Student/xjobblista2.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad...</label>
@@ -113,6 +114,13 @@
                                         return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                                     }
                                     var myList = JSON.parse(jsonEscape(JSON_List));
+
+                                    var JSON_List2 = '<?php echo $res ?>';
+                                    console.log(JSON_List2);
+                                    function jsonEscape(str) {
+                                        return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                                    }
+                                    var myList2 = JSON.parse(jsonEscape(JSON_List2));
                                     
                                     console.log(myList);
                                     
@@ -121,6 +129,28 @@
                                             var x = document.getElementById("SearchC").value;
                                             var y = sok(x, myList);
                                             console.log(myList);
+                                            console.log(y);
+                                            document.getElementById("CompanieList").innerHTML = "";
+                                            y.forEach(element => {
+                                                var li = document.createElement("li");
+                                                var t = document.createTextNode(element.name);
+                                                li.appendChild(t);
+                        
+                                                li.addEventListener("click", function (e) {
+                        
+                                                    if (e.target && e.target.nodeName == "LI") {
+                                                        console.log(element.name + " was clicked");
+                                                        document.getElementById("CompanieName-Readonly").value = element.name;
+                                                    }
+                                                });
+                        
+                                                document.getElementById("CompanieList").appendChild(li);
+                                            });
+                                            }
+                                        if(document.getElementById('student').checked){
+                                            var x = document.getElementById("SearchC").value;
+                                            var y = sok(x, myList2);
+                                            console.log(myList2);
                                             console.log(y);
                                             document.getElementById("CompanieList").innerHTML = "";
                                             y.forEach(element => {
