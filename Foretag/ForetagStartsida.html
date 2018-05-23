@@ -177,6 +177,8 @@
                                 var StudentList = JSON.parse(jsonEscape(JSO_lista));
                                 document.getElementById("ansokningslista").innerHTML = "";
                                 StudentList.forEach(element => {
+                                    console.log("Från func" + ExjobbID);
+                                    console.log("Från php" + element.exjobslistID);
                                     if (ExjobbID == element.exjobslistID) {
                                         var lii = document.createElement("li");
                                         var tt = document.createTextNode(element.Uname);
