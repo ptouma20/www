@@ -138,7 +138,7 @@
                                         console.log(element.Title + "This was clicked");
                                         document.getElementById("ExjobbTitle").value = element.Title;
                                         document.getElementById("Exjobb-Bio").value = element.description;
-                                        fillListansokning();
+                                        fillListansokning(element.id);
                                         aktuellTitle = element.Title;
 
                                     }
@@ -168,7 +168,7 @@
                         </ul>
 
                         <script>
-                            function fillListansokning() {
+                            function fillListansokning(ExjobbID) {
                                 var JSO_lista = '<?php echo $res4 ?>';
                                 console.log(JSO_lista);
                                 function jsonEscape(str) {
