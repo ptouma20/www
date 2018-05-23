@@ -155,14 +155,14 @@
                                             document.getElementById("CompanieList").innerHTML = "";
                                             y.forEach(element => {
                                                 var li = document.createElement("li");
-                                                var t = document.createTextNode(element.name);
+                                                var t = document.createTextNode(element.Username);
                                                 li.appendChild(t);
                         
                                                 li.addEventListener("click", function (e) {
                         
                                                     if (e.target && e.target.nodeName == "LI") {
                                                         console.log(element.name + " was clicked");
-                                                        document.getElementById("CompanieName-Readonly").value = element.name;
+                                                        document.getElementById("CompanieName-Readonly").value = element.Username;
                                                     }
                                                 });
                         
