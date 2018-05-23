@@ -175,10 +175,11 @@
                                     return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                                 }
                                 var StudentList = JSON.parse(jsonEscape(JSO_lista));
+                                console.log(StudentList);
                                 document.getElementById("ansokningslista").innerHTML = "";
                                 StudentList.forEach(element => {
-                                    console.log("Från func" + ExjobbID);
-                                    console.log("Från php" + element.exjobslistID);
+                                    console.log("Från func " + ExjobbID);
+                                    console.log("Från php " + element.exjobslistID);
                                     if (ExjobbID == element.exjobslistID) {
                                         var lii = document.createElement("li");
                                         var tt = document.createTextNode(element.Uname);
