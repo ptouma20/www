@@ -73,7 +73,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#LoggaUt">Logga ut</a>
+                    <a href="logaut.php">Logga ut</a>
                 </li>
                 <li>
                     <div class="Search">
@@ -164,7 +164,7 @@
                                 document.getElementById("CompanieMail-Readonly").value = element.email;
                                 document.getElementById("CompanieWebpage-Readonly").value = element.webpage;
                                 document.getElementById("CompanieDescription-Readonly").value = element.bio;
-                                GetExjobb(element.name);
+                                GetExjobb(element.ID, element.name);
                             }
                         });
 
@@ -179,25 +179,25 @@
                 }
                 var myList2 = JSON.parse(jsonEscape(JSON_List2));
                 console.log(myList2);
-                function GetExjobb(foretagsnamn) {
+                function GetExjobb(foretagsID, foretagsNamn) {
                     document.getElementById("ExjobbContainerUL").innerHTML = "";
                     myList2.forEach(element => {
-                        if (foretagsnamn == element.Name) {
-                            var li = document.createElement("li");
+                        if (foretagsID == element.companyID) {
+                            var li2 = document.createElement("li");
                             var t = document.createTextNode(element.Title);
-                            li.appendChild(t);
+                            li2.appendChild(t);
 
-                            li.addEventListener("click", function (e) {
+                            li2.addEventListener("click", function (e) {
 
                                 if (e.target && e.target.nodeName == "LI") {
-                                    console.log(element.name + " was clicked");
+                                    console.log(element.Name + " was clicked");
                                     document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                    document.getElementById("Exjobbcompname-Readonly").value = element.Name;
+                                    document.getElementById("Exjobbcompname-Readonly").value = foretagsNamn;
                                     document.getElementById("ExjobbDescription-Readonly").value = element.description;
                                 }
                             });
+                        document.getElementById("ExjobbContainerUL").appendChild(li2);
                         }
-                        document.getElementById("ExjobbContainerUL").appendChild(li);
                     });
                 }
             </script>
@@ -205,22 +205,22 @@
 
             <div class="ExjobbContainer">
 
-                <form id="ExjobbContainerInformation">
+                <form id="ExjobbContainerInformation" method = "POST" action = "ansokexjobb2.php">
 
                     <legend align="center" style="margin-top:1%;">Information om examensarbetet</legend>
                     <hr>
                     <p>Examensarbete
                         <br>
-                        <input type="text" id="Exjobbtitle-Readonly" readonly>
+                        <input type="text" id="Exjobbtitle-Readonly" name = "Exarbete" readonly>
                     </p>
                     <p>Företagsnamn
                         <br>
-                        <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
+                        <input type="text" id="Exjobbcompname-Readonly" name = "Fname"  readonly> </p>
                     <p>Beskrivning om examensarbetet
                         <br>
                         <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="14" readonly></textarea>
                     </p>
-                    <input type="button" value="Ansök om Exjobb" id="StudentSearchCompanyButton">
+                    <button type="submit" name ="Ansök om Exjobb" id="StudentSearchCompanyButton">Ansök om Exjobb</button>
                 </form>
             </div>
 

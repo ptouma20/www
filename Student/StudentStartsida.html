@@ -81,7 +81,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#LoggaUt">Logga ut</a>
+                    <a href="logaut.php">Logga ut</a>
                 </li>
                 <li>
                     <div class="Search">
@@ -139,7 +139,7 @@
                                 if (e.target && e.target.nodeName == "LI") {
                                     console.log(element.Title + " was clicked");
                                     document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                    document.getElementById("Exjobbcompname-Readonly").value = element.ID;
+                                    document.getElementById("Exjobbcompname-Readonly").value = element.Name;
                                     document.getElementById("ExjobbDescription-Readonly").value = element.description;
                                 }
                             });
@@ -171,7 +171,7 @@
                                 if (e.target && e.target.nodeName == "LI") {
                                     console.log(element.Title + " was clicked");
                                     document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                    document.getElementById("Exjobbcompname-Readonly").value = element.ID;
+                                    document.getElementById("Exjobbcompname-Readonly").value = element.Name;
                                     document.getElementById("ExjobbDescription-Readonly").value = element.description;
                                 }
                             });
@@ -183,8 +183,8 @@
 
             <body onload="exjobbFEED()"></body>
             </div>
-                
-            <div class="mainCol3" method = "POST" action = "studentansoka.php">
+        <form id = "aa" method = "POST" action = "ansokexjobb.php">
+            <div class="mainCol3" >
                 <fieldset style="width:90%;height:60%;" class="Startsida" form="student-user-content">
                     <legend align="center">Nyligen tillagda examensarbete</legend>
                     <fieldset style="width:auto;height:90%;overflow-y:scroll;" class="Startsida">
@@ -192,24 +192,24 @@
                         </ul>
                     </fieldset>
                 </fieldset>
-
                 <fieldset style="height:auto;width:90%;" class="Startsida" form="student-user-content" >
                     <legend align="center">Information om det valda examensarbetet</legend>
 
                     <p>Examensarbete
                         <br>
-                        <input type="text" id="Exjobbtitle-Readonly" readonly>
+                        <input type="text" id="Exjobbtitle-Readonly" name = "Exarbete" readonly>
                     </p>
                     <p>Företagsnamn
                         <br>
-                        <input type="text" id="Exjobbcompname-Readonly" readonly> </p>
+                        <input type="text" id="Exjobbcompname-Readonly" name = "Fname"  readonly> </p>
                     <p>Beskrivning om examensarbetet
                         <br>
                         <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
                     </p>
-                    <button type="submit" class="AddButton" name="AddButton" style="margin-left:4%;" name="Ansök Exjobb">Ansök Exjobb</button>
+                    <button type="submit" class="AddButton" style="margin-left:4%;" name="Ansök Exjobb">Ansök Exjobb</button>
                 </fieldset>
             </div>
+        </form>
         </div>
         <br>
     </main>
