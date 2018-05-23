@@ -41,6 +41,7 @@
 
 <body>
     <?php include 'xjobb.php'; ?>
+    <?php include 'ExjobSok.php'?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">
@@ -181,7 +182,7 @@
                     }
                 </script>
                 <br>
-                <form id="StudentAppliedExjobb" onload="ExjobSokt.php">
+                <form id="StudentAppliedExjobb" onload="Getsokexjobb()">
                     <fieldset style="height:45%;width:100%;margin-left:2%;">
                         <legend align="center">Sökta Exjobb</legend>
 
@@ -189,6 +190,7 @@
                             <li>test</li>
                         </ul>
                         <script>
+                            function Getsokexjobb() {
                             var JSON_List3 = '<?php echo $res3 ?>'; // a = company...
 
                             function jsonEscape(str) {
@@ -196,7 +198,7 @@
                             }
                             var myList3 = JSON.parse(jsonEscape(JSON_List3));
 
-                            function Getsokexjobb() {
+                            
                                 document.getElementById("AppliedExjobblist").innerHTML = "";
                                 myList3.forEach(element => {
                                     var li = document.createElement("li");
@@ -209,9 +211,9 @@
                                         //console.log(e.createTextNode);
                                         if (e.target && e.target.nodeName == "LI") {
                                             console.log(element.Title + " was clicked");
-                                            document.getElementById("Exjobbtitle-Readonly").value = element.Title;
-                                            document.getElementById("Exjobbcompname-Readonly").value = element.Name;
-                                            document.getElementById("ExjobbDescription-Readonly").value = element.description;
+                                            document.getElementById("Exjobbtitle-Readonly").value = element.exjobb;
+                                            document.getElementById("Exjobbcompname-Readonly").value = element.Fname;
+                                            document.getElementById("ExjobbDescription-Readonly").value = element.Bio;
                                         }
                                     });
 
