@@ -115,7 +115,7 @@
                                     }
                                     var myList = JSON.parse(jsonEscape(JSON_List));
 
-                                    var JSON_List2 = '<?php echo $res ?>';
+                                    var JSON_List2 = '<?php echo $res9 ?>';
                                     console.log(JSON_List2);
                                     function jsonEscape(str) {
                                         return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
@@ -155,14 +155,14 @@
                                             document.getElementById("CompanieList").innerHTML = "";
                                             y.forEach(element => {
                                                 var li = document.createElement("li");
-                                                var t = document.createTextNode(element.name);
+                                                var t = document.createTextNode(element.Username);
                                                 li.appendChild(t);
                         
                                                 li.addEventListener("click", function (e) {
                         
                                                     if (e.target && e.target.nodeName == "LI") {
                                                         console.log(element.name + " was clicked");
-                                                        document.getElementById("CompanieName-Readonly").value = element.name;
+                                                        document.getElementById("CompanieName-Readonly").value = element.Username;
                                                     }
                                                 });
                         
