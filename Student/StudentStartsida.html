@@ -229,7 +229,7 @@
 
                 <body onload="exjobbFEED(), Getexjobb()"></body>
             </div>
-            <form id="aa" method="POST" action="ansokexjobb.php">
+            <form id="aa" method="POST" >
                 <div class="mainCol3">
                     <fieldset style="width:90%;height:60%;" class="Startsida" form="student-user-content">
                         <legend align="center">Nyligen tillagda examensarbete</legend>
@@ -252,8 +252,8 @@
                             <br>
                             <textarea id="ExjobbDescription-Readonly" style="height:90%;width:95%;" rows="12" readonly></textarea>
                         </p>
-                        <button type="submit" class="AddButton" style="margin-left:4%;" name="Ansök Exjobb">Ansök Exjobb</button>
-                        <button type="submit" class="DeleteButton" style="margin-left:4%;">Ta bort ansökan</button>
+                        <button type="submit" class="AddButton" style="margin-left:4%;" name="Ansök Exjobb" formaction="ansokexjobb.php">Ansök Exjobb</button>
+                        <button type="submit" class="DeleteButton" style="margin-left:4%;" formaction="tabortexjob.php">Ta bort ansökan</button>
                     </fieldset>
                 </div>
             </form>

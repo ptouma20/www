@@ -75,11 +75,15 @@
                     function sendMail() {
                         var emailadress = document.getElementById('mottagareEmail');
                         email = emailadress.value;
+                        var amne = document.getElementById('amne');
+                        sub = amne.value;
+                        var medd = document.getElementById('content');
+                        meddelande = medd.value;
+
                         var link = "mailto:" + email
-                        + "?subject=" + escape(document.getElementById(utf8_encode('amne')).value)
-                        + "&body=" + escape(document.getElementById(utf8_encode('content')).value)
+                        + "?subject=" + sub
+                        + "&body=" + meddelande
                     ;
-    
                     window.location.href = link;
                     }
                     
