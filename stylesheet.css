@@ -1236,6 +1236,60 @@ input#SearchC
 
 
 
+.MailDivAdmin
+{
+    border: 0.75px solid black;
+    float:left;
+    margin-left:100%;
+    padding:1%;
+    margin:1%;
+    width:50%;
+}
+
+#MailFormAdmin
+{
+    border: 0.25px solid black;
+    height:auto;
+    width:auto;
+    padding:1%;
+    margin:1%;
+   
+}
+#MailFormAdmin input
+{
+    margin:1%;
+    margin-left:10%;
+    
+    padding:1%;
+}
+
+#MailFormAdmin textarea{
+    
+    margin:1%;
+    margin-left:10%;
+    height:70%;
+    width:75%;
+}
+#MailFormAdmin #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+#MailFormAdmin #submit:hover
+{
+    color:white;
+    background-color: red;
+}
+
 
 .MailDiv
 {
