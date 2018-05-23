@@ -33,6 +33,7 @@
 </head>
 
 <body>
+    <?php include 'xjobblista.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad...</label>
@@ -81,6 +82,21 @@
     <main>
             <div class="MessageForm">
                 <!-- Här står det någon om bla bla bra.. -->
+                <div class="MailDivExtra">
+                    <form >
+                        <fieldset style="width:95%;height:95%;">
+                            <legend align="center">Sök Företag</legend>
+                            <input type="search" id="SearchC" placeholder="Företag..." />
+                            <button id="submit" type="button" onclick="Getsok()">
+                                <i id="ico" class="fa fa-search"></i>
+                            </button>
+                            <hr>
+                            <ul id="CompanieList">
+                            </ul>
+
+                        </fieldset>
+                    </form>
+                </div>
                 <div class="MailDiv">
                     
                     <form id="MailForm">
@@ -112,6 +128,40 @@
                 }
                 
             </script>
+            <script>
+                    var JSON_List = '<?php echo $res ?>';
+                    console.log(JSON_List);
+                    function jsonEscape(str) {
+                        return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                    }
+                    var myList = JSON.parse(jsonEscape(JSON_List));
+    
+                    console.log(myList);
+    
+                    function Getsok() {
+                        var x = document.getElementById("SearchC").value;
+                        var y = sok(x, myList);
+                        console.log(myList);
+                        console.log(y);
+                        document.getElementById("CompanieList").innerHTML = "";
+                        y.forEach(element => {
+                            var li = document.createElement("li");
+                            var t = document.createTextNode(element.name);
+                            li.appendChild(t);
+    
+                            li.addEventListener("click", function (e) {
+    
+                                if (e.target && e.target.nodeName == "LI") {
+                                    console.log(element.name + " was clicked");
+                                    document.getElementById("mottagareEmail").value = element.email;
+                                    GetExjobb(element.ID, element.name);
+                                }
+                            });
+    
+                            document.getElementById("CompanieList").appendChild(li);
+                        });
+                    }
+                </script>
     </main>
     <footer>
     <div class="row">
