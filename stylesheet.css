@@ -650,7 +650,7 @@ input#SearchC
     width:150px;
     margin-bottom:2%;
 }
-StudentSearchCompanyButton:hover
+#StudentSearchCompanyButton:hover
 {
     background-color: red;
     color:white;
