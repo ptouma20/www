@@ -55,6 +55,7 @@
 
 <body onload="fillList()">
     <?php include 'laggtillexjobb.php'; ?>
+    <?php include 'StudenterSoktExjobb.php'; ?>
     <header>
         <div class="InloggLabel">
             <label for="Inlogg">Inloggad som
@@ -111,11 +112,11 @@
                 <!-- Form med exjobb ska vara en ul med hover och radiobutton likt med ett eventlistener istället -->
                 <!-- Form man ska kunna se studenter efter att man har tryckt på ett exjobb och -->
 
-                <form id="ExjobbForm" method = "post" action = "exjobbtabort.php" style="width:90%;">
+                <form id="ExjobbForm" method="post" action="exjobbtabort.php" style="width:90%;">
                     <fieldset id="Fieldset-ExJForm" style="width:100%;">
                         <legend align="center">Lista av Exjobb</legend>
                         <ul id="exjoblist" class="UL-Exjobb" type="button">
-                            <li>SKRIV DIN TITEL HÄR</li>
+
                         </ul>
                         <input type="button" name="AddToExjobb" id="AddToExjobb" value="Lägg till" onclick="titleAdd()">
                         <script>
@@ -137,40 +138,81 @@
                                         console.log(element.Title + "This was clicked");
                                         document.getElementById("ExjobbTitle").value = element.Title;
                                         document.getElementById("Exjobb-Bio").value = element.description;
+                                        fillListansokning();
                                         aktuellTitle = element.Title;
-                                        
+
                                     }
-                                    
-                                    
+
+
                                     )
-                                    
+
                                     document.getElementById("exjoblist").appendChild(li);
-                                });  
+                                });
                             }
-                            
-                            function titleAdd(){
+
+                            function titleAdd() {
                                 var li = document.createElement("li");
                                 var t = document.createTextNode("Nytt Exjobb");
                                 li.appendChild(t);
                                 document.getElementById("exjoblist").appendChild(li);
                             }
                         </script>
-                        
+
                     </fieldset>
                 </form>
-                <form id="ExjobbForm"style="width:90%;">
+                <form id="ExjobbForm" style="width:90%;">
                     <fieldset id="Fieldset-SF-Exjobb" style="width:100%;">
                         <legend align="center">Intresseanmälan</legend>
-                        <ul class="UL-Exjobb">
-                            <li>StudentProfilTest</li>
+                        <ul id="ansokningslista" class="UL-Exjobb">
+
                         </ul>
+
+                        <script>
+                            function fillListansokning() {
+                                var JSO_lista = '<?php echo $res4 ?>';
+                                console.log(JSO_lista);
+                                function jsonEscape(str) {
+                                    return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
+                                }
+                                var StudentList = JSON.parse(jsonEscape(JSO_lista));
+                                document.getElementById("ansokningslista").innerHTML = "";
+                                StudentList.forEach(element => {
+
+                                    var lii = document.createElement("li");
+                                    var tt = document.createTextNode(element.Uname);
+                                    lii.appendChild(tt);
+
+                                    lii.addEventListener("click", function (e) {
+                                        console.log(element.Title + "This was clicked");
+                                        document.getElementById("ShowProgram").value = element.Pro;
+                                        document.getElementById("StudentSkills").value = element.Pro;
+                                        document.getElementById("StudentExperience").value = element.Bio;
+
+
+                                    }
+
+
+                                    )
+
+                                    document.getElementById("ansokningslista").appendChild(lii);
+                                });
+                            }
+
+                            function titleAdd() {
+                                var lii = document.createElement("lii");
+                                var tt = document.createTextNode("Nyt Exjobb");
+                                lii.appendChild(t);
+                                document.getElementById("exjoblist").appendChild(li);
+                            }
+                        </script>
+
                     </fieldset>
                 </form>
                 <form id="ExjobbForm" style="width:90%;">
                     <fieldset id="SPanelPinfo" style="width:100%;">
                         <legend align="center">Student</legend>
                         <p>
-                            <input readonly type="text" style="padding: 1%;" name="ShowStudent" id="ShowStudent" placeholder="Student">
+                            <input readonly type="text" style="padding: 1%;" name="ShowProgram" id="ShowProgram" placeholder="Program">
                         </p>
                         <p>
                             <textarea readonly name="StudentSkills" style="height:100%;width:99%;" id="StudentSkills" maxlength="60000" rows="12" placeholder="Studentens kunskaper.."></textarea>
@@ -180,26 +222,24 @@
                                 maxlength="60000" rows="12"></textarea>
                         </p>
 
-                        <input type="button" id="ContactStudentButton"value="Kontakta">
+                        <input type="button" id="ContactStudentButton" value="Kontakta">
                     </fieldset>
                 </form>
             </div>
 
 
             <div class="Panel-Add-Exjobb">
-                <form id="Add-Exjobb" method="post" action="exjobbtabort.php">
-                        <form id="Add-Exjobb" method="post" action="laggtillexjobbspara.php">
+                <form id="Add-Exjobb" method="post">
                     <fieldset id="A-Exjobb">
                         <legend align="center">Lägg till Exjobb</legend>
                         <p>
-                            <input id = "ExjobbTitle" type="text" name="exjobbt" style="width:50%;height:25%;" placeholder="Exjobb Title">
+                            <input id="ExjobbTitle" type="text" name="exjobbt" style="width:50%;height:25%;" placeholder="Exjobb Title">
                         </p>
                         <p>
                             <textarea name="Exjobb-Bio" id="Exjobb-Bio" style="width:99%;height:100%;" maxlength="60000" rows="20" placeholder="Om Exjobb..."></textarea>
                         </p>
-                        <button type="submit" name="AddExjobb" id="AddExjobb" value="Spara">Spara</button>
-                    </form>
-                        <button type="submit" name="DeleteExjobb" id="DeleteExjobb" value= "Ta bort" >Ta bort</button>
+                        <button type="submit" name="AddExjobb" id="AddExjobb" value="Spara" formaction="laggtillexjobbspara.php">Spara</button>
+                        <button type="submit" name="DeleteExjobb" id="DeleteExjobb" value="Ta bort" formaction="exjobbtabort.php">Ta bort</button>
                     </fieldset>
                 </form>
             </div>
