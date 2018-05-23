@@ -101,8 +101,10 @@ li.dropdown-items
 .InloggLabel
 {
     position: absolute;
-    top:10px;
-    right:200px;
+    top:3%;
+    right:10.5%;
+    /* float:auto; */
+    /* margin-right:10%; */
 }
 
 .Logo

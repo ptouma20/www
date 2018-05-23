@@ -40,46 +40,49 @@
 <body>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg"><font color=blue font face='arial' size='5pt'>Inloggad som 
-                <?php session_start(); ;echo $_SESSION["Name"] ?></font></label>
+            <label for="Inlogg"><font color=red font face='arial' size='3pt'>Inloggad:  
+                    <?php echo $_SESSION["Name"] ?></font></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
             <map name="ORULOGGA">
-                <area alt="Örebro Universitet Logga" href="StudentStartsida.html" coords="916,370,1,6" shape="rect">
+                <area alt="Örebro Universitet Logga" href="../Student/StudentStartsida.html" coords="916,370,1,6" shape="rect">
             </map>
         </div>
         <div class="navigation">
             <ul class="dropdown">
                 <li>
-                    <a href="StudentStartsida.html">Startsida</a>
+                    <a href="../Student/StudentStartsida.html">Startsida</a>
                 </li>
                 <li>
-                    <a class="active" href="StudentProfil.html">Profil</a>
+                        <a href="../Student/StudentSokForetag.html">Sök Företag</a>
                 </li>
                 <li>
-                    <a href="StudentMeddelande.html">Meddelande</a>
+                    <a class="active" href="../Student/StudentProfil.html">Profil</a>
+                </li>
+                <li>
+                    <a href="../Student/StudentMeddelande.html">Meddelande</a>
                 </li>
                 <li class="dropdown-items">
                     <a class="DropLink">Hjälp</a>
                     <div class="dropdown-content">
-                        <a href="SupportAndQandA.html">Support</a>
-                        <a href="SupportAndQandA.html">Q&amp;A</a>
+                        <a href="../Student/StudentSupport.html">Support</a>
+                        <a href="../Student/StudentQandA.html">Q&amp;A</a>
                     </div>
                 </li>
                 <li>
                     <a href="logaut.php">Logga ut</a>
                 </li>
-                <li>
+                <!-- <li>
                     <div class="Search">
                         <form class="SearchBar">
                             <input type="text" id="sök" placeholder="Sök..." />
-                            <button type="submit">
+                            <button type="submit" formaction="StudentSokForetag.html">
                                 <i class="fa fa-search"></i>
                             </button>
                         </form>
                     </div>
-                </li>
+                </li> -->
             </ul>
         </div>
     </header>
@@ -256,11 +259,11 @@
                 <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
                 <h4 id="TCM">Om TCM</h4>
                 <section>
-                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
-                        och Edin Jelecevic.
-                        <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.
-                        <br>
-                    </p>
+                        <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                                och Edin Jelecevic.
+                                <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet där studenter<br>skulle kunna söka och ansöka exjobb.
+                                <br>
+                            </p>
                 </section>
             </div>
         </div>
