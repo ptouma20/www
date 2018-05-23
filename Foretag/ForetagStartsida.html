@@ -177,23 +177,21 @@
                                 var StudentList = JSON.parse(jsonEscape(JSO_lista));
                                 document.getElementById("ansokningslista").innerHTML = "";
                                 StudentList.forEach(element => {
+                                    if (ExjobbID == element.exjobslistID) {
+                                        var lii = document.createElement("li");
+                                        var tt = document.createTextNode(element.Uname);
+                                        lii.appendChild(tt);
 
-                                    var lii = document.createElement("li");
-                                    var tt = document.createTextNode(element.Uname);
-                                    lii.appendChild(tt);
-
-                                    lii.addEventListener("click", function (e) {
-                                        console.log(element.Title + "This was clicked");
-                                        document.getElementById("ShowProgram").value = element.Pro;
-                                        document.getElementById("StudentSkills").value = element.Pro;
-                                        document.getElementById("StudentExperience").value = element.Bio;
+                                        lii.addEventListener("click", function (e) {
+                                            console.log(element.Title + "This was clicked");
+                                            document.getElementById("ShowProgram").value = element.Pro;
+                                            document.getElementById("StudentSkills").value = element.Pro;
+                                            document.getElementById("StudentExperience").value = element.Bio;
 
 
+                                        }
+                                        )
                                     }
-
-
-                                    )
-
                                     document.getElementById("ansokningslista").appendChild(lii);
                                 });
                             }
@@ -222,7 +220,7 @@
                                 maxlength="60000" rows="12"></textarea>
                         </p>
 
-                        <input type="button" id="ContactStudentButton" onclick="window.location.href='ForetagMeddelande.html'"value="Kontakta">
+                        <input type="button" id="ContactStudentButton" onclick="window.location.href='ForetagMeddelande.html'" value="Kontakta">
                     </fieldset>
                 </form>
             </div>
