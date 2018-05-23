@@ -87,17 +87,22 @@
                     </div>
                     
                     <div class="SearchCompaniesForm2_4">
-                        <p>Namn
-                            <br>
-                            <input type="text" id="CompanieName-Readonly" readonly> </p>
-
-                            <input name="type" type="radio" style="margin-left: 4%">Ta bort konto</input>
-                                                    
-                            <input name="type" type="radio" style="margin-left: 1%">Varna</input>
+                        <p>
                             
-                        <p>Meddelande
-                            <br>
-                        <textarea rows="10" style="width: 350px;" name="message" class="form-control"></textarea>
+                            <input type="text" id="CompanieName-Readonly" readonly placeholder="Namn..">
+                        </p>
+                        <p>
+                            <textarea placeholder="Beskrivning.." readonly name="BioContainer1" id="BioContainer1" style="width:90%;height:auto;"rows="7"></textarea>
+                        </p> 
+                        <p>
+                                <textarea placeholder="Beskrivning.."readonly name="BioContainer2" id="BioContainer2" style="width:90%;height:auto;"rows="7"></textarea>
+                        </p>    
+                        <input name="type" type="radio" style="margin-left: 4%">Ta bort konto</input>
+                                                    
+                        <input name="type" type="radio" style="margin-left: 1%">Varna</input>
+                            
+                        <p>
+                        <textarea placeholder="Skriv ett meddelande.." rows="7" style="width:90%;height:auto;" name="message" class="form-control"></textarea>
                             <br>
                             <button id="send">Skicka</button>
 
