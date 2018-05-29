@@ -37,7 +37,7 @@
         <div class="InloggLabel">
                 <label for="Inlogg">
                         <font color=red font face='arial' size='3pt'>Inloggad: 
-                            <?php echo $_SESSION["Name"] ?>
+                            <?php session_start(); echo $_SESSION["Name"] ?>
                         </font>
                     </label>
         
