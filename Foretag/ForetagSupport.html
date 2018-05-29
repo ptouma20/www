@@ -70,19 +70,29 @@
         </div>
     </header>
     <main>
+            <script>
+                    function sendMail() {
+                        var emailadress = document.getElementById('mottagareEmail');
+                        email = emailadress.value;
+                        var link = "mailto:" + "support@TSM.se"
+                        + "?subject=" + escape(document.getElementById('amne').value)
+                        + "&body=" + escape(document.getElementById('content').value)
+                    ;
+    
+                    window.location.href = link;
+                    }
+                    
+                </script>
             <div id="SupportForm">
                 <div id="supportDiv">
                         Kontakta oss så hjälper vi dig!
 
 
                     <form id="supportForm">
-                        <p><input type="text" name="name" id="input-name" placeholder="Namn" required></p>
-                        <p> <input type="email" name="email" id="input-email" placeholder="Din mailadress" required></p>
-                        <p><input type="text" name="subject" id="input-subject" placeholder="Ämne" required></p>
-                        
-                        <textarea name="message" id="input-message" cols="30" rows="8" maxlength="60000" placeholder="Skriv ditt meddelande här..." required></textarea>
+                        <p> <input type="email" name="email" id="amne" placeholder="Ämne" required></p>
+                        <textarea name="message" id="content" cols="30" rows="8" maxlength="60000" placeholder="Skriv din fråga här.." required></textarea>
                         <br>
-                        <input type="submit" name="submit" id="input-submit" value="Skicka till support">
+                        <input type="submit" name="submit" id="input-submit" value="Skicka till support" onclick="sendMail(); return false">
                     </form>
                 </div>
             </div>
