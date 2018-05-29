@@ -192,7 +192,7 @@
                                             document.getElementById("ShowProgram").value = element.Pro;
                                             document.getElementById("StudentSkills").value = element.Pro;
                                             document.getElementById("StudentExperience").value = element.Bio;
-                                            aktuellEmail = Studentmail;
+                                            aktuellEmail = element.Studentmail;
                                             var email = element.Email;
                                             console.log(aktuellEmail);
                                             console.log(email);
@@ -213,7 +213,7 @@
                         </script>
                                     <script>
                                         function sendMail() {
-                                            var link = "mailto:" + email
+                                            var link = "mailto:" + aktuellEmail
                                             ;
     
                                             window.location.href = link;
