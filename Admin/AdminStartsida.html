@@ -96,9 +96,7 @@
                         <p>
                             <textarea placeholder="Beskrivning.." readonly name="BioContainer1" id="BioContainer1" style="width:90%;height:auto;"rows="7"></textarea>
                         </p> 
-                        <p>
-                                <textarea placeholder="Beskrivning.."readonly name="BioContainer2" id="BioContainer2" style="width:90%;height:auto;"rows="7"></textarea>
-                        </p>    
+                        
                         <input name="type" type="radio" style="margin-left: 4%">Ta bort konto</input>
                                                     
                         <input name="type" type="radio" style="margin-left: 1%">Varna</input>
@@ -142,6 +140,7 @@
                                                     if (e.target && e.target.nodeName == "LI") {
                                                         console.log(element.name + " was clicked");
                                                         document.getElementById("CompanieName-Readonly").value = element.name;
+                                                        document.getElementById("BioContainer1").value = element.bio;
                                                     }
                                                 });
                         
@@ -164,6 +163,7 @@
                                                     if (e.target && e.target.nodeName == "LI") {
                                                         console.log(element.name + " was clicked");
                                                         document.getElementById("CompanieName-Readonly").value = element.Username;
+                                                        document.getElementById("BioContainer1").value = element.Bio;
                                                     }
                                                 });
                         
