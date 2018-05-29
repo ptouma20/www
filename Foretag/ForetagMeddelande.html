@@ -62,7 +62,7 @@
                     </div>
                 </li>
                 <li>
-                    <a href="#LoggaUt">Logga ut</a>
+                    <a href="/Student/logaut.php">Logga ut</a>
                 </li>
                
             </ul>
@@ -70,22 +70,39 @@
         </div>
     </header>
     <main>
+            <script>
+                    function sendMail() {
+                        var emailadress = document.getElementById('mottagareEmail');
+                        email = emailadress.value;
+                        var link = "mailto:" + email
+                        + "?subject=" + escape(document.getElementById('amne').value)
+                        + "&body=" + escape(document.getElementById('content').value)
+                    ;
+    
+                    window.location.href = link;
+                    }
+                    
+                </script>
             <div class="MessageForm">
                     <!-- Här står det någon om bla bla bra.. -->
-                    <div class="MailDiv">
-                        
-                        <form id="MailForm">
-                            <p><input name="name"type="mail" class="InputName-Mail" placeholder="Din mailadress" required>
-                           
-                            </p>
-                            <p><input name="name"type="mail" class="InputName-Mail" placeholder="Mottagarens mailadress" required>
-                            </p> 
-                            <p><input type="text" name="subject" class="" placeholder="Ämne">
-                            </p>
-    
-                            <textarea name="content" id="content" maxlength="60000" rows="8"  placeholder="Skriv ditt meddelande här..." required></textarea>
-                             <br>
-                             <input type="submit" name="submit" id="submit" value="Skicka Mail">   
+                    <div class="MailDivCompanie">
+                            <section>
+                                    <img src="../MeddelandeHaveTOhaveThis.png" style="width:95%;">
+                                    <p>För att kunna skicka meddelanden behöver ni sätta en default mail. I Browsern Chroome kan man sätta gmail till deafult mail genom  att trycka på knappen som ovanstående figur.</p>
+                                    <p>I Chroome och om du inte har gmail kan du ladda ner mailto extension genom denna <a target="_blank" href="https://chrome.google.com/webstore/detail/mailto/gppbppehiogfokmpligejhaepeopajdf?utm_source=chrome-app-launcher">länk</a></p>
+                                    <p>I Mozilla Firefox kan man installera default mail genom denna <a target="_blank"href="https://support.mozilla.org/en-US/kb/change-program-used-open-email-links#os=win7&browser=fx19">länk</a></p>
+                                    
+                                </section>
+                        <form id="MailFormCompanie">
+                                <p><input name="name"type="mail" id="mottagareEmail"class="InputName-Mail" placeholder="Mailadress" required>
+                       
+                                </p>
+                                <p><input type="text" name="subject" id="amne" class="" placeholder="Ämne">
+                                </p>
+        
+                                <textarea name="content" id="content" maxlength="60000" rows="8"  placeholder="Skriv ditt meddelande här..." required></textarea>
+                                 <br>
+                                 <input type="submit" name="submit" id="submit" value="Skicka Mail" onclick="sendMail(); return false">   
                             
                         </form>
                     </div>

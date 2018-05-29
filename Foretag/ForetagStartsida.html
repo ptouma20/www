@@ -88,14 +88,14 @@
                     <a class="DropLink">Hjälp</a>
                     <div class="dropdown-content">
                         <a href="../Foretag/ForetagSupport.html">Support</a>
-                        <a href="../Foretag/ForetagSupport.html">Q&amp;A</a>
+                        <a href="../Foretag/ForetagQandA.html">Q&amp;A</a>
 
 
 
                     </div>
                 </li>
                 <li>
-                    <a href="#LoggaUt">Logga ut</a>
+                    <a href="/Student/logaut.php">Logga ut</a>
                 </li>
 
             </ul>
@@ -127,6 +127,7 @@
                             }
                             var exjobblist = JSON.parse(jsonEscape(JSON_lista));
                             var aktuellTitle;
+                            var aktuellEmail;
                             function fillList() {
                                 exjobblist.forEach(element => {
 
@@ -138,8 +139,9 @@
                                         console.log(element.Title + "This was clicked");
                                         document.getElementById("ExjobbTitle").value = element.Title;
                                         document.getElementById("Exjobb-Bio").value = element.description;
-                                        fillListansokning(element.id);
+                                        fillListansokning(element.id, element.Email);
                                         aktuellTitle = element.Title;
+                                        aktuellEmail = element.Email;
 
                                     }
 
@@ -168,17 +170,18 @@
                         </ul>
 
                         <script>
-                            function fillListansokning(ExjobbID) {
+                            function fillListansokning(ExjobbID, Studentmail) {
                                 var JSO_lista = '<?php echo $res4 ?>';
                                 console.log(JSO_lista);
                                 function jsonEscape(str) {
                                     return str.replace(/\n/g, "\\n").replace(/\r/g, "\\r").replace(/\t/g, "\\t");
                                 }
                                 var StudentList = JSON.parse(jsonEscape(JSO_lista));
+                                console.log(StudentList);
                                 document.getElementById("ansokningslista").innerHTML = "";
                                 StudentList.forEach(element => {
-                                    console.log("Från func" + ExjobbID);
-                                    console.log("Från php" + element.exjobslistID);
+                                    console.log("Från func " + ExjobbID);
+                                    console.log("Från php " + element.exjobslistID);
                                     if (ExjobbID == element.exjobslistID) {
                                         var lii = document.createElement("li");
                                         var tt = document.createTextNode(element.Uname);
@@ -189,12 +192,16 @@
                                             document.getElementById("ShowProgram").value = element.Pro;
                                             document.getElementById("StudentSkills").value = element.Pro;
                                             document.getElementById("StudentExperience").value = element.Bio;
-
-
+                                            document.getElementById("Emailadress").value = element.Email;
+                                            aktuellEmail = element.Studentmail;
+                                            var email = element.Email;
+                                            console.log(aktuellEmail);
+                                            console.log(email);
                                         }
                                         )
+                                        document.getElementById("ansokningslista").appendChild(lii);
                                     }
-                                    document.getElementById("ansokningslista").appendChild(lii);
+                                    
                                 });
                             }
 
@@ -205,6 +212,14 @@
                                 document.getElementById("exjoblist").appendChild(li);
                             }
                         </script>
+                                    <script>
+                                        function sendMail() {
+                                            var link = "mailto:" + aktuellEmail
+                                            ;
+    
+                                            window.location.href = link;
+                                        }
+                                        </script>
 
                     </fieldset>
                 </form>
@@ -215,6 +230,9 @@
                             <input readonly type="text" style="padding: 1%;" name="ShowProgram" id="ShowProgram" placeholder="Program">
                         </p>
                         <p>
+                                <input readonly type="text" style="padding: 1%;" name="Emailadress" id="ShowProgram" placeholder="Program">
+                        </p>
+                        <p>
                             <textarea readonly name="StudentSkills" style="height:100%;width:99%;" id="StudentSkills" maxlength="60000" rows="12" placeholder="Studentens kunskaper.."></textarea>
                         </p>
                         <p>
@@ -222,7 +240,7 @@
                                 maxlength="60000" rows="12"></textarea>
                         </p>
 
-                        <input type="button" id="ContactStudentButton" onclick="window.location.href='ForetagMeddelande.html'" value="Kontakta">
+                        <input type="button" id="ContactStudentButton" value="Kontakta" onclick="sendMail(); return false">
                     </fieldset>
                 </form>
             </div>
