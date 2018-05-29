@@ -35,7 +35,7 @@
 <body>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad som <?php session_start(); echo $_SESSION["Name"]; ?></label>
+            <label for="Inlogg"><font color=red font face='arial' size='3pt'>Inloggad: <?php session_start(); echo $_SESSION["Name"]; ?></font></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -55,10 +55,10 @@
                     <a href="../Foretag/ForetagMeddelande.html">Meddelande</a>
                 </li>
                 <li class="dropdown-items">
-                    <a class="active" class="DropLink">Hjälp</a>
+                    <a  class="DropLink">Hjälp</a>
                     <div class="dropdown-content">
-                        <a href="../Foretag/ForetagSupport.html">Support</a>
-                        <a href="../Foretag/ForetagSupport.html">Q&amp;A</a>
+                        <a class="active" href="../Foretag/ForetagSupport.html">Support</a>
+                        <a href="../Foretag/ForetagQandA.html">Q&amp;A</a>
                     </div>
                 </li>
                 <li>
@@ -82,13 +82,22 @@
                     
                 </script>
             <div id="SupportForm">
+                
                 <div id="supportDiv">
+                        <section>
+                                <img src="../MeddelandeHaveTOhaveThis.png" style="width:95%;">
+                                <p>För att kunna skicka meddelanden behöver ni sätta en default mail. I Browsern Chroome kan man sätta gmail till deafult mail genom  att trycka på knappen som ovanstående figur.</p>
+                                <p>I Chroome och om du inte har gmail kan du ladda ner mailto extension genom denna <a target="_blank" href="https://chrome.google.com/webstore/detail/mailto/gppbppehiogfokmpligejhaepeopajdf?utm_source=chrome-app-launcher">länk</a></p>
+                                <p>I Mozilla Firefox kan man installera default mail genom denna <a target="_blank"href="https://support.mozilla.org/en-US/kb/change-program-used-open-email-links#os=win7&browser=fx19">länk</a></p>
+                                
+                            </section>
+                            <br>
                         Kontakta oss så hjälper vi dig!
 
 
                     <form id="supportForm">
                         <p> <input name="email" id="amne" placeholder="Ämne" required></p>
-                        <textarea name="message" id="content" cols="30" rows="8" maxlength="60000" placeholder="Skriv din fråga här.." required></textarea>
+                        <textarea name="message" id="content" cols="30" rows="8" maxlength="60000" placeholder="Skriv här.." required></textarea>
                         <br>
                         <input type="submit" name="submit" id="submit" value="Skicka Mail" onclick="sendMail(); return false">
                     </form>
@@ -114,7 +123,11 @@
                     <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
                 <h4 id="TCM">Om TCM</h4>
                 <section>
-                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma och Edin Jelecevic.<br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.<br></p>
+                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                        och Edin Jelecevic.
+                        <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet där studenter<br>skulle kunna söka och ansöka exjobb.
+                        <br>
+                    </p>
                 </section>
             </div>
         </div>
