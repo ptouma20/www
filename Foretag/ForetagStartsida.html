@@ -193,7 +193,8 @@
                                             document.getElementById("StudentSkills").value = element.Pro;
                                             document.getElementById("StudentExperience").value = element.Bio;
                                             aktuellEmail = Studentmail;
-                                            email = element.Email;
+                                            var email = element.Email;
+                                            console.log(email);
                                         }
                                         )
                                         document.getElementById("ansokningslista").appendChild(lii);
