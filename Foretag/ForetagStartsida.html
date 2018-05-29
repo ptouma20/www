@@ -193,7 +193,7 @@
                                             document.getElementById("StudentSkills").value = element.Pro;
                                             document.getElementById("StudentExperience").value = element.Bio;
                                             aktuellEmail = Studentmail;
-
+                                            email = element.Studentmail
                                         }
                                         )
                                         document.getElementById("ansokningslista").appendChild(lii);
@@ -209,6 +209,14 @@
                                 document.getElementById("exjoblist").appendChild(li);
                             }
                         </script>
+                                    <script>
+                                        function sendMail() {
+                                            var link = "mailto:" + email
+                                            ;
+    
+                                            window.location.href = link;
+                                        }
+                                        </script>
 
                     </fieldset>
                 </form>
@@ -226,7 +234,7 @@
                                 maxlength="60000" rows="12"></textarea>
                         </p>
 
-                        <input type="button" id="ContactStudentButton" onclick="window.location.href='ForetagMeddelande.html?mail=' +aktuellEmail" value="Kontakta">
+                        <input type="button" id="ContactStudentButton" value="Kontakta" onclick="sendMail(); return false">
                     </fieldset>
                 </form>
             </div>
