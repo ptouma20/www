@@ -188,14 +188,10 @@
                                         lii.appendChild(tt);
 
                                         lii.addEventListener("click", function (e) {
-                                            console.log(element.Title + "This was clicked");
                                             document.getElementById("ShowProgram").value = element.Pro;
                                             document.getElementById("StudentSkills").value = element.Pro;
                                             document.getElementById("StudentExperience").value = element.Bio;
-                                            document.getElementById("Emailadress").value = element.Email;
-                                            aktuellEmail = element.Studentmail;
-                                            var email = element.Email;
-                                            console.log(aktuellEmail);
+                                            email = element.studentmail;
                                             console.log(email);
                                         }
                                         )
@@ -214,7 +210,7 @@
                         </script>
                                     <script>
                                         function sendMail() {
-                                            var link = "mailto:" + aktuellEmail
+                                            var link = "mailto:" + email
                                             ;
     
                                             window.location.href = link;
@@ -228,9 +224,6 @@
                         <legend align="center">Student</legend>
                         <p>
                             <input readonly type="text" style="padding: 1%;" name="ShowProgram" id="ShowProgram" placeholder="Program">
-                        </p>
-                        <p>
-                                <input readonly type="text" style="padding: 1%;" name="Emailadress" id="ShowProgram" placeholder="Program">
                         </p>
                         <p>
                             <textarea readonly name="StudentSkills" style="height:100%;width:99%;" id="StudentSkills" maxlength="60000" rows="12" placeholder="Studentens kunskaper.."></textarea>
