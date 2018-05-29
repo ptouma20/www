@@ -7,7 +7,6 @@ $usernamee = $_POST['username1'];
 $Passwordd = $_POST['password1'];
 $pp = "pascal";
 
-
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
@@ -19,7 +18,7 @@ $sql = "SELECT  id, Username, Password, Firstname, Lastname, Email, Education FR
 
 $result = $conn->query($sql);
 
-
+echo $_SERVER['pp'];
 
 
 
