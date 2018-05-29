@@ -43,7 +43,7 @@
     <?php include '../Student/xjobblista2.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad som <?php session_start(); echo $_SESSION["Usernameadmin"]; ?></label>
+            <label for="Inlogg"><font color=red font face='arial' size='3pt'>Inloggad:  <?php session_start(); echo $_SESSION["Usernameadmin"]; ?></font></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -106,7 +106,7 @@
                         <textarea placeholder="Skriv ett meddelande.." rows="7" style="width:90%;height:auto;" id="message" name="message" class="form-control"></textarea>
                             <br>
                             
-                            <button id="submit" formaction="tabort.php" onclick="sendMail(); return false">Skicka</button>
+                            <button style="width: 10%" id="submit" formaction="tabort.php" onclick="sendMail(); return false">Skicka</button>
                     </form>
                               <script>
                                     function sendMail() {
