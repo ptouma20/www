@@ -72,15 +72,13 @@
     <main>
             <script>
                     function sendMail() {
-                        var emailadress = document.getElementById('mottagareEmail');
-                        email = emailadress.value;
-                        var link = "mailto:" + "support@TSM.se"
-                        + "?subject=" + escape(document.getElementById('amne').value)
-                        + "&body=" + escape(document.getElementById('content').value)
-                    ;
-    
-                    window.location.href = link;
-                    }
+                    var link = "mailto:" + "support@tsm.se"
+                    + "?subject=" + escape(document.getElementById('amne').value)
+                    + "&body=" + escape(document.getElementById('content').value)
+                ;
+
+                window.location.href = link;
+                }
                     
                 </script>
             <div id="SupportForm">
