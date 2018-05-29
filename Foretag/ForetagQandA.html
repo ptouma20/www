@@ -35,7 +35,7 @@
 <body>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad som <?php session_start(); echo $_SESSION["Name"]; ?></label>
+            <label for="Inlogg"><font color=red font face='arial' size='3pt'>Inloggad: <?php session_start(); echo $_SESSION["Name"]; ?></font></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -70,7 +70,7 @@
         </div>
     </header>
     <main>
-            <div id="QandAForm">
+            <div style="margin-bottom:1%;"id="QandAForm">
                 <fieldset id="qAnda">
                     <legend align="center">Frågor och svar</legend>
 
@@ -118,7 +118,11 @@
                     <a title="youtube.com/wwworuse" target="_blank" href="https://www.youtube.com/user/wwworuse" class="fa fa-youtube"></a>
                 <h4 id="TCM">Om TCM</h4>
                 <section>
-                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma och Edin Jelecevic.<br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet.<br></p>
+                    <p id="PTCM">Företaget TCM består av Petter Nordin, Edvin Esselin, Fredrik Lidström, Choekyi Choekyi,Pascal Touma
+                        och Edin Jelecevic.
+                        <br>Företaget fick i uppdrag av Örebro Universitet att utveckla en applikation för Dataingenjörerprogrammet där studenter<br>skulle kunna söka och ansöka exjobb.
+                        <br>
+                    </p>
                 </section>
             </div>
         </div>

@@ -372,6 +372,26 @@ td
     color:white;
 }
 
+
+#supportForm #submit
+{
+    background-color:black;
+    color:white;
+    transition-duration: 0.4s;
+    width:130px;
+    border-radius: 1% 1% 1% 1%;
+    padding: 10px 10px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    text-align:center;
+}
+
+#supportForm #submit:hover
+{
+    background-color: red;
+    color:white;
+}
 fieldset
 {
    
