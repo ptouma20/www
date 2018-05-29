@@ -98,16 +98,35 @@
                             <textarea placeholder="Beskrivning.." readonly name="BioContainer1" id="BioContainer1" style="width:90%;height:auto;"rows="7"></textarea>
                         </p> 
                         
-                        <input name="type" type="radio" value="tabort" style="margin-left: 4%">Ta bort konto</input>
+                        <input name="type" id="tabort" type="radio" value="tabort" style="margin-left: 4%">Ta bort konto</input>
                                                     
-                        <input name="type" type="radio" style="margin-left: 1%">Varna</input>
+                        <input name="type" id="varna" type="radio" style="margin-left: 1%">Varna</input>
                             
                         <p>
                         <textarea placeholder="Skriv ett meddelande.." rows="7" style="width:90%;height:auto;" name="message" class="form-control"></textarea>
                             <br>
+                            <button id="submit" onclick="sendMail(); return false">Skicka</button>
                             <button id="submit" formaction="tabort.php">Skicka</button>
                     </form>
+                              <script>
+                                    function sendMail() {
+                                        if(tabort.checked)
+                                        {
+                                        location.href = 'tabort.php';
+                                        var link = "mailto:" + email
+                                        ;
 
+                                        window.location.href = link;
+                                    }
+                                        if(varna.checked)
+                                        {
+                                        var link = "mailto:" + email
+                                        ;
+
+                                        window.location.href = link;
+                                        }
+                                }
+                                </script>
                                 <script>
                                     var email;
                                     var JSON_List = '<?php echo $res ?>';
