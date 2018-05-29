@@ -43,7 +43,7 @@
     <?php include '../Student/xjobblista2.php'; ?>
     <header>
         <div class="InloggLabel">
-            <label for="Inlogg">Inloggad...</label>
+            <label for="Inlogg">Inloggad som <?php session_start(); echo $_SESSION["Usernameadmin"]; ?></label>
         </div>
         <div class="Logo">
             <img src="../Logos/Logo.jpg" alt="Örebro Universitet Exjobb Loga" style="width:250px;height:100px" usemap="ORULOGGA">
@@ -64,7 +64,7 @@
                 </li>
                
                 <li>
-                    <a href="#LoggaUt">Logga ut</a>
+                    <a href="/Student/logaut.php">Logga ut</a>
                 </li>
               
             </ul>
@@ -89,22 +89,24 @@
                     </div>
                     
                     <div class="SearchCompaniesForm2_4">
+                    <form id="Tabort" method="post">
                         <p>
                             
-                            <input type="text" id="CompanieName-Readonly" readonly placeholder="Namn..">
+                            <input type="text" name="tabortt"id="CompanieName-Readonly" readonly placeholder="Namn..">
                         </p>
                         <p>
                             <textarea placeholder="Beskrivning.." readonly name="BioContainer1" id="BioContainer1" style="width:90%;height:auto;"rows="7"></textarea>
                         </p> 
                         
-                        <input name="type" type="radio" style="margin-left: 4%">Ta bort konto</input>
+                        <input name="type" type="radio" value="tabort" style="margin-left: 4%">Ta bort konto</input>
                                                     
                         <input name="type" type="radio" style="margin-left: 1%">Varna</input>
                             
                         <p>
                         <textarea placeholder="Skriv ett meddelande.." rows="7" style="width:90%;height:auto;" name="message" class="form-control"></textarea>
                             <br>
-                            <button id="send">Skicka</button>
+                            <button id="submit" formaction="tabort.php">Skicka</button>
+                    </form>
 
                                 <script>
                                     var email;

@@ -3,26 +3,24 @@ $servername = "localhost";
 $username = "user";
 $password = "12345";
 $dbname = "exjobb";
-$_SESSION["fname"] = "";
-//$id = $_POST['Exjobbcompname-Readonly'];
-$userid = $_SESSION["userid"];
+$name = $_SESSION["Name"];
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
+} 
+$a=array();
 
-        $sql = "SELECT MAX(company.Name) FROM exjobslist, company WHERE company.ID = '2'";
-        $result = $conn->query($sql);
-        
+$sql = "SELECT keywords.Name from students, studentkeywords, keywords where students.Name =  '$name'
+AND students.ID = studentkeywords.studentID AND studentkeywords.studentID AND studentkeywords.keywordID = keywords.ID ";
+$result = $conn->query($sql);
+
+
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-         $_SESSION["fname"]= $row["MAX(company.Name)"];
-
+        array_push($a, $row["Name"]);
     }}
-//header("Location: /Student/StudentProfil.html");
+$_SESSION["keywords"] = $a;
 $conn->close();
-
 ?>
-

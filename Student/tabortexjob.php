@@ -21,7 +21,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-$sql = "SELECT  ID, description, companyID, Title FROM exjobslist";
+$sql = "SELECT  * FROM exjobslist";
 
 $result = $conn->query($sql);
 //header("Content-type: text/javascript");
@@ -30,7 +30,7 @@ if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
        $obj = new MyStruct();
         $obj->ID = $row["ID"];
-        $r = $row["ID"];
+        $r = $row["companyID"];
         $obj->description = utf8_encode($row["description"]);
         $obj->companyID = utf8_encode($row["companyID"]);
         $obj->Title = utf8_encode($row["Title"]);
@@ -51,22 +51,27 @@ if ($result->num_rows > 0) {
 
 if(isset($_POST['Fname']))
 {
-$Fname = $_POST['Fname'];
-$Exarbete = $_POST['Exarbete'];
+$Fname = utf8_encode($_POST['Fname']);
+$Exarbete = utf8_encode($_POST['Exarbete']);
 foreach ($a as &$value) {
-    if($Fname == $value->Name){
-    $v = $value->companyID ;
+    if($Fname == $value->Name && $Exarbete == $value->Title){
+    $v = $value->Name ;
+    $T = $value->Title;
     $exid = $value->ID;
     }
 }
 
 
-$sql = "INSERT INTO applyings(studentID,ExjobID) VALUES ($id,$exid)";
+$sql = "DELETE FROM applyings WHERE studentID ='$id' AND ExjobID='$exid' ;";
 
 $result = $conn->query($sql);
 }
-
-header("Location: /Student/StudentSokForetag.html");
+//print_r($id);
+//print_r("____________");
+//print_r($exid);
+//print_r("____________");
+//print_r($v);
+header("Location: /Student/StudentStartsida.html");
 
 $conn->close();
 ?>

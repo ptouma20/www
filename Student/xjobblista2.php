@@ -1,18 +1,20 @@
-<?php header('Content-type: text/html; charset=utf-8'); ?>
+
 <?php
 // session_start();
 $servername = "localhost";
 $username = "user";
 $password = "12345";
 $dbname = "exjobb";
-class MyStruct {
+class MyStruct9 {
     public $ID;
-    public $name;
-    public $webpage;
-    public $email;
-    public $bio;
+    public $Username;
+    public $Name;
+    public $Lastname;
+    public $Email;
+    public $Education;
+    public $Bio;
 };
-//$obj = new MyStruct();
+//$obj = new MyStruct9();
 $a=array();
 
 
@@ -24,27 +26,26 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
 
-$sql = "SELECT  id, Name, Email, Webpage, Bio FROM company";
+$sql = "SELECT *  FROM students;";
 
 $result = $conn->query($sql);
 //header("Content-type: text/javascript");
 
 if ($result->num_rows > 0) {
     while($row = $result->fetch_assoc()) {
-       $obj = new MyStruct();
-        $obj->ID = $row["id"];
-        $obj->name = utf8_encode($row["Name"]);
-        $obj->webpage = $row["Webpage"];
-        $obj->email = utf8_encode($row["Email"]);
-        $obj->bio = utf8_encode($row["Bio"]);
+        $obj = new MyStruct9();
+        $obj->ID = utf8_encode($row["ID"]);
+        $obj->Username = utf8_encode($row["Username"]);
+        $obj->Name = utf8_encode($row["Name"]);
+        $obj->Lastname = utf8_encode($row["Lastname"]);
+        $obj->Email = utf8_encode($row["Email"]);
+        $obj->Education = utf8_encode($row["Education"]);
+        $obj->Bio = utf8_encode($row["Bio"]);
         array_push($a, $obj);
-        //$a[] = $obj;
-        
-        //echo $obj->name;
 
     }
     //print_r($a);
-    $res = json_encode($a);
+    $res9 = json_encode($a);
     //$_SESSION["a"] = $a;
     
 } else {
