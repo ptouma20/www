@@ -107,6 +107,7 @@
                             <button id="send">Skicka</button>
 
                                 <script>
+                                    var email;
                                     var JSON_List = '<?php echo $res ?>';
                                     console.log(JSON_List);
                                     function jsonEscape(str) {
@@ -141,6 +142,8 @@
                                                         console.log(element.name + " was clicked");
                                                         document.getElementById("CompanieName-Readonly").value = element.name;
                                                         document.getElementById("BioContainer1").value = element.bio;
+                                                        email = element.email;
+
                                                     }
                                                 });
                         
@@ -164,6 +167,7 @@
                                                         console.log(element.name + " was clicked");
                                                         document.getElementById("CompanieName-Readonly").value = element.Username;
                                                         document.getElementById("BioContainer1").value = element.Bio;
+                                                        email = element.email;
                                                     }
                                                 });
                         
